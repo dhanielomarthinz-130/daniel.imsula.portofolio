@@ -1,20 +1,20 @@
 {
   "profile": {
-    "name": "Inventory Specialist",
-    "role": "Inventory Control & Stock Accuracy Specialist",
-    "tagline": "Menciptakan akurasi inventaris maksimal (99.8%+), efisiensi proses gudang, dan rekonsiliasi stok tanpa selisih.",
+    "name": "Daniel Imsula",
+    "role": "Inventory Controller - Associate & Warehouse Specialist",
+    "tagline": "Menciptakan akurasi inventaris maksimal (99.8%+), efisiensi proses pergudangan, dan rekonsiliasi stok tanpa selisih.",
     "status": "Tersedia untuk Peluang Karir & Konsultasi Inventory",
     "location": "Jakarta & Sekitarnya, Indonesia",
     "email": "contact.inventory.pro@gmail.com",
     "linkedin": "https://linkedin.com",
-    "phone": "+62 812-XXXX-XXXX",
+    "photo": "images/daniel-imsula.jpg",
     "stockAccuracy": "99.8%",
     "skusManaged": "50,000+",
     "shrinkageReduction": "-85%",
     "opnameSuccessRate": "100%"
   },
   "about": {
-    "summary": "Profesional Inventory Control dan Warehouse Management berdedikasi dengan rekam jejak terbukti dalam meningkatkan Stock Accuracy hingga level maksimal sesuai target KPI perusahaan di PT Beauty Haul Indonesia dan PT Kirin Dinamika Sentosa. Berpengalaman mendalam dalam manajemen Cycle Count, Stock Opname terstruktur, pengendalian selisih (discrepancy & shrinkage), optimasi WMS/ERP, serta implementasi SOP FIFO/FEFO untuk industri FMCG, Beauty/Skincare, dan Manufaktur.",
+    "summary": "Profesional Inventory Controller dan Warehouse Management berdedikasi dengan rekam jejak terbukti di Somethinc - Beautyhaul, PT Aditya Manufaktur Indonesia, dan PT Kirin Dinamika Sentosa. Berpengalaman mendalam dalam menjaga akurasi stok (Stock Accuracy 99.8%+), memimpin pelaksanaan Cycle Count & Stock Opname berskala besar, mitigasi selisih (shrinkage & discrepancy), implementasi SOP FIFO/FEFO, serta optimalisasi operasional gudang Inbound/Outbound.",
     "highlights": [
       {
         "title": "Akurasi Stok Maksimal (99.8%+)",
@@ -26,7 +26,7 @@
       },
       {
         "title": "Investigasi Discrepancy & Loss Prevention",
-        "description": "Melakukan Root Cause Analysis pada setiap ketidaksesuaian stok, meminimalisir shrinkage (kehilangan/kerusakan), dan menjaga kontrol tanggal kadaluarsa (FEFO/FIFO)."
+        "description": "Melakukan Root Cause Analysis (5-Why) pada setiap ketidaksesuaian stok, meminimalisir shrinkage, dan menjaga kontrol tanggal kadaluarsa (FEFO/FIFO)."
       }
     ]
   },
@@ -64,9 +64,9 @@
   "projects": [
     {
       "id": "inv-1",
-      "title": "BeautyHaul Omnichannel Stock Accuracy Transformation",
+      "title": "BeautyHaul & Somethinc Stock Accuracy Transformation",
       "category": "accuracy",
-      "badge": "PT Beauty Haul Indonesia",
+      "badge": "Somethinc - Beautyhaul",
       "description": "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel (E-commerce + Offline Store), berhasil menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat FEFO produk kosmetik.",
       "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
       "technologies": ["Cycle Count", "FEFO Control", "WMS Sync", "Omnichannel", "Excel Dashboard"],
@@ -76,9 +76,21 @@
     },
     {
       "id": "inv-2",
+      "title": "Manufacturing Warehouse Flow & Supervisory Optimization",
+      "category": "process",
+      "badge": "Aditya Manufaktur Indonesia",
+      "description": "Optimalisasi alur penerimaan bahan baku dan pengiriman barang jadi, penataan ulang denah layout rak, dan peningkatan kecepatan dispatch hingga mendapatkan promosi sebagai Supervisor Warehouse.",
+      "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["Warehouse Admin", "Supervisory", "Inbound/Outbound", "Slotting Layout"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "Promoted to Supervisor • +30% Operasional Flow"
+    },
+    {
+      "id": "inv-3",
       "title": "High-Volume Stock Opname & Discrepancy Elimination",
       "category": "opname",
-      "badge": "PT Kirin Dinamika Sentosa",
+      "badge": "Kirin Dinamika Sentosa",
       "description": "Memimpin eksekusi Wall-to-Wall Stock Opname untuk puluhan ribu SKU barang manufaktur/distribusi, menurunkan selisih varians stok (shrinkage) hingga di bawah 0.05% dari nilai aset.",
       "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80",
       "technologies": ["Stock Opname", "Variance Investigation", "Barcode Audit", "Shrinkage Control"],
@@ -87,10 +99,10 @@
       "metrics": "Varians < 0.05% • 100% Selesai Tepat Waktu"
     },
     {
-      "id": "inv-3",
+      "id": "inv-4",
       "title": "Root Cause Analysis & Loss Prevention Framework",
       "category": "reconciliation",
-      "badge": "Process Improvement",
+      "badge": "Loss Prevention",
       "description": "Perancangan matriks audit selisih barang (investigasi selisih picking, return barang, salah lokasi putaway, hingga human error sistem), menghasilkan mitigasi kehilangan hingga 85%.",
       "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
       "technologies": ["RCA 5-Why", "Loss Prevention", "Putaway Audit", "Excel Power Query"],
@@ -99,22 +111,10 @@
       "metrics": "-85% Stock Loss • 100% Traceability"
     },
     {
-      "id": "inv-4",
-      "title": "ABC Analysis & Fast-Moving Layout Optimization",
-      "category": "process",
-      "badge": "Warehouse Efficiency",
-      "description": "Reorganisasi denah gudang berdasarkan kecepatan perputaran barang (Fast, Medium, Slow Moving), mempercepat waktu picking 35% dan mengurangi kesalahan letak barang (*misplacement*).",
-      "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["ABC Analysis", "Layout Racking", "Picking Path", "Slotting"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "+35% Picking Speed • Minimalisir Salah Lokasi"
-    },
-    {
       "id": "inv-5",
       "title": "Expired & Slow-Moving Stock Mitigation Protocol",
       "category": "process",
-      "badge": "BeautyHaul Quality Control",
+      "badge": "Quality & Expiry Control",
       "description": "Sistem peringatan dini (Early Warning System) untuk produk kosmetik mendekati masa kadaluarsa (6-12 bulan), mencegah timbulnya deadstock dan memaksimalkan perputaran aset.",
       "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
       "technologies": ["FEFO Matrix", "Aging Report", "Batch Number Tracking", "WMS"],
@@ -137,24 +137,34 @@
   ],
   "experience": [
     {
-      "period": "Pengalaman Profesional",
-      "role": "Inventory Control & Stock Accuracy Specialist",
-      "company": "PT Beauty Haul Indonesia (BeautyHaul Group)",
-      "description": "Bertanggung jawab atas akurasi total inventaris ribuan SKU produk kecantikan & perawatan kulit di gudang pusat dan multi-channel fulfillment. Memimpin Cycle Count rutin, pengawasan FIFO/FEFO ketat, investigasi selisih sistem vs fisik di WMS, serta mempertahankan Stock Accuracy rate konsisten di angka 99.8% sesuai target KPI manajemen."
+      "company": "Somethinc - Beautyhaul (PT Beauty Haul Indonesia)",
+      "role": "Inventory Controller - Associate",
+      "period": "Maret 2022 – Agustus 2026",
+      "employmentType": "Permanent",
+      "description": "Bertanggung jawab atas akurasi total inventaris puluhan ribu SKU produk Somethinc & Beautyhaul di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin, pengawasan ketat sistem FEFO/FIFO produk kosmetik, rekonsiliasi data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level 99.8%+ sesuai target KPI perusahaan."
     },
     {
-      "period": "Pengalaman Profesional",
-      "role": "Inventory Specialist & Stock Opname Lead",
+      "company": "PT Aditya Manufaktur Indonesia",
+      "role": "Administrator Warehouse ➔ Up To Supervisor Warehouse",
+      "period": "Januari 2015 – Mei 2021",
+      "employmentType": "Permanent",
+      "promotion": "Administrator Warehouse (Januari 2015 – April 2021) • Up To Supervisor Warehouse (Februari – Mei 2021)",
+      "description": "Mengelola administrasi menyeluruh operasional pergudangan manufaktur dan logistik Inbound/Outbound. Bertanggung jawab atas penerimaan bahan baku, kontrol barang jadi, slotting rak gudang, hingga dipromosikan sebagai Supervisor Warehouse (Februari – Mei 2021) untuk memimpin tim pelaksana gudang dan kelancaran alur operasional secara keseluruhan."
+    },
+    {
       "company": "PT Kirin Dinamika Sentosa",
-      "description": "Mengelola pengendalian stok barang, perancangan jadwal Stock Opname berkala, audit penerimaan barang (Inbound) dan pengiriman (Outbound). Berhasil menurunkan discrepancy varians stok hingga mendekati nol, menyusun SOP handling material, dan mengoptimalkan penataan racking gudang."
+      "role": "Administrator Warehouse",
+      "period": "Januari 2014 – Desember 2015",
+      "employmentType": "Contract",
+      "description": "Bertanggung jawab atas pencatatan dan administrasi stok barang gudang, verifikasi dokumen surat jalan & packing list Inbound/Outbound, pemutakhiran data sistem inventaris, penanganan investigasi selisih barang, serta pelaksanaan Wall-to-Wall Stock Opname berkala."
     }
   ],
   "education": [
     {
-      "period": "Pendidikan & Sertifikasi",
-      "degree": "Spesialisasi Supply Chain & Inventory Management",
-      "institution": "Pendidikan Tinggi & Pelatihan Profesional Inventory Control",
-      "description": "Fokus pada Warehouse Management System (WMS), Cycle Counting Methodology, Lean Inventory, Inventory Accounting, and Discrepancy Prevention."
+      "period": "Pendidikan & Sertifikasi Profesional",
+      "degree": "Warehouse & Inventory Operations Specialist",
+      "institution": "Sertifikasi & Pelatihan Profesional Inventory Management",
+      "description": "Spesialisasi dalam Warehouse Management System (WMS), Cycle Counting Methodology, Root Cause Analysis (RCA), Discrepancy Prevention, dan Supply Chain Optimization."
     }
   ]
 }

@@ -100,12 +100,13 @@ function initTypewriter() {
   if (!typewriterElem) return;
 
   const words = [
-    'Stock Accuracy Lead (99.8%+)',
-    'PT Beauty Haul Indonesia',
-    'PT Kirin Dinamika Sentosa',
-    'Stock Opname & Audit Specialist',
-    'Warehouse Process Optimizer',
-    'Discrepancy RCA & Loss Prevention'
+    'Inventory Controller - Associate',
+    'Somethinc - Beautyhaul (2022-2026)',
+    'Aditya Manufaktur Indonesia (2015-2021)',
+    'Supervisor & Warehouse Admin',
+    'Kirin Dinamika Sentosa (2014-2015)',
+    'Stock Accuracy Specialist (99.8%+)',
+    'Cycle Count & Stock Opname Lead'
   ];
 
   let wordIndex = 0;
@@ -226,9 +227,9 @@ function setupDefaultProjects() {
   const defaultProjects = [
     {
       id: "inv-1",
-      title: "BeautyHaul Omnichannel Stock Accuracy Transformation",
+      title: "BeautyHaul & Somethinc Stock Accuracy Transformation",
       category: "accuracy",
-      badge: "PT Beauty Haul Indonesia",
+      badge: "Somethinc - Beautyhaul",
       description: "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel (E-commerce + Offline Store), berhasil menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat FEFO produk kosmetik.",
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
       technologies: ["Cycle Count", "FEFO Control", "WMS Sync", "Omnichannel", "Excel Dashboard"],
@@ -238,9 +239,21 @@ function setupDefaultProjects() {
     },
     {
       id: "inv-2",
+      title: "Manufacturing Warehouse Flow & Supervisory Optimization",
+      category: "process",
+      badge: "Aditya Manufaktur Indonesia",
+      description: "Optimalisasi alur penerimaan bahan baku dan pengiriman barang jadi, penataan ulang layout rak, dan peningkatan kecepatan dispatch hingga mendapatkan promosi sebagai Supervisor Warehouse.",
+      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Warehouse Admin", "Supervisory", "Inbound/Outbound", "Slotting Layout"],
+      liveDemo: "#inventory-studio-section",
+      github: "#",
+      metrics: "Promoted to Supervisor • +30% Operasional Flow"
+    },
+    {
+      id: "inv-3",
       title: "High-Volume Stock Opname & Discrepancy Elimination",
       category: "opname",
-      badge: "PT Kirin Dinamika Sentosa",
+      badge: "Kirin Dinamika Sentosa",
       description: "Memimpin eksekusi Wall-to-Wall Stock Opname untuk puluhan ribu SKU barang manufaktur/distribusi, menurunkan selisih varians stok (shrinkage) hingga di bawah 0.05% dari nilai aset.",
       image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80",
       technologies: ["Stock Opname", "Variance Investigation", "Barcode Audit", "Shrinkage Control"],
@@ -249,10 +262,10 @@ function setupDefaultProjects() {
       metrics: "Varians < 0.05% • 100% Selesai Tepat Waktu"
     },
     {
-      id: "inv-3",
+      id: "inv-4",
       title: "Root Cause Analysis & Loss Prevention Framework",
       category: "reconciliation",
-      badge: "Process Improvement",
+      badge: "Loss Prevention",
       description: "Perancangan matriks audit selisih barang (investigasi selisih picking, return barang, salah lokasi putaway, hingga human error sistem), menghasilkan mitigasi kehilangan hingga 85%.",
       image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
       technologies: ["RCA 5-Why", "Loss Prevention", "Putaway Audit", "Excel Power Query"],
