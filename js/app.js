@@ -100,15 +100,16 @@ function initTypewriter() {
   if (!typewriterElem) return;
 
   const words = [
+    'Stock Accuracy: 75% ➔ 99.99%+',
     'PT Inovasi Eka Gemilang - Hanasui',
     'Creator of Handheld IMS & TMS',
+    'Picking Logic & Productivity Lead',
     'Inventory Controller & Specialist',
     'Somethinc - Beautyhaul (2022-2026)',
     'Aditya Manufaktur Indonesia (2015-2021)',
     'Supervisor & Warehouse Admin',
     'Kirin Dinamika Sentosa (2014-2015)',
-    'Sameday Instant Queue System',
-    'Stock Accuracy Specialist (99.8%+)'
+    'Sameday Instant Queue System'
   ];
 
   let wordIndex = 0;
@@ -229,15 +230,15 @@ function setupDefaultProjects() {
   const defaultProjects = [
     {
       id: "sys-ims",
-      title: "Handheld-Integrated Inventory Management System (IMS)",
+      title: "Handheld-Integrated IMS & Picking Logic Optimization",
       category: "ims-tech",
       badge: "Sistem Buatan Sendiri (Handheld IMS)",
-      description: "Merancang dan mengembangkan sistem Inventory Management System (IMS) terintegrasi untuk monitoring realtime, transaksi backend, serta kontrol pergerakan stok presisi yang dioperasikan langsung menggunakan perangkat Handheld Scanner (PDA/Barcode Scanner) di area gudang.",
+      description: "Merancang dan mengembangkan sistem Inventory Management System (IMS) terintegrasi untuk monitoring realtime, transaksi backend, serta kontrol pergerakan stok presisi via perangkat Handheld Scanner (PDA/Barcode). Berhasil mengubah dan mengoptimalkan Picking Logic Picker sehingga produktivitas picker meningkat drastis serta akurasi stok melonjak tajam dari 75% menjadi 99.99%+ tanpa olah spreadsheet manual.",
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Handheld Scanner", "Backend Transaction", "Stock Monitoring", "Real-Time Sync", "Barcode Scanning"],
+      technologies: ["Handheld Scanner", "Picking Logic Engine", "Picker Productivity", "Backend Transaction", "Stock Accuracy 99.99%+"],
       liveDemo: "#inventory-studio-section",
       github: "#",
-      metrics: "Akurasi Stok 99.8%+ • Transaksi Handheld Realtime"
+      metrics: "Akurasi 75% ➔ 99.99%+ • Peningkatan Produktivitas Picker"
     },
     {
       id: "sys-tms",
