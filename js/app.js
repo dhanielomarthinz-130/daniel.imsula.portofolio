@@ -152,17 +152,24 @@ function initNavigation() {
 
   if (mobileBtn && navLinks) {
     mobileBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
       const icon = mobileBtn.querySelector('i');
       if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
+        if (isOpen) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
       }
     });
 
     links.forEach(l => {
       l.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        document.body.style.overflow = '';
         const icon = mobileBtn.querySelector('i');
         if (icon) {
           icon.classList.add('fa-bars');
