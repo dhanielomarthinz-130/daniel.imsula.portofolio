@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Inventory Specialist | Stock Accuracy & Warehouse Management</title>
+  <meta name="description" content="Portofolio Profesional Inventory Control & Stock Accuracy Specialist berpengalaman di PT Beauty Haul Indonesia dan PT Kirin Dinamika Sentosa. Mencapai akurasi inventaris maksimal 99.8%+ dan efisiensi proses gudang." />
+  <meta name="keywords" content="Inventory Specialist, Stock Accuracy, Warehouse Management, Stock Opname, Cycle Count, BeautyHaul, Kirin Dinamika Sentosa, WMS, Supply Chain" />
+  <meta name="author" content="Inventory Control Professional" />
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Portofolio Inventory Control & Stock Accuracy Specialist" />
+  <meta property="og:description" content="Mencapai akurasi inventaris 99.8%+, optimalisasi alur gudang, dan rekonsiliasi selisih stok di PT Beauty Haul Indonesia & PT Kirin Dinamika Sentosa." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Animated Background -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+  </div>
+
+  <!-- ========================================================================
+       Navigation Bar
+       ======================================================================== -->
+  <header class="navbar" id="main-navbar">
+    <div class="container">
+      <a href="#hero" class="nav-brand" id="nav-brand-logo">
+        <div class="nav-logo-badge" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <span>INVENTORY.<span class="gradient-text">PRO</span></span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero" class="nav-link active">Beranda</a></li>
+          <li><a href="#about" class="nav-link">Tentang</a></li>
+          <li><a href="#skills" class="nav-link">Kompetensi</a></li>
+          <li><a href="#projects" class="nav-link">Pencapaian & Proyek</a></li>
+          <li><a href="#inventory-studio-section" class="nav-link"><i class="fa-solid fa-clipboard-list" style="color: var(--accent-secondary);"></i> Inventory Studio</a></li>
+          <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+          <li><a href="#contact" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="server-status-pill" id="server-status-pill" title="Status Sistem">
+          <span class="status-dot"></span> Akurasi Target: 99.8%+
+        </div>
+
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Ganti Tema">
+          <i class="fa-solid fa-sun" id="theme-toggle-icon"></i>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status" style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35); color: #10b981;">
+            <span class="status-dot" style="background: #10b981;"></span> Terbukti Mencapai Akurasi Stok Maksimal (99.8%+)
+          </div>
+          
+          <h1 class="hero-title">
+            Spesialis Pengendalian <span class="gradient-text">Inventory</span> & Akurasi Gudang<br />
+            <span class="typewriter-wrapper" id="typewriter-text"></span>
+          </h1>
+
+          <p class="hero-description">
+            Profesional Inventory Control berpengalaman di <strong>PT Beauty Haul Indonesia</strong> & <strong>PT Kirin Dinamika Sentosa</strong>. Berhasil mentransformasikan efisiensi alur pergudangan, memimpin Cycle Count & Stock Opname, serta mengeliminasi selisih stok (*discrepancy & shrinkage*) hingga mencapai akurasi tertinggi sesuai target perusahaan.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="hero-btn-projects" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+              <i class="fa-solid fa-chart-line"></i> Lihat Pencapaian & Proyek
+            </a>
+            <a href="#inventory-studio-section" class="btn btn-secondary" id="hero-btn-notes">
+              <i class="fa-solid fa-clipboard-check"></i> Buka Inventory Studio
+            </a>
+            <button class="btn btn-secondary open-resume-btn" id="hero-btn-resume">
+              <i class="fa-regular fa-file-lines"></i> Lihat Profil & CV
+            </button>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h3 style="color: #10b981;">99.8%</h3>
+              <p>Stock Accuracy Rate</p>
+            </div>
+            <div class="stat-item">
+              <h3 style="color: #06b6d4;">50k+</h3>
+              <p>SKU Managed</p>
+            </div>
+            <div class="stat-item">
+              <h3 style="color: #f59e0b;">-85%</h3>
+              <p>Shrinkage Reduction</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-card">
+          <div class="avatar-wrapper" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 50%, #6366f1 100%);">
+            <div class="avatar-inner">
+              <i class="fa-solid fa-warehouse avatar-icon" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+              <h4 style="font-size: 1.25rem;">Inventory Control Specialist</h4>
+              <span style="color: var(--text-secondary); font-size: 0.88rem;">BeautyHaul & Kirin Dinamika</span>
+            </div>
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge floating-badge-1">
+            <i class="fa-solid fa-certificate" style="color: #10b981;"></i>
+            <span>PT Beauty Haul Indonesia</span>
+          </div>
+
+          <div class="floating-badge floating-badge-2">
+            <i class="fa-solid fa-boxes-packing" style="color: #06b6d4;"></i>
+            <span>PT Kirin Dinamika Sentosa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       About Section
+       ======================================================================== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="color: #10b981; border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.1);">
+          <i class="fa-solid fa-bullseye"></i> Nilai Unggul & Metodologi
+        </span>
+        <h2 class="section-title">Optimalisasi Proses & Akurasi Total Inventaris</h2>
+        <p class="section-subtitle">
+          Kombinasi audit fisik terstruktur, kepatuhan SOP, analisis data mendalam, dan integrasi sistem WMS/ERP untuk menciptakan operasional gudang yang presisi.
+        </p>
+      </div>
+
+      <div class="about-pillars-grid">
+        <div class="pillar-card glass-card">
+          <div class="pillar-icon-box" style="color: #10b981; background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3);">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3>Akurasi Stok Maksimal (99.8%+)</h3>
+          <p>
+            Menerapkan metodologi Cycle Count harian/mingguan dengan segmentasi ABC Analysis, rekonsiliasi data fisik vs WMS, serta audit berkala untuk menjamin integritas data stok.
+          </p>
+        </div>
+
+        <div class="pillar-card glass-card">
+          <div class="pillar-icon-box" style="color: #06b6d4; background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.3);">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3>Optimalisasi Alur Proses Gudang</h3>
+          <p>
+            Menyempurnakan SOP Inbound receiving, putaway racking, picking path, hingga outbound dispatch. Mengurangi bottleneck dan meningkatkan kecepatan pemenuhan pesanan.
+          </p>
+        </div>
+
+        <div class="pillar-card glass-card">
+          <div class="pillar-icon-box" style="color: #f59e0b; background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3);">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Investigasi Discrepancy & Loss Prevention</h3>
+          <p>
+            Melakukan Root Cause Analysis (RCA 5-Why) pada setiap ketidaksesuaian barang, mengeliminasi selisih sistem vs fisik, serta menerapkan kontrol ketat FIFO/FEFO untuk produk expired-sensitive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Skills & Competencies Section
+       ======================================================================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="color: #06b6d4; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.1);">
+          <i class="fa-solid fa-list-check"></i> Keahlian & Kompetensi
+        </span>
+        <h2 class="section-title">Core Competencies Inventory Control</h2>
+        <p class="section-subtitle">
+          Keahlian teknis dan manajerial dalam pengelolaan stok, sistem informasi pergudangan, dan kepatuhan audit.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1: Core Inventory & Audit -->
+        <div class="skill-category-card glass-card">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-bullseye" style="color: #10b981;"></i>
+            <h3>Inventory & Audit</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-check-double" style="color: #10b981;"></i> Stock Accuracy Management</span>
+                <span>99%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 99%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-clipboard-list" style="color: #06b6d4;"></i> Cycle Count & Stock Opname</span>
+                <span>98%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 98%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-magnifying-glass" style="color: #6366f1;"></i> Discrepancy RCA & Loss Prevention</span>
+                <span>96%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 96%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-boxes-packing" style="color: #f59e0b;"></i> FIFO / FEFO & Batch Tracking</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 95%; background: linear-gradient(90deg, #10b981, #06b6d4);"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Systems & Data Analysis -->
+        <div class="skill-category-card glass-card">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-laptop" style="color: #06b6d4;"></i>
+            <h3>Sistem & Analisa Data</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-file-excel" style="color: #107c41;"></i> Advanced Excel (Pivot, XLOOKUP)</span>
+                <span>96%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 96%; background: linear-gradient(90deg, #107c41, #38bdf8);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-server" style="color: #00d2ff;"></i> WMS (Warehouse Mgmt System)</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 95%; background: linear-gradient(90deg, #107c41, #38bdf8);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-database" style="color: #9d4edd;"></i> ERP & Database Stok (SAP/Odoo)</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 90%; background: linear-gradient(90deg, #107c41, #38bdf8);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-barcode" style="color: #ffb703;"></i> Barcode & RFID Verification</span>
+                <span>94%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 94%; background: linear-gradient(90deg, #107c41, #38bdf8);"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Warehouse Operations -->
+        <div class="skill-category-card glass-card">
+          <div class="skill-category-header">
+            <i class="fa-solid fa-warehouse" style="color: #f59e0b;"></i>
+            <h3>Operasional & SOP</h3>
+          </div>
+          <div class="skill-items-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-truck-ramp-box" style="color: #f05032;"></i> Inbound & Outbound Handling</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 92%; background: linear-gradient(90deg, #f59e0b, #ec4899);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-layer-group" style="color: #2496ed;"></i> ABC Analysis & Slotting Layout</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 92%; background: linear-gradient(90deg, #f59e0b, #ec4899);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-chart-pie" style="color: #fcc624;"></i> Safety Stock & ROP Optimization</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 90%; background: linear-gradient(90deg, #f59e0b, #ec4899);"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name"><i class="fa-solid fa-list-check" style="color: #10b981;"></i> Standard Operating Procedure (SOP)</span>
+                <span>95%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 95%; background: linear-gradient(90deg, #f59e0b, #ec4899);"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Featured Case Studies & Projects Section
+       ======================================================================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="color: #6366f1; border-color: rgba(99, 102, 241, 0.3); background: rgba(99, 102, 241, 0.1);">
+          <i class="fa-solid fa-trophy"></i> Rekam Jejak & Proyek
+        </span>
+        <h2 class="section-title">Studi Kasus & Pencapaian Inventory</h2>
+        <p class="section-subtitle">
+          Implementasi nyata dalam meningkatkan akurasi stok, memimpin Stock Opname berskala puluhan ribu SKU, dan optimalisasi alur gudang.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="projects-filter-bar" id="projects-filter-bar">
+        <button class="filter-btn active" data-filter="all">Semua Pencapaian</button>
+        <button class="filter-btn" data-filter="accuracy">Akurasi Stok</button>
+        <button class="filter-btn" data-filter="opname">Stock Opname</button>
+        <button class="filter-btn" data-filter="process">Optimalisasi Proses</button>
+        <button class="filter-btn" data-filter="reconciliation">Rekonsiliasi & Audit</button>
+      </div>
+
+      <!-- Projects Grid Container -->
+      <div class="projects-grid" id="projects-grid-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Interactive Feature: Inventory Studio
+       ======================================================================== -->
+  <section id="inventory-studio-section" class="notejs-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="color: #06b6d4; border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.1);">
+          <i class="fa-solid fa-boxes-stacked"></i> Live Interactive Feature
+        </span>
+        <h2 class="section-title">Inventory & Stock Audit Studio</h2>
+        <p class="section-subtitle">
+          Workspace interaktif untuk mencatat log Stock Opname, checklist audit discrepancy, dan template SOP inventory secara realtime.
+        </p>
+      </div>
+
+      <div class="notejs-studio-container">
+        <!-- Header Bar -->
+        <div class="notejs-header-bar">
+          <div class="notejs-title-group">
+            <i class="fa-solid fa-clipboard-list notejs-brand-icon" style="color: #10b981;"></i>
+            <div>
+              <h3 style="font-size: 1.25rem;">Inventory Log & SOP Workspace</h3>
+              <p style="font-size: 0.82rem; color: var(--text-muted);">Kelola log audit, catatan selisih stok, dan rumus kontrol gudang</p>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span class="notejs-sync-indicator" id="notejs-sync-status">
+              <i class="fa-solid fa-shield-halved"></i> Data Storage Aktif
+            </span>
+            <button class="btn btn-secondary btn-sm" id="export-notes-btn" title="Ekspor Log ke File JSON">
+              <i class="fa-solid fa-file-export"></i> Ekspor Log Data
+            </button>
+          </div>
+        </div>
+
+        <!-- Studio Grid Layout -->
+        <div class="notejs-studio-grid">
+          <!-- Left: Create Form -->
+          <div class="note-creator-panel glass-card">
+            <h3><i class="fa-solid fa-pen-to-square" style="color: #10b981;"></i> Tambah Catatan Audit / SOP</h3>
+
+            <form id="note-create-form">
+              <div class="form-group">
+                <label for="note-title-input">Judul Log / Topik Audit</label>
+                <input type="text" id="note-title-input" class="form-input" placeholder="Misal: Hasil Cycle Count Rak B-04..." required />
+              </div>
+
+              <div class="form-row-dual">
+                <div class="form-group">
+                  <label for="note-tag-input">Kategori</label>
+                  <input type="text" id="note-tag-input" class="form-input" placeholder="Stock Opname, Discrepancy, SOP..." />
+                </div>
+                <div class="form-group">
+                  <label for="note-type-input">Format</label>
+                  <select id="note-type-input" class="form-select">
+                    <option value="markdown">Markdown & Checklist</option>
+                    <option value="code">Rumus / Formula Excel</option>
+                    <option value="text">Catatan Biasa</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row-dual">
+                <div class="form-group">
+                  <label for="note-lang-input">Tipe Format Data</label>
+                  <select id="note-lang-input" class="form-select">
+                    <option value="text">Teks Deskriptif</option>
+                    <option value="sql">Formula / Query Log</option>
+                    <option value="json">Format JSON / Tabel</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="justify-content: flex-end; padding-bottom: 0.5rem;">
+                  <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; text-transform: none;">
+                    <input type="checkbox" id="note-pinned-input" style="accent-color: #10b981;" />
+                    <span>Sematkan di Atas (Pin)</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="note-content-input">Detail Hasil Audit / Langkah SOP</label>
+                <textarea id="note-content-input" class="form-textarea" placeholder="Tuliskan temuan audit, data selisih fisik vs WMS, atau prosedur SOP di sini..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem; background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+                <i class="fa-solid fa-plus"></i> Simpan Catatan Audit
+              </button>
+            </form>
+          </div>
+
+          <!-- Right: Notes List & Explorer -->
+          <div class="notes-explorer-panel">
+            <!-- Search & Filter Toolbar -->
+            <div class="notes-search-toolbar">
+              <div class="search-input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="notes-search-box" class="form-input" placeholder="Cari catatan berdasarkan judul, tag, atau isi..." />
+              </div>
+              <span id="notes-total-count" style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); white-space: nowrap;">
+                3 Catatan
+              </span>
+            </div>
+
+            <!-- Tags Filter Bar -->
+            <div class="note-tags-filter-bar" id="note-tags-filter-group">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Cards Container -->
+            <div class="notes-cards-container" id="notes-cards-list">
+              <!-- Rendered dynamically by notes-module.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Experience & Career Timeline
+       ======================================================================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.1);">
+          <i class="fa-solid fa-briefcase"></i> Pengalaman Kerja
+        </span>
+        <h2 class="section-title">Perjalanan Karir Profesional</h2>
+        <p class="section-subtitle">
+          Rekam jejak kontribusi di perusahaan terkemuka dalam menjaga keandalan stok dan kelancaran rantai pasok.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Experience 1: BeautyHaul -->
+        <div class="timeline-item">
+          <div class="timeline-node" style="border-color: #10b981; box-shadow: 0 0 10px #10b981;"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-period" style="color: #10b981;">Pengalaman Profesional</span>
+            <h3 class="timeline-role">Inventory Control & Stock Accuracy Specialist</h3>
+            <h4 class="timeline-company" style="color: #06b6d4;"><i class="fa-solid fa-building"></i> PT Beauty Haul Indonesia (BeautyHaul Group)</h4>
+            <p class="timeline-desc">
+              Bertanggung jawab penuh atas keandalan dan akurasi total inventaris puluhan ribu SKU kosmetik & skincare di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin, menerapkan pengawasan ketat FEFO (First-Expired, First-Out), rekonsiliasi data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level <strong>99.8%+</strong> sesuai target KPI manajemen.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience 2: Kirin Dinamika -->
+        <div class="timeline-item">
+          <div class="timeline-node" style="border-color: #06b6d4; box-shadow: 0 0 10px #06b6d4;"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-period" style="color: #06b6d4;">Pengalaman Profesional</span>
+            <h3 class="timeline-role">Inventory Specialist & Stock Opname Lead</h3>
+            <h4 class="timeline-company" style="color: #10b981;"><i class="fa-solid fa-building"></i> PT Kirin Dinamika Sentosa</h4>
+            <p class="timeline-desc">
+              Mengelola pengendalian inventaris barang, merancang jadwal dan memimpin pelaksanaan Wall-to-Wall Stock Opname berkala. Melakukan audit ketat pada proses Inbound receiving dan Outbound dispatch, berhasil menurunkan selisih varians stok (*shrinkage*) hingga mendekati 0.05%, serta menyempurnakan penataan slotting rak gudang.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Contact Section
+       ======================================================================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" style="color: #10b981; border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.1);">
+          <i class="fa-regular fa-envelope"></i> Hubungi Saya
+        </span>
+        <h2 class="section-title">Mari Berdiskusi & Berkolaborasi</h2>
+        <p class="section-subtitle">
+          Tertarik merekrut atau berdiskusi seputar peningkatan akurasi pergudangan dan manajemen stok? Silakan hubungi saya.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-card glass-card">
+          <h3>Informasi Kontak</h3>
+          <p>
+            Saya selalu terbuka untuk mendiskusikan peluang karir penuh waktu, konsultasi optimalisasi proses pergudangan, maupun audit inventaris.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method-item">
+              <div class="contact-method-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3);"><i class="fa-regular fa-envelope"></i></div>
+              <div class="contact-method-text">
+                <span>Email Langsung</span>
+                <strong class="profile-email">contact.inventory.pro@gmail.com</strong>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon" style="color: #06b6d4; background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.3);"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-method-text">
+                <span>Lokasi Kerja</span>
+                <strong class="profile-location">Jakarta & Sekitarnya, Indonesia</strong>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3);"><i class="fa-solid fa-award"></i></div>
+              <div class="contact-method-text">
+                <span>Target KPI</span>
+                <strong>Stock Accuracy 99.8%+ & Zero Shrinkage</strong>
+              </div>
+            </div>
+          </div>
+
+          <h4 style="font-size: 0.95rem; margin-bottom: 1rem; color: var(--text-secondary);">Terhubung Profesional:</h4>
+          <div class="social-links-row">
+            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:contact.inventory.pro@gmail.com" class="social-btn" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <button class="social-btn open-resume-btn" title="Lihat Profil Resume"><i class="fa-regular fa-file-pdf"></i></button>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card glass-card">
+          <h3 style="margin-bottom: 1.5rem;">Kirimkan Pesan</h3>
+
+          <form id="portfolio-contact-form" class="contact-form">
+            <div class="form-row-dual">
+              <div class="form-group">
+                <label for="contact-name">Nama Lengkap / Perusahaan</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Nama Anda / HRD / Manajemen" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Alamat Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="email@perusahaan.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subjek Pesan</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="Tawaran Posisi / Diskusi Inventory Management" />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Isi Pesan</label>
+              <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Tuliskan detail tawaran kerja atau kebutuhan audit stok gudang Anda..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+              <i class="fa-regular fa-paper-plane"></i> Kirim Pesan
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="nav-brand">
+        <div class="nav-logo-badge" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <span>INVENTORY.<span class="gradient-text">PRO</span></span>
+      </div>
+
+      <p class="footer-copy">
+        &copy; 2026 Portofolio Profesional <strong>Inventory Control & Stock Accuracy Specialist</strong>.
+      </p>
+
+      <div class="social-links-row">
+        <a href="#hero" class="social-btn" title="Kembali ke Atas"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Modal: Resume / CV Preview
+       ======================================================================== -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close-btn modal-close-trigger" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-glass);">
+        <div class="nav-logo-badge" style="width: 48px; height: 48px; font-size: 1.5rem; background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
+          <i class="fa-solid fa-user-check"></i>
+        </div>
+        <div>
+          <h2 style="font-size: 1.4rem;">Inventory Control Specialist</h2>
+          <p style="color: var(--accent-tertiary); font-size: 0.9rem;">Stock Accuracy, Cycle Count & Warehouse Management Professional</p>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.2rem; font-size: 0.92rem; color: var(--text-secondary);">
+        <div>
+          <h4 style="color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fa-solid fa-user-tie"></i> Ringkasan Profil</h4>
+          <p>Profesional Inventory Control dengan pengalaman teruji di <strong>PT Beauty Haul Indonesia</strong> dan <strong>PT Kirin Dinamika Sentosa</strong> dalam menjaga keakuratan stok inventaris (Stock Accuracy Rate 99.8%+), memimpin pelaksanaan Stock Opname berkala, dan mengoptimalkan SOP gudang Inbound/Outbound.</p>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fa-solid fa-building"></i> Riwayat Pengalaman Kerja</h4>
+          <p><strong>1. PT Beauty Haul Indonesia (BeautyHaul Group)</strong> — <em>Inventory Control & Stock Accuracy Specialist</em><br/>
+          Mengelola akurasi stok omnichannel (online e-commerce & retail), pengawasan FIFO/FEFO produk kecantikan, dan penyelesaian selisih WMS.<br/><br/>
+          <strong>2. PT Kirin Dinamika Sentosa</strong> — <em>Inventory Specialist & Stock Opname Lead</em><br/>
+          Memimpin Stock Opname berkala puluhan ribu SKU barang, audit Inbound/Outbound, dan minimalisasi shrinkage hingga < 0.05%.</p>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-primary); margin-bottom: 0.3rem;"><i class="fa-solid fa-list-check"></i> Kompetensi Teknis</h4>
+          <p><strong>Inventory Methods:</strong> Cycle Count, Wall-to-Wall Stock Opname, ABC Analysis, FIFO/FEFO Control, RCA 5-Why.<br/>
+          <strong>Software & Tools:</strong> WMS (Warehouse Management System), ERP (SAP / Odoo), Advanced Excel (Pivot, XLOOKUP, Automation), Barcode/RFID Flow.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; display: flex; justify-content: flex-end; gap: 1rem;">
+        <button class="btn btn-secondary modal-close-trigger">Tutup</button>
+        <button class="btn btn-primary" onclick="window.print()" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);"><i class="fa-solid fa-print"></i> Cetak / Simpan PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/notes-module.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

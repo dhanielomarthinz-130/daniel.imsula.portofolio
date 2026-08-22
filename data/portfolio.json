@@ -1,0 +1,160 @@
+{
+  "profile": {
+    "name": "Inventory Specialist",
+    "role": "Inventory Control & Stock Accuracy Specialist",
+    "tagline": "Menciptakan akurasi inventaris maksimal (99.8%+), efisiensi proses gudang, dan rekonsiliasi stok tanpa selisih.",
+    "status": "Tersedia untuk Peluang Karir & Konsultasi Inventory",
+    "location": "Jakarta & Sekitarnya, Indonesia",
+    "email": "contact.inventory.pro@gmail.com",
+    "linkedin": "https://linkedin.com",
+    "phone": "+62 812-XXXX-XXXX",
+    "stockAccuracy": "99.8%",
+    "skusManaged": "50,000+",
+    "shrinkageReduction": "-85%",
+    "opnameSuccessRate": "100%"
+  },
+  "about": {
+    "summary": "Profesional Inventory Control dan Warehouse Management berdedikasi dengan rekam jejak terbukti dalam meningkatkan Stock Accuracy hingga level maksimal sesuai target KPI perusahaan di PT Beauty Haul Indonesia dan PT Kirin Dinamika Sentosa. Berpengalaman mendalam dalam manajemen Cycle Count, Stock Opname terstruktur, pengendalian selisih (discrepancy & shrinkage), optimasi WMS/ERP, serta implementasi SOP FIFO/FEFO untuk industri FMCG, Beauty/Skincare, dan Manufaktur.",
+    "highlights": [
+      {
+        "title": "Akurasi Stok Maksimal (99.8%+)",
+        "description": "Menjalankan metodologi Cycle Count harian/mingguan dan rekonsiliasi data fisik vs sistem (WMS/ERP) untuk memastikan akurasi data inventaris mendekati sempurna."
+      },
+      {
+        "title": "Optimalisasi Proses & Alur Gudang",
+        "description": "Menyempurnakan Standard Operating Procedure (SOP) Inbound, Putaway, Storing, Picking, Packing, hingga Outbound guna meminimalkan human error dan bottleneck."
+      },
+      {
+        "title": "Investigasi Discrepancy & Loss Prevention",
+        "description": "Melakukan Root Cause Analysis pada setiap ketidaksesuaian stok, meminimalisir shrinkage (kehilangan/kerusakan), dan menjaga kontrol tanggal kadaluarsa (FEFO/FIFO)."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Core Inventory & Auditing",
+      "items": [
+        { "name": "Stock Accuracy & Reconciliation", "level": 99, "icon": "fa-solid fa-bullseye", "color": "#10b981" },
+        { "name": "Cycle Count & Stock Opname", "level": 98, "icon": "fa-solid fa-clipboard-check", "color": "#06b6d4" },
+        { "name": "Discrepancy & Root Cause Analysis", "level": 96, "icon": "fa-solid fa-magnifying-glass-chart", "color": "#6366f1" },
+        { "name": "FIFO / FEFO & Expiry Control", "level": 95, "icon": "fa-solid fa-boxes-packing", "color": "#f59e0b" },
+        { "name": "ABC Analysis & Velocity Profiling", "level": 92, "icon": "fa-solid fa-arrow-down-wide-short", "color": "#ec4899" }
+      ]
+    },
+    {
+      "category": "Systems & Data Analysis",
+      "items": [
+        { "name": "WMS (Warehouse Management System)", "level": 95, "icon": "fa-solid fa-server", "color": "#00d2ff" },
+        { "name": "ERP & Inventory Database (SAP / Odoo)", "level": 90, "icon": "fa-solid fa-database", "color": "#9d4edd" },
+        { "name": "Advanced Microsoft Excel (Pivot, XLOOKUP)", "level": 96, "icon": "fa-solid fa-file-excel", "color": "#107c41" },
+        { "name": "Barcode Scanning & RFID Flow", "level": 94, "icon": "fa-solid fa-barcode", "color": "#ffb703" },
+        { "name": "Inventory Dashboard & KPI Reporting", "level": 92, "icon": "fa-solid fa-chart-line", "color": "#38bdf8" }
+      ]
+    },
+    {
+      "category": "Warehouse Operations & Compliance",
+      "items": [
+        { "name": "Inbound & Outbound Logistics", "level": 92, "icon": "fa-solid fa-truck-ramp-box", "color": "#f05032" },
+        { "name": "Storage Layout & Space Optimization", "level": 90, "icon": "fa-solid fa-warehouse", "color": "#2496ed" },
+        { "name": "Safety Stock & ROP Management", "level": 88, "icon": "fa-solid fa-cubes-stacked", "color": "#fcc624" },
+        { "name": "Standard Operating Procedure (SOP)", "level": 95, "icon": "fa-solid fa-list-check", "color": "#10b981" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "inv-1",
+      "title": "BeautyHaul Omnichannel Stock Accuracy Transformation",
+      "category": "accuracy",
+      "badge": "PT Beauty Haul Indonesia",
+      "description": "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel (E-commerce + Offline Store), berhasil menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat FEFO produk kosmetik.",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["Cycle Count", "FEFO Control", "WMS Sync", "Omnichannel", "Excel Dashboard"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "Akurasi 99.85% • Zero Expired Discrepancy"
+    },
+    {
+      "id": "inv-2",
+      "title": "High-Volume Stock Opname & Discrepancy Elimination",
+      "category": "opname",
+      "badge": "PT Kirin Dinamika Sentosa",
+      "description": "Memimpin eksekusi Wall-to-Wall Stock Opname untuk puluhan ribu SKU barang manufaktur/distribusi, menurunkan selisih varians stok (shrinkage) hingga di bawah 0.05% dari nilai aset.",
+      "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["Stock Opname", "Variance Investigation", "Barcode Audit", "Shrinkage Control"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "Varians < 0.05% • 100% Selesai Tepat Waktu"
+    },
+    {
+      "id": "inv-3",
+      "title": "Root Cause Analysis & Loss Prevention Framework",
+      "category": "reconciliation",
+      "badge": "Process Improvement",
+      "description": "Perancangan matriks audit selisih barang (investigasi selisih picking, return barang, salah lokasi putaway, hingga human error sistem), menghasilkan mitigasi kehilangan hingga 85%.",
+      "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["RCA 5-Why", "Loss Prevention", "Putaway Audit", "Excel Power Query"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "-85% Stock Loss • 100% Traceability"
+    },
+    {
+      "id": "inv-4",
+      "title": "ABC Analysis & Fast-Moving Layout Optimization",
+      "category": "process",
+      "badge": "Warehouse Efficiency",
+      "description": "Reorganisasi denah gudang berdasarkan kecepatan perputaran barang (Fast, Medium, Slow Moving), mempercepat waktu picking 35% dan mengurangi kesalahan letak barang (*misplacement*).",
+      "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["ABC Analysis", "Layout Racking", "Picking Path", "Slotting"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "+35% Picking Speed • Minimalisir Salah Lokasi"
+    },
+    {
+      "id": "inv-5",
+      "title": "Expired & Slow-Moving Stock Mitigation Protocol",
+      "category": "process",
+      "badge": "BeautyHaul Quality Control",
+      "description": "Sistem peringatan dini (Early Warning System) untuk produk kosmetik mendekati masa kadaluarsa (6-12 bulan), mencegah timbulnya deadstock dan memaksimalkan perputaran aset.",
+      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["FEFO Matrix", "Aging Report", "Batch Number Tracking", "WMS"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "Zero Deadstock • 100% Batch Tracking"
+    },
+    {
+      "id": "inv-6",
+      "title": "Automated Stock Opname Reconciliation Template",
+      "category": "reconciliation",
+      "badge": "Excel & Automation",
+      "description": "Pembuatan template rekonsiliasi cerdas berbasis Advanced Excel (XLOOKUP, Dynamic Array, Pivot Table) yang memproses ribuan baris data hitung fisik vs WMS dalam hitungan menit.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["Advanced Excel", "Data Reconciliation", "Automation", "Variance Log"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "Rekonsiliasi 5x Lebih Cepat • 0% Formula Error"
+    }
+  ],
+  "experience": [
+    {
+      "period": "Pengalaman Profesional",
+      "role": "Inventory Control & Stock Accuracy Specialist",
+      "company": "PT Beauty Haul Indonesia (BeautyHaul Group)",
+      "description": "Bertanggung jawab atas akurasi total inventaris ribuan SKU produk kecantikan & perawatan kulit di gudang pusat dan multi-channel fulfillment. Memimpin Cycle Count rutin, pengawasan FIFO/FEFO ketat, investigasi selisih sistem vs fisik di WMS, serta mempertahankan Stock Accuracy rate konsisten di angka 99.8% sesuai target KPI manajemen."
+    },
+    {
+      "period": "Pengalaman Profesional",
+      "role": "Inventory Specialist & Stock Opname Lead",
+      "company": "PT Kirin Dinamika Sentosa",
+      "description": "Mengelola pengendalian stok barang, perancangan jadwal Stock Opname berkala, audit penerimaan barang (Inbound) dan pengiriman (Outbound). Berhasil menurunkan discrepancy varians stok hingga mendekati nol, menyusun SOP handling material, dan mengoptimalkan penataan racking gudang."
+    }
+  ],
+  "education": [
+    {
+      "period": "Pendidikan & Sertifikasi",
+      "degree": "Spesialisasi Supply Chain & Inventory Management",
+      "institution": "Pendidikan Tinggi & Pelatihan Profesional Inventory Control",
+      "description": "Fokus pada Warehouse Management System (WMS), Cycle Counting Methodology, Lean Inventory, Inventory Accounting, and Discrepancy Prevention."
+    }
+  ]
+}
