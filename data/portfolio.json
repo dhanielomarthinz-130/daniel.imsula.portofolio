@@ -58,9 +58,9 @@
     {
       "category": "Data & Warehouse Systems",
       "items": [
-        { "name": "Backend System Automation (Zero Excel)", "level": 98, "icon": "fa-solid fa-code", "color": "#10b981" },
-        { "name": "WMS (Warehouse Management System)", "level": 95, "icon": "fa-solid fa-database", "color": "#00d2ff" },
-        { "name": "ERP & Database Stok (SAP / Odoo)", "level": 90, "icon": "fa-solid fa-layer-group", "color": "#9d4edd" },
+        { "name": "Warehouse Backend System Automation", "level": 98, "icon": "fa-solid fa-code", "color": "#10b981" },
+        { "name": "WMS & Custom Inventory Database", "level": 95, "icon": "fa-solid fa-database", "color": "#00d2ff" },
+        { "name": "Inventory Discrepancy & Traceability Engine", "level": 94, "icon": "fa-solid fa-layer-group", "color": "#9d4edd" },
         { "name": "Inbound & Outbound Handling", "level": 93, "icon": "fa-solid fa-truck-ramp-box", "color": "#f05032" },
         { "name": "Standard Operating Procedure (SOP)", "level": 95, "icon": "fa-solid fa-list-check", "color": "#10b981" }
       ]
@@ -165,7 +165,8 @@
       "role": "Inventory Controller - Associate",
       "period": "Maret 2022 – Agustus 2026",
       "employmentType": "Permanent",
-      "description": "Bertanggung jawab atas akurasi total inventaris puluhan ribu SKU produk Somethinc & Beautyhaul di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin harian/mingguan, pengawasan ketat sistem FEFO/FIFO produk kosmetik, rekonsiliasi otomatis data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level 99.8%+ sesuai target KPI perusahaan."
+      "award": "Sertifikat 'The Best Admin Excentric'",
+      "description": "Menerima Penghargaan Sertifikat 'The Best Admin Excentric' atas pencapaian dedikasi dan performa administrasi & kontrol stok terbaik. Bertanggung jawab atas akurasi total inventaris puluhan ribu SKU produk Somethinc & Beautyhaul di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin harian/mingguan, pengawasan ketat sistem FEFO/FIFO produk kosmetik, rekonsiliasi otomatis data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level 99.8%+ sesuai target KPI perusahaan."
     },
     {
       "company": "PT Aditya Manufaktur Indonesia",
