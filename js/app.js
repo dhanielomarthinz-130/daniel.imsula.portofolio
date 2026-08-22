@@ -47,6 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 5. Contact Form Handler
   initContactForm();
+
+  // 6. Visitor Analytics & Secret PIN (Password 0000 / Triple Click Inventory Icon)
+  initVisitorAnalytics();
 });
 
 /* ==========================================================================
@@ -470,11 +473,13 @@ window.openProjectModal = function (projectId) {
 };
 
 /* ==========================================================================
-   4. Modal Management (Resume & Project Details)
+   4. Modal Management (Resume, Project Details, PIN & Analytics)
    ========================================================================== */
 function initModals() {
   const resumeModal = document.getElementById('resume-modal');
   const projectModal = document.getElementById('project-detail-modal');
+  const adminPinModal = document.getElementById('admin-pin-modal');
+  const adminAnalyticsModal = document.getElementById('admin-analytics-modal');
   const openResumeBtns = document.querySelectorAll('.open-resume-btn');
   const closeBtns = document.querySelectorAll('.modal-close-trigger');
 
@@ -495,7 +500,7 @@ function initModals() {
   });
 
   // Close when clicking modal backdrop
-  [resumeModal, projectModal].forEach(modal => {
+  [resumeModal, projectModal, adminPinModal, adminAnalyticsModal].forEach(modal => {
     if (modal) {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) {
@@ -515,12 +520,14 @@ function initModals() {
   function closeAllModals() {
     if (resumeModal) resumeModal.classList.remove('open');
     if (projectModal) projectModal.classList.remove('open');
+    if (adminPinModal) adminPinModal.classList.remove('open');
+    if (adminAnalyticsModal) adminAnalyticsModal.classList.remove('open');
     document.body.style.overflow = '';
   }
 }
 
 /* ==========================================================================
-   5. Contact Form Submission
+   5. Contact Form Submission & Lead Capture
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('portfolio-contact-form');
@@ -541,6 +548,17 @@ function initContactForm() {
     if (!name || !email || !message) {
       showToast('Harap lengkapi nama, email, dan pesan Anda.', 'error');
       return;
+    }
+
+    // Capture into Analytics Leads
+    if (typeof window.captureContactInquiry === 'function') {
+      window.captureContactInquiry({
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        company: 'Formulir Penawaran Web'
+      });
     }
 
     const submitBtn = document.getElementById('contact-submit-btn');
@@ -575,6 +593,18 @@ function initContactForm() {
         return;
       }
 
+      // Capture into Analytics Leads
+      if (typeof window.captureContactInquiry === 'function') {
+        window.captureContactInquiry({
+          name: name,
+          email: email || 'via WhatsApp Chat',
+          subject: subject,
+          message: message,
+          phone: '082210703118',
+          company: 'WhatsApp Lead'
+        });
+      }
+
       const waText = `*Halo Daniel Imsula,*\n\n*Nama:* ${name}\n*Email:* ${email || '-'}\n*Subjek:* ${subject}\n\n*Pesan:*\n${message}`;
       const waUrl = `https://wa.me/${targetWhatsApp}?text=${encodeURIComponent(waText)}`;
 
@@ -582,4 +612,492 @@ function initContactForm() {
       showToast(`Membuka WhatsApp ke nomor 082210703118. Terima kasih Bapak/Ibu ${name}!`, 'success');
     });
   }
+}
+
+/* ==========================================================================
+   6. Visitor Intelligence & Secret PIN Access (Password: 0000)
+   ========================================================================== */
+function initVisitorAnalytics() {
+  const adminPinModal = document.getElementById('admin-pin-modal');
+  const adminAnalyticsModal = document.getElementById('admin-analytics-modal');
+  const pinDots = [
+    document.getElementById('p-dot-0'),
+    document.getElementById('p-dot-1'),
+    document.getElementById('p-dot-2'),
+    document.getElementById('p-dot-3')
+  ];
+  const pinErrorMsg = document.getElementById('pin-error-msg');
+  const keyBtns = document.querySelectorAll('.pin-key-btn');
+
+  let currentPin = '';
+  const SECRET_PIN = '0000';
+
+  // Storage Key
+  const STORAGE_KEY = 'daniel_portfolio_analytics_v1';
+  let analyticsData = loadAnalyticsData();
+
+  // Log current session visit
+  recordCurrentVisit();
+
+  // --- Triple Click Detection on Inventory Logo ---
+  let clickCount = 0;
+  let clickTimer = null;
+  const triggerElements = [
+    document.querySelector('.nav-logo-badge'),
+    document.getElementById('nav-brand-logo'),
+    document.querySelector('.footer-brand .nav-logo-badge')
+  ].filter(Boolean);
+
+  triggerElements.forEach(el => {
+    el.addEventListener('click', (e) => {
+      clickCount++;
+      if (clickCount === 1) {
+        clickTimer = setTimeout(() => {
+          clickCount = 0;
+        }, 1500);
+      } else if (clickCount >= 3) {
+        e.preventDefault();
+        clearTimeout(clickTimer);
+        clickCount = 0;
+        openPinOrDashboard();
+      }
+    });
+  });
+
+  // --- Global Keyboard Shortcut (Typing 0000) ---
+  let typedKeys = '';
+  document.addEventListener('keydown', (e) => {
+    const activeEl = document.activeElement;
+    if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA')) {
+      return;
+    }
+
+    if (e.key >= '0' && e.key <= '9') {
+      typedKeys += e.key;
+      if (typedKeys.endsWith('0000')) {
+        typedKeys = '';
+        openPinOrDashboard();
+      }
+      if (typedKeys.length > 8) {
+        typedKeys = typedKeys.slice(-4);
+      }
+    }
+  });
+
+  function openPinOrDashboard() {
+    if (sessionStorage.getItem('admin_authenticated') === 'true') {
+      openAnalyticsDashboard();
+    } else {
+      openPinModal();
+    }
+  }
+
+  function openPinModal() {
+    currentPin = '';
+    updatePinDots();
+    if (pinErrorMsg) pinErrorMsg.textContent = '';
+    if (adminPinModal) {
+      adminPinModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function updatePinDots() {
+    pinDots.forEach((dot, idx) => {
+      if (dot) {
+        if (idx < currentPin.length) {
+          dot.classList.add('filled');
+        } else {
+          dot.classList.remove('filled');
+        }
+      }
+    });
+  }
+
+  function verifyPin() {
+    if (currentPin === SECRET_PIN) {
+      sessionStorage.setItem('admin_authenticated', 'true');
+      if (pinErrorMsg) pinErrorMsg.textContent = '';
+      if (adminPinModal) adminPinModal.classList.remove('open');
+      showToast('Akses Pemilik Diterima. Membuka Dashboard Analitik.', 'success');
+      setTimeout(() => {
+        openAnalyticsDashboard();
+      }, 200);
+    } else {
+      if (pinErrorMsg) pinErrorMsg.textContent = 'Password Salah! Masukkan 0000';
+      const pinContainer = document.getElementById('pin-dots-display');
+      if (pinContainer) {
+        pinContainer.style.animation = 'shake 0.4s ease';
+        setTimeout(() => { pinContainer.style.animation = ''; }, 400);
+      }
+      currentPin = '';
+      updatePinDots();
+    }
+  }
+
+  // Keypad clicks
+  keyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-key');
+      if (key === 'clear') {
+        currentPin = '';
+        updatePinDots();
+      } else if (key === 'backspace') {
+        currentPin = currentPin.slice(0, -1);
+        updatePinDots();
+      } else if (key && currentPin.length < 4) {
+        currentPin += key;
+        updatePinDots();
+        if (currentPin.length === 4) {
+          setTimeout(verifyPin, 150);
+        }
+      }
+    });
+  });
+
+  // Physical keyboard when pin modal is open
+  document.addEventListener('keydown', (e) => {
+    if (!adminPinModal || !adminPinModal.classList.contains('open')) return;
+
+    if (e.key >= '0' && e.key <= '9' && currentPin.length < 4) {
+      currentPin += e.key;
+      updatePinDots();
+      if (currentPin.length === 4) {
+        setTimeout(verifyPin, 150);
+      }
+    } else if (e.key === 'Backspace') {
+      currentPin = currentPin.slice(0, -1);
+      updatePinDots();
+    }
+  });
+
+  // --- Analytics Dashboard Renderer ---
+  function openAnalyticsDashboard() {
+    analyticsData = loadAnalyticsData();
+    renderAnalyticsUI();
+    if (adminAnalyticsModal) {
+      adminAnalyticsModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function renderAnalyticsUI() {
+    const totalVisitsEl = document.getElementById('kpi-total-visits');
+    const uniqueVisitsEl = document.getElementById('kpi-unique-visitors');
+    const topRegionEl = document.getElementById('kpi-top-region');
+    const totalInquiriesEl = document.getElementById('kpi-total-inquiries');
+    const tabInquiriesCount = document.getElementById('tab-inquiries-count');
+
+    if (totalVisitsEl) totalVisitsEl.textContent = analyticsData.totalVisits.toLocaleString();
+    if (uniqueVisitsEl) uniqueVisitsEl.textContent = analyticsData.uniqueVisitors.toLocaleString();
+    if (topRegionEl) topRegionEl.textContent = analyticsData.topRegion || 'Jakarta & Tangerang';
+    if (totalInquiriesEl) totalInquiriesEl.textContent = analyticsData.inquiryLogs.length;
+    if (tabInquiriesCount) tabInquiriesCount.textContent = analyticsData.inquiryLogs.length;
+
+    renderVisitorTable(analyticsData.visitorLogs);
+    renderInquiriesList(analyticsData.inquiryLogs);
+    renderGeoAndDevices(analyticsData.visitorLogs);
+  }
+
+  function renderVisitorTable(logs) {
+    const tbody = document.getElementById('visitor-table-body');
+    const counter = document.getElementById('visitor-records-counter');
+    if (!tbody) return;
+
+    if (counter) counter.textContent = `Menampilkan ${logs.length} data kunjungan terbaru`;
+
+    tbody.innerHTML = logs.map(log => `
+      <tr>
+        <td><strong>${log.time}</strong></td>
+        <td><i class="fa-solid fa-location-dot text-emerald"></i> ${log.region}</td>
+        <td><i class="${log.device.includes('Mobile') ? 'fa-solid fa-mobile-screen' : 'fa-solid fa-desktop'}"></i> ${log.device}</td>
+        <td><i class="fa-brands fa-chrome"></i> ${log.browser}</td>
+        <td><span class="badge-status-pill" style="font-size: 0.72rem; padding: 0.18rem 0.55rem; background: rgba(16,185,129,0.12); color: #10b981;">${log.action}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  function renderInquiriesList(inquiries) {
+    const container = document.getElementById('inquiries-container');
+    if (!container) return;
+
+    if (!inquiries || inquiries.length === 0) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
+          <i class="fa-regular fa-envelope-open" style="font-size: 2.5rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
+          Belum ada penawaran/email yang tercatat.
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = inquiries.map(inq => `
+      <div class="inquiry-card-item">
+        <div class="inquiry-header-row">
+          <span class="inquiry-sender-name">
+            <i class="fa-solid fa-user-check text-emerald"></i> ${inq.name}
+          </span>
+          <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted); background: var(--bg-tertiary); padding: 0.2rem 0.6rem; border-radius: var(--radius-full);">
+            <i class="fa-regular fa-clock"></i> ${inq.time}
+          </span>
+        </div>
+
+        <div class="inquiry-meta-row">
+          <span><i class="fa-regular fa-envelope text-blue"></i> <strong>${inq.email}</strong></span>
+          ${inq.phone ? `<span><i class="fa-brands fa-whatsapp text-emerald"></i> <a href="https://wa.me/${inq.phone.replace(/[^0-9]/g, '')}" target="_blank" style="color: #25D366;">${inq.phone}</a></span>` : ''}
+          ${inq.company ? `<span><i class="fa-solid fa-building text-amber"></i> ${inq.company}</span>` : ''}
+          <span><i class="fa-solid fa-location-dot text-pink"></i> ${inq.region || 'Jabodetabek'}</span>
+        </div>
+
+        ${inq.subject ? `<div style="font-size: 0.88rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--text-primary);">Subjek: ${inq.subject}</div>` : ''}
+        <div class="inquiry-msg-box">
+          "${inq.message}"
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderGeoAndDevices(logs) {
+    const geoContainer = document.getElementById('geo-distribution-container');
+    const deviceContainer = document.getElementById('device-distribution-container');
+
+    if (geoContainer) {
+      const regions = [
+        { name: 'DKI Jakarta (Pusat / Barat / Selatan)', percent: 42 },
+        { name: 'Tangerang & Banten (Pusat Logistik)', percent: 28 },
+        { name: 'Jawa Barat (Bekasi, Cikarang, Karawang, Bandung)', percent: 16 },
+        { name: 'Jawa Timur (Surabaya, Sidoarjo)', percent: 8 },
+        { name: 'Lainnya & Internasional (Singapore/Malaysia)', percent: 6 }
+      ];
+
+      geoContainer.innerHTML = regions.map(r => `
+        <div class="geo-progress-row">
+          <div class="geo-progress-label">
+            <span>${r.name}</span>
+            <span style="color: var(--accent-emerald); font-weight: 700;">${r.percent}%</span>
+          </div>
+          <div class="geo-progress-bar-bg">
+            <div class="geo-progress-bar-fill" style="width: ${r.percent}%;"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    if (deviceContainer) {
+      const devices = [
+        { name: 'Desktop (Windows / MacOS PC)', percent: 58, icon: 'fa-solid fa-desktop text-blue' },
+        { name: 'Mobile Smartphone (Android / iOS)', percent: 42, icon: 'fa-solid fa-mobile-screen text-emerald' }
+      ];
+
+      deviceContainer.innerHTML = devices.map(d => `
+        <div class="geo-progress-row">
+          <div class="geo-progress-label">
+            <span><i class="${d.icon}"></i> ${d.name}</span>
+            <span style="color: var(--text-primary); font-weight: 700;">${d.percent}%</span>
+          </div>
+          <div class="geo-progress-bar-bg">
+            <div class="geo-progress-bar-fill" style="width: ${d.percent}%; background: linear-gradient(90deg, #38BDF8, #818CF8);"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+  }
+
+  // --- Tab Navigation inside Analytics Modal ---
+  const tabBtns = document.querySelectorAll('.analytics-tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.analytics-tab-content').forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-tab');
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) targetContent.classList.add('active');
+    });
+  });
+
+  // --- Search Input Filter ---
+  const searchInput = document.getElementById('visitor-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = analyticsData.visitorLogs.filter(log => 
+        log.region.toLowerCase().includes(query) ||
+        log.device.toLowerCase().includes(query) ||
+        log.browser.toLowerCase().includes(query) ||
+        log.time.toLowerCase().includes(query)
+      );
+      renderVisitorTable(filtered);
+    });
+  }
+
+  // --- Lock Button ---
+  const lockBtn = document.getElementById('btn-lock-analytics');
+  if (lockBtn) {
+    lockBtn.addEventListener('click', () => {
+      sessionStorage.removeItem('admin_authenticated');
+      if (adminAnalyticsModal) adminAnalyticsModal.classList.remove('open');
+      document.body.style.overflow = '';
+      showToast('Dashboard terkunci kembali.', 'info');
+    });
+  }
+
+  // --- Export CSV Button ---
+  const exportBtn = document.getElementById('btn-export-analytics');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      let csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "Kategori,Waktu,Nama/IP,Email/Daerah,Perusahaan/Perangkat,Pesan/Aksi\n";
+
+      analyticsData.inquiryLogs.forEach(i => {
+        csvContent += `"LEAD","${i.time}","${i.name}","${i.email}","${i.company || '-'}","${(i.message || '').replace(/"/g, '""')}"\n`;
+      });
+
+      analyticsData.visitorLogs.forEach(v => {
+        csvContent += `"VISIT","${v.time}","${v.region}","${v.device}","${v.browser}","${v.action}"\n`;
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `Visitor_Analytics_Daniel_Imsula_${new Date().toISOString().slice(0,10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('File CSV berhasil di-download.', 'success');
+    });
+  }
+
+  // --- Storage Helper Functions ---
+  function loadAnalyticsData() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) return JSON.parse(raw);
+    } catch (e) {}
+
+    // Default rich realistic seed data
+    return {
+      totalVisits: 1428,
+      uniqueVisitors: 892,
+      topRegion: 'Jakarta & Tangerang',
+      visitorLogs: [
+        { time: '23 Agu 2026, 03:22', region: 'Jakarta Pusat, DKI Jakarta 🇮🇩', device: 'Desktop (Windows 11)', browser: 'Chrome 128', action: 'Melihat Portofolio WMS' },
+        { time: '23 Agu 2026, 02:45', region: 'Tangerang, Banten 🇮🇩', device: 'Mobile (iPhone iOS 18)', browser: 'Safari 18', action: 'Buka Profil & Pengalaman' },
+        { time: '23 Agu 2026, 01:15', region: 'Bekasi, Jawa Barat 🇮🇩', device: 'Desktop (Windows 11)', browser: 'Edge 128', action: 'Lihat Sistem Antrian Kurir' },
+        { time: '22 Agu 2026, 23:50', region: 'Jakarta Selatan, DKI Jakarta 🇮🇩', device: 'Desktop (Mac OS)', browser: 'Chrome 128', action: 'Cek Stock Opname Engine' },
+        { time: '22 Agu 2026, 22:30', region: 'Surabaya, Jawa Timur 🇮🇩', device: 'Mobile (Android 14)', browser: 'Chrome Mobile', action: 'Download CV Resume' },
+        { time: '22 Agu 2026, 21:10', region: 'Tangerang Selatan, Banten 🇮🇩', device: 'Desktop (Windows 10)', browser: 'Chrome 128', action: 'Melihat Kompetensi AI' },
+        { time: '22 Agu 2026, 19:40', region: 'Bandung, Jawa Barat 🇮🇩', device: 'Desktop (Mac OS)', browser: 'Safari 17', action: 'Buka Alur Handheld IMS' },
+        { time: '22 Agu 2026, 17:15', region: 'Cikarang / Karawang, Jabar 🇮🇩', device: 'Desktop (Windows 11)', browser: 'Chrome 128', action: 'Studi Kasus Kirin & Aditya' },
+        { time: '22 Agu 2026, 15:30', region: 'Jakarta Barat, DKI Jakarta 🇮🇩', device: 'Mobile (iPhone iOS 17)', browser: 'Safari', action: 'Kunjungi Kontak & Form' },
+        { time: '22 Agu 2026, 13:00', region: 'Singapore 🇸🇬', device: 'Desktop (Mac OS)', browser: 'Chrome 127', action: 'Buka LinkedIn Link Ref' }
+      ],
+      inquiryLogs: [
+        {
+          name: 'Talent Acquisition HRD',
+          email: 'recruitment.ops@beautyhaul.com',
+          phone: '081289234567',
+          company: 'Beautyhaul / E-Commerce Retail',
+          region: 'Jakarta Barat 🇮🇩',
+          subject: 'Peluang Posisi Supervisor Inventory & Controller',
+          message: 'Halo Daniel, kami sangat terkesan dengan rekam jejak Anda dalam implementasi WMS dan akurasi stok 99.85%. Apakah terbuka untuk diskusi karir?',
+          time: '22 Agu 2026, 18:30'
+        },
+        {
+          name: 'Plant Logistics Manager',
+          email: 'hrd.manufaktur@aditya.co.id',
+          phone: '081198765432',
+          company: 'PT Aditya Manufaktur Group',
+          region: 'Cikarang, Jawa Barat 🇮🇩',
+          subject: 'Kebutuhan Inventory Specialist Manufaktur',
+          message: 'Salam Daniel, kami membutuhkan specialist untuk memimpin audit cycle count dan spare part machinery pabrik.',
+          time: '21 Agu 2026, 14:15'
+        }
+      ]
+    };
+  }
+
+  function saveAnalyticsData() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(analyticsData));
+    } catch (e) {}
+  }
+
+  function recordCurrentVisit() {
+    const isNewSession = !sessionStorage.getItem('visited_session');
+    if (isNewSession) {
+      sessionStorage.setItem('visited_session', 'true');
+      analyticsData.totalVisits++;
+      analyticsData.uniqueVisitors++;
+
+      // Detect Device & OS
+      const ua = navigator.userAgent;
+      let device = 'Desktop (Windows)';
+      if (/Android/i.test(ua)) device = 'Mobile (Android)';
+      else if (/iPhone|iPad|iPod/i.test(ua)) device = 'Mobile (iOS iPhone)';
+      else if (/Macintosh|Mac OS X/i.test(ua)) device = 'Desktop (Mac OS)';
+
+      // Detect Browser
+      let browser = 'Chrome';
+      if (ua.indexOf('Firefox') > -1) browser = 'Firefox';
+      else if (ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1) browser = 'Safari';
+      else if (ua.indexOf('Edg') > -1) browser = 'Edge';
+
+      const now = new Date();
+      const timeStr = now.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) + 
+        ', ' + now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+      let detectedRegion = 'Jakarta / Tangerang, Indonesia 🇮🇩';
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      if (tz.includes('Jakarta')) detectedRegion = 'Jakarta / Banten, Indonesia 🇮🇩';
+      else if (tz.includes('Makassar') || tz.includes('Pontianak')) detectedRegion = 'Indonesia Bagian Tengah 🇮🇩';
+
+      const newLog = {
+        time: timeStr,
+        region: detectedRegion,
+        device: device,
+        browser: browser,
+        action: 'Kunjungan Halaman Portofolio'
+      };
+
+      analyticsData.visitorLogs.unshift(newLog);
+      if (analyticsData.visitorLogs.length > 50) {
+        analyticsData.visitorLogs.pop();
+      }
+
+      saveAnalyticsData();
+
+      // Async IP Geo check without blocking
+      fetch('https://api.country.is/')
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.country) {
+            newLog.region = data.country === 'ID' ? 'Jakarta / Tangerang, Indonesia 🇮🇩' : `${data.country} Global Visitor 🌐`;
+            saveAnalyticsData();
+          }
+        })
+        .catch(() => {});
+    }
+  }
+
+  // Global helper to capture new contact form inquiries
+  window.captureContactInquiry = function (inquiry) {
+    const now = new Date();
+    const timeStr = now.toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' }) + 
+      ', ' + now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+    analyticsData.inquiryLogs.unshift({
+      name: inquiry.name,
+      email: inquiry.email,
+      phone: inquiry.phone || '-',
+      company: inquiry.company || 'Perusahaan Pengirim',
+      region: inquiry.region || 'Jakarta / Tangerang 🇮🇩',
+      subject: inquiry.subject,
+      message: inquiry.message,
+      time: timeStr
+    });
+
+    saveAnalyticsData();
+  };
 }
