@@ -1,20 +1,6 @@
 {
-  "name": "developer-portfolio-nodejs",
+  "name": "portofolio-daniel-imsula",
   "version": "1.0.0",
-  "description": "Modern Developer Portfolio & Project Showcase with NoteJS Studio, built with Node.js and Vanilla Web Technologies",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
-  },
-  "keywords": [
-    "portfolio",
-    "nodejs",
-    "developer",
-    "notes-app",
-    "glassmorphism",
-    "showcase"
-  ],
-  "author": "Developer",
-  "license": "MIT"
+  "description": "Portofolio Profesional Daniel Imsula - Inventory Controller & Warehouse Specialist",
+  "private": true
 }
