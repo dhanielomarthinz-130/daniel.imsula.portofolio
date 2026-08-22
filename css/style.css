@@ -195,12 +195,14 @@ button {
 .gradient-text {
   background: var(--gradient-brand);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-accent {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -569,6 +571,7 @@ section {
   font-size: 5.5rem;
   background: var(--gradient-brand);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
 }
