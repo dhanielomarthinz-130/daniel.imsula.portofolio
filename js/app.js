@@ -96,20 +96,21 @@ function initThemeToggle() {
 }
 
 /* ==========================================================================
-   2. Typewriter Effect (Inventory Specialist)
+   2. Typewriter Effect (Inventory & Systems Specialist)
    ========================================================================== */
 function initTypewriter() {
   const typewriterElem = document.getElementById('typewriter-text');
   if (!typewriterElem) return;
 
   const words = [
+    'Creator of Handheld IMS & TMS',
     'Inventory Controller - Associate',
     'Somethinc - Beautyhaul (2022-2026)',
     'Aditya Manufaktur Indonesia (2015-2021)',
     'Supervisor & Warehouse Admin',
     'Kirin Dinamika Sentosa (2014-2015)',
-    'Stock Accuracy Specialist (99.8%+)',
-    'Cycle Count & Stock Opname Lead'
+    'Sameday Instant Queue System',
+    'Stock Accuracy Specialist (99.8%+)'
   ];
 
   let wordIndex = 0;
@@ -204,7 +205,7 @@ function initNavigation() {
 }
 
 /* ==========================================================================
-   4. Portfolio Data & Projects Filtering (Inventory Projects)
+   4. Portfolio Data & Projects Filtering (Inventory Projects & Systems)
    ========================================================================== */
 let allProjectsData = [];
 
@@ -222,19 +223,55 @@ async function initPortfolioData() {
     console.log('Using default embedded projects data.');
   }
 
-  // Default inventory projects
+  // Default inventory projects & systems
   setupDefaultProjects();
 }
 
 function setupDefaultProjects() {
   const defaultProjects = [
     {
+      id: "sys-ims",
+      title: "Handheld-Integrated Inventory Management System (IMS)",
+      category: "ims-tech",
+      badge: "Sistem Buatan Sendiri (Handheld IMS)",
+      description: "Merancang dan mengembangkan sistem Inventory Management System (IMS) terintegrasi untuk monitoring realtime, transaksi backend, serta kontrol pergerakan stok presisi yang dioperasikan langsung menggunakan perangkat Handheld Scanner (PDA/Barcode Scanner) di area gudang.",
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Handheld Scanner", "Backend Transaction", "Stock Monitoring", "Real-Time Sync", "Barcode Scanning"],
+      liveDemo: "#inventory-studio-section",
+      github: "#",
+      metrics: "Akurasi Stok 99.8%+ • Transaksi Handheld Realtime"
+    },
+    {
+      id: "sys-tms",
+      title: "Transportation Management System (TMS) & Driver Live Tracking",
+      category: "tms-logistics",
+      badge: "Sistem Buatan Sendiri (TMS Logistics)",
+      description: "Membangun Transportation Management System (TMS) untuk penjadwalan pengiriman (delivery scheduling), koordinasi antar driver, live tracking posisi armada secara realtime, serta modul pelaporan status pengiriman digital berbasis mobile bagi driver.",
+      image: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+      technologies: ["TMS Logistics", "Live Tracking GPS", "Delivery Scheduling", "Mobile Driver Report", "Fleet Dispatch"],
+      liveDemo: "#inventory-studio-section",
+      github: "#",
+      metrics: "100% Live Visibility • On-Time Delivery Terpantau"
+    },
+    {
+      id: "sys-queue",
+      title: "Sameday & Instant Courier Pickup Queue Management System",
+      category: "queue-system",
+      badge: "Sistem Buatan Sendiri (Queue System)",
+      description: "Mengembangkan sistem antrian serah-terima paket kurir instan dan sameday (Grab, GoSend, SPX, dll.) secara digital, mengeliminasi penumpukan antrian driver di area staging, dan mempercepat proses serah terima paket ke kurir secara drastis.",
+      image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Queue Management", "Sameday Logistics", "Instant Courier Flow", "Staging Dispatch", "Barcode Handover"],
+      liveDemo: "#inventory-studio-section",
+      github: "#",
+      metrics: "-70% Waktu Tunggu Driver • Zero Staging Bottleneck"
+    },
+    {
       id: "inv-1",
       title: "BeautyHaul & Somethinc Stock Accuracy Transformation",
       category: "accuracy",
       badge: "Somethinc - Beautyhaul",
       description: "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel (E-commerce + Offline Store), berhasil menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat FEFO produk kosmetik.",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
       technologies: ["Cycle Count", "FEFO Control", "WMS Sync", "Omnichannel", "Excel Dashboard"],
       liveDemo: "#inventory-studio-section",
       github: "#",
@@ -263,54 +300,6 @@ function setupDefaultProjects() {
       liveDemo: "#inventory-studio-section",
       github: "#",
       metrics: "Varians < 0.05% • 100% Selesai Tepat Waktu"
-    },
-    {
-      id: "inv-4",
-      title: "Root Cause Analysis & Loss Prevention Framework",
-      category: "reconciliation",
-      badge: "Loss Prevention",
-      description: "Perancangan matriks audit selisih barang (investigasi selisih picking, return barang, salah lokasi putaway, hingga human error sistem), menghasilkan mitigasi kehilangan hingga 85%.",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["RCA 5-Why", "Loss Prevention", "Putaway Audit", "Excel Power Query"],
-      liveDemo: "#inventory-studio-section",
-      github: "#",
-      metrics: "-85% Stock Loss • 100% Traceability"
-    },
-    {
-      id: "inv-4",
-      title: "ABC Analysis & Fast-Moving Layout Optimization",
-      category: "process",
-      badge: "Warehouse Efficiency",
-      description: "Reorganisasi denah gudang berdasarkan kecepatan perputaran barang (Fast, Medium, Slow Moving), mempercepat waktu picking 35% dan mengurangi kesalahan letak barang (*misplacement*).",
-      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
-      technologies: ["ABC Analysis", "Layout Racking", "Picking Path", "Slotting"],
-      liveDemo: "#inventory-studio-section",
-      github: "#",
-      metrics: "+35% Picking Speed • Minimalisir Salah Lokasi"
-    },
-    {
-      id: "inv-5",
-      title: "Expired & Slow-Moving Stock Mitigation Protocol",
-      category: "process",
-      badge: "BeautyHaul Quality Control",
-      description: "Sistem peringatan dini (Early Warning System) untuk produk kosmetik mendekati masa kadaluarsa (6-12 bulan), mencegah timbulnya deadstock dan memaksimalkan perputaran aset.",
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-      technologies: ["FEFO Matrix", "Aging Report", "Batch Number Tracking", "WMS"],
-      liveDemo: "#inventory-studio-section",
-      github: "#",
-      metrics: "Zero Deadstock • 100% Batch Tracking"
-    },
-    {
-      id: "inv-6",
-      title: "Automated Stock Opname Reconciliation Template",
-      category: "reconciliation",
-      badge: "Excel & Automation",
-      description: "Pembuatan template rekonsiliasi cerdas berbasis Advanced Excel (XLOOKUP, Dynamic Array, Pivot Table) yang memproses ribuan baris data hitung fisik vs WMS dalam hitungan menit.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Advanced Excel", "Data Reconciliation", "Automation", "Variance Log"],
-      liveDemo: "#inventory-studio-section",
-      github: "#",
-      metrics: "Rekonsiliasi 5x Lebih Cepat • 0% Formula Error"
     }
   ];
 

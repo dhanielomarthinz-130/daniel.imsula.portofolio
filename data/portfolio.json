@@ -2,8 +2,8 @@
   "profile": {
     "name": "Daniel Imsula",
     "role": "Inventory Controller - Associate & Warehouse Specialist",
-    "tagline": "Menciptakan akurasi inventaris maksimal (99.8%+), efisiensi proses pergudangan, dan rekonsiliasi stok tanpa selisih.",
-    "status": "Tersedia untuk Peluang Karir & Konsultasi Inventory",
+    "tagline": "Menciptakan akurasi inventaris maksimal (99.8%+), efisiensi alur pergudangan, dan pengembangan sistem IMS/TMS.",
+    "status": "Tersedia untuk Peluang Karir & Konsultasi Inventory & Warehouse Tech",
     "location": "Jakarta & Sekitarnya, Indonesia",
     "email": "contact.inventory.pro@gmail.com",
     "linkedin": "https://linkedin.com",
@@ -14,61 +14,102 @@
     "opnameSuccessRate": "100%"
   },
   "about": {
-    "summary": "Profesional Inventory Controller dan Warehouse Management berdedikasi dengan rekam jejak terbukti di Somethinc - Beautyhaul, PT Aditya Manufaktur Indonesia, dan PT Kirin Dinamika Sentosa. Berpengalaman mendalam dalam menjaga akurasi stok (Stock Accuracy 99.8%+), memimpin pelaksanaan Cycle Count & Stock Opname berskala besar, mitigasi selisih (shrinkage & discrepancy), implementasi SOP FIFO/FEFO, serta optimalisasi operasional gudang Inbound/Outbound.",
+    "summary": "Profesional Inventory Controller dan Warehouse Operations Specialist berdedikasi dengan keahlian ganda dalam manajemen operasional gudang dan pengembangan sistem inventaris & logistik (IMS, TMS, & Queue Management). Berpengalaman terbukti di Somethinc - Beautyhaul, PT Aditya Manufaktur Indonesia, dan PT Kirin Dinamika Sentosa dalam menjamin akurasi stok (99.8%+), integrasi Handheld Scanner, live driver tracking, serta optimalisasi logistik pengiriman instan/sameday.",
     "highlights": [
       {
-        "title": "Akurasi Stok Maksimal (99.8%+)",
-        "description": "Menjalankan metodologi Cycle Count harian/mingguan dan rekonsiliasi data fisik vs sistem (WMS/ERP) untuk memastikan akurasi data inventaris mendekati sempurna."
+        "title": "Pengembangan Sistem Inventory & Handheld (IMS)",
+        "description": "Membangun sistem Inventory Management System (IMS) untuk transaksi backend, monitoring stok realtime, dan integrasi operasional scanner Handheld (PDA) di lantai gudang."
       },
       {
-        "title": "Optimalisasi Proses & Alur Gudang",
-        "description": "Menyempurnakan Standard Operating Procedure (SOP) Inbound, Putaway, Storing, Picking, Packing, hingga Outbound guna meminimalkan human error dan bottleneck."
+        "title": "Transportation Management System (TMS) & Driver App",
+        "description": "Mengembangkan sistem TMS untuk scheduling jadwal kirim, live tracking posisi armada antar-driver, serta modul pelaporan status pengiriman mobile driver."
       },
       {
-        "title": "Investigasi Discrepancy & Loss Prevention",
-        "description": "Melakukan Root Cause Analysis (5-Why) pada setiap ketidaksesuaian stok, meminimalisir shrinkage, dan menjaga kontrol tanggal kadaluarsa (FEFO/FIFO)."
+        "title": "Sistem Antrian Pickup Sameday & Paket Instan",
+        "description": "Merancang dan menerapkan sistem antrian digital serah-terima paket kurir instan/sameday (Grab/GoSend/SPX), memangkas waktu tunggu driver hingga 70%."
+      },
+      {
+        "title": "Akurasi Stok Maksimal (99.8%+) & Loss Prevention",
+        "description": "Menjalankan metodologi Cycle Count harian/mingguan, rekonsiliasi data fisik vs sistem (WMS/ERP), kontrol FEFO/FIFO ketat, serta mitigasi selisih stok."
       }
     ]
   },
   "skills": [
     {
+      "category": "Sistem & Inovasi Logistik",
+      "items": [
+        { "name": "Inventory Management System (IMS)", "level": 98, "icon": "fa-solid fa-server", "color": "#10b981" },
+        { "name": "Handheld Scanner & PDA Flow", "level": 97, "icon": "fa-solid fa-barcode", "color": "#06b6d4" },
+        { "name": "Transportation Mgmt System (TMS)", "level": 95, "icon": "fa-solid fa-truck-fast", "color": "#6366f1" },
+        { "name": "Driver Live Tracking & Mobile Reports", "level": 94, "icon": "fa-solid fa-location-crosshairs", "color": "#f59e0b" },
+        { "name": "Sameday & Instant Queue System", "level": 96, "icon": "fa-solid fa-stopwatch-20", "color": "#ec4899" }
+      ]
+    },
+    {
       "category": "Core Inventory & Auditing",
       "items": [
         { "name": "Stock Accuracy & Reconciliation", "level": 99, "icon": "fa-solid fa-bullseye", "color": "#10b981" },
         { "name": "Cycle Count & Stock Opname", "level": 98, "icon": "fa-solid fa-clipboard-check", "color": "#06b6d4" },
-        { "name": "Discrepancy & Root Cause Analysis", "level": 96, "icon": "fa-solid fa-magnifying-glass-chart", "color": "#6366f1" },
-        { "name": "FIFO / FEFO & Expiry Control", "level": 95, "icon": "fa-solid fa-boxes-packing", "color": "#f59e0b" },
-        { "name": "ABC Analysis & Velocity Profiling", "level": 92, "icon": "fa-solid fa-arrow-down-wide-short", "color": "#ec4899" }
+        { "name": "Discrepancy & Root Cause Analysis (RCA)", "level": 96, "icon": "fa-solid fa-magnifying-glass-chart", "color": "#6366f1" },
+        { "name": "FIFO / FEFO & Batch Expiry Control", "level": 95, "icon": "fa-solid fa-boxes-packing", "color": "#f59e0b" },
+        { "name": "ABC Analysis & Slotting Layout", "level": 92, "icon": "fa-solid fa-arrow-down-wide-short", "color": "#38bdf8" }
       ]
     },
     {
-      "category": "Systems & Data Analysis",
+      "category": "Data Analysis & Warehouse Ops",
       "items": [
-        { "name": "WMS (Warehouse Management System)", "level": 95, "icon": "fa-solid fa-server", "color": "#00d2ff" },
-        { "name": "ERP & Inventory Database (SAP / Odoo)", "level": 90, "icon": "fa-solid fa-database", "color": "#9d4edd" },
-        { "name": "Advanced Microsoft Excel (Pivot, XLOOKUP)", "level": 96, "icon": "fa-solid fa-file-excel", "color": "#107c41" },
-        { "name": "Barcode Scanning & RFID Flow", "level": 94, "icon": "fa-solid fa-barcode", "color": "#ffb703" },
-        { "name": "Inventory Dashboard & KPI Reporting", "level": 92, "icon": "fa-solid fa-chart-line", "color": "#38bdf8" }
-      ]
-    },
-    {
-      "category": "Warehouse Operations & Compliance",
-      "items": [
-        { "name": "Inbound & Outbound Logistics", "level": 92, "icon": "fa-solid fa-truck-ramp-box", "color": "#f05032" },
-        { "name": "Storage Layout & Space Optimization", "level": 90, "icon": "fa-solid fa-warehouse", "color": "#2496ed" },
-        { "name": "Safety Stock & ROP Management", "level": 88, "icon": "fa-solid fa-cubes-stacked", "color": "#fcc624" },
+        { "name": "WMS (Warehouse Management System)", "level": 95, "icon": "fa-solid fa-database", "color": "#00d2ff" },
+        { "name": "Advanced Excel (Pivot, XLOOKUP, Automation)", "level": 96, "icon": "fa-solid fa-file-excel", "color": "#107c41" },
+        { "name": "ERP & Inventory Database (SAP / Odoo)", "level": 90, "icon": "fa-solid fa-layer-group", "color": "#9d4edd" },
+        { "name": "Inbound & Outbound Handling", "level": 93, "icon": "fa-solid fa-truck-ramp-box", "color": "#f05032" },
         { "name": "Standard Operating Procedure (SOP)", "level": 95, "icon": "fa-solid fa-list-check", "color": "#10b981" }
       ]
     }
   ],
   "projects": [
     {
+      "id": "sys-ims",
+      "title": "Handheld-Integrated Inventory Management System (IMS)",
+      "category": "ims-tech",
+      "badge": "Sistem Buatan Sendiri (Handheld IMS)",
+      "description": "Merancang dan mengembangkan sistem Inventory Management System (IMS) terintegrasi untuk monitoring realtime, transaksi backend, serta kontrol pergerakan stok presisi yang dioperasikan langsung menggunakan perangkat Handheld Scanner (PDA/Barcode Scanner) di area gudang.",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["Handheld Scanner", "Backend Transaction", "Stock Monitoring", "Real-Time Sync", "Barcode Scanning"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "Akurasi Stok 99.8%+ • Transaksi Handheld Realtime"
+    },
+    {
+      "id": "sys-tms",
+      "title": "Transportation Management System (TMS) & Driver Live Tracking",
+      "category": "tms-logistics",
+      "badge": "Sistem Buatan Sendiri (TMS Logistics)",
+      "description": "Membangun Transportation Management System (TMS) untuk penjadwalan pengiriman (delivery scheduling), koordinasi antar driver, live tracking posisi armada secara realtime, serta modul pelaporan status pengiriman digital berbasis mobile bagi driver.",
+      "image": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["TMS Logistics", "Live Tracking GPS", "Delivery Scheduling", "Mobile Driver Report", "Fleet Dispatch"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "100% Live Visibility • On-Time Delivery Terpantau"
+    },
+    {
+      "id": "sys-queue",
+      "title": "Sameday & Instant Courier Pickup Queue Management System",
+      "category": "queue-system",
+      "badge": "Sistem Buatan Sendiri (Queue System)",
+      "description": "Mengembangkan sistem antrian serah-terima paket kurir instan dan sameday (Grab, GoSend, SPX, dll.) secara digital, mengeliminasi penumpukan antrian driver di area staging, dan mempercepat proses serah terima paket ke kurir secara drastis.",
+      "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
+      "technologies": ["Queue Management", "Sameday Logistics", "Instant Courier Flow", "Staging Dispatch", "Barcode Handover"],
+      "liveDemo": "#inventory-studio-section",
+      "github": "#",
+      "metrics": "-70% Waktu Tunggu Driver • Zero Staging Bottleneck"
+    },
+    {
       "id": "inv-1",
       "title": "BeautyHaul & Somethinc Stock Accuracy Transformation",
       "category": "accuracy",
       "badge": "Somethinc - Beautyhaul",
       "description": "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel (E-commerce + Offline Store), berhasil menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat FEFO produk kosmetik.",
-      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
       "technologies": ["Cycle Count", "FEFO Control", "WMS Sync", "Omnichannel", "Excel Dashboard"],
       "liveDemo": "#inventory-studio-section",
       "github": "#",
@@ -79,7 +120,7 @@
       "title": "Manufacturing Warehouse Flow & Supervisory Optimization",
       "category": "process",
       "badge": "Aditya Manufaktur Indonesia",
-      "description": "Optimalisasi alur penerimaan bahan baku dan pengiriman barang jadi, penataan ulang denah layout rak, dan peningkatan kecepatan dispatch hingga mendapatkan promosi sebagai Supervisor Warehouse.",
+      "description": "Optimalisasi alur penerimaan bahan baku dan pengiriman barang jadi, penataan ulang layout rak, dan peningkatan kecepatan dispatch hingga mendapatkan promosi sebagai Supervisor Warehouse.",
       "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
       "technologies": ["Warehouse Admin", "Supervisory", "Inbound/Outbound", "Slotting Layout"],
       "liveDemo": "#inventory-studio-section",
@@ -101,7 +142,7 @@
     {
       "id": "inv-4",
       "title": "Root Cause Analysis & Loss Prevention Framework",
-      "category": "reconciliation",
+      "category": "accuracy",
       "badge": "Loss Prevention",
       "description": "Perancangan matriks audit selisih barang (investigasi selisih picking, return barang, salah lokasi putaway, hingga human error sistem), menghasilkan mitigasi kehilangan hingga 85%.",
       "image": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80",
@@ -111,21 +152,9 @@
       "metrics": "-85% Stock Loss • 100% Traceability"
     },
     {
-      "id": "inv-5",
-      "title": "Expired & Slow-Moving Stock Mitigation Protocol",
-      "category": "process",
-      "badge": "Quality & Expiry Control",
-      "description": "Sistem peringatan dini (Early Warning System) untuk produk kosmetik mendekati masa kadaluarsa (6-12 bulan), mencegah timbulnya deadstock dan memaksimalkan perputaran aset.",
-      "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["FEFO Matrix", "Aging Report", "Batch Number Tracking", "WMS"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "Zero Deadstock • 100% Batch Tracking"
-    },
-    {
       "id": "inv-6",
       "title": "Automated Stock Opname Reconciliation Template",
-      "category": "reconciliation",
+      "category": "opname",
       "badge": "Excel & Automation",
       "description": "Pembuatan template rekonsiliasi cerdas berbasis Advanced Excel (XLOOKUP, Dynamic Array, Pivot Table) yang memproses ribuan baris data hitung fisik vs WMS dalam hitungan menit.",
       "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
@@ -141,7 +170,7 @@
       "role": "Inventory Controller - Associate",
       "period": "Maret 2022 – Agustus 2026",
       "employmentType": "Permanent",
-      "description": "Bertanggung jawab atas akurasi total inventaris puluhan ribu SKU produk Somethinc & Beautyhaul di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin, pengawasan ketat sistem FEFO/FIFO produk kosmetik, rekonsiliasi data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level 99.8%+ sesuai target KPI perusahaan."
+      "description": "Bertanggung jawab atas akurasi total inventaris puluhan ribu SKU produk Somethinc & Beautyhaul di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin harian/mingguan, pengawasan ketat sistem FEFO/FIFO produk kosmetik, rekonsiliasi data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level 99.8%+ sesuai target KPI perusahaan."
     },
     {
       "company": "PT Aditya Manufaktur Indonesia",
