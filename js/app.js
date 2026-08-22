@@ -639,13 +639,15 @@ function initVisitorAnalytics() {
   // Log current session visit
   recordCurrentVisit();
 
-  // --- Triple Click Detection on Inventory Logo ---
+  // --- Triple Click Detection on Inventory Logo (Header & Footer) ---
   let clickCount = 0;
   let clickTimer = null;
   const triggerElements = [
     document.querySelector('.nav-logo-badge'),
-    document.getElementById('nav-brand-logo'),
-    document.querySelector('.footer-brand .nav-logo-badge')
+    document.getElementById('header-inventory-logo'),
+    document.getElementById('footer-inventory-logo'),
+    document.querySelector('.footer-brand .nav-logo-badge'),
+    document.querySelector('.footer-brand')
   ].filter(Boolean);
 
   triggerElements.forEach(el => {
@@ -654,9 +656,10 @@ function initVisitorAnalytics() {
       if (clickCount === 1) {
         clickTimer = setTimeout(() => {
           clickCount = 0;
-        }, 1500);
+        }, 1800);
       } else if (clickCount >= 3) {
         e.preventDefault();
+        e.stopPropagation();
         clearTimeout(clickTimer);
         clickCount = 0;
         openPinOrDashboard();
