@@ -50,9 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Resume Modal & Project Modal
   initModals();
 
-  // Profile Photo Editor & Upload Handler
-  initPhotoEditor();
-
   // Initialize Inventory NoteJS Module
   if (window.NoteJS) {
     window.NoteJS.init();
@@ -454,115 +451,7 @@ function initModals() {
 }
 
 /* ==========================================================================
-   7. Profile Photo Editor & Upload Controller
-   ========================================================================== */
-function initPhotoEditor() {
-  const openBtn = document.getElementById('open-photo-modal-btn');
-  const modal = document.getElementById('photo-editor-modal');
-  const fileInput = document.getElementById('photo-file-upload');
-  const urlInput = document.getElementById('photo-url-input');
-  const applyUrlBtn = document.getElementById('apply-photo-url-btn');
-  const resetBtn = document.getElementById('reset-photo-default-btn');
-
-  // Load custom photo if previously saved by user
-  const savedAvatar = localStorage.getItem('daniel_custom_avatar');
-  if (savedAvatar) {
-    applyAvatar(savedAvatar, false);
-  }
-
-  // Open modal trigger
-  if (openBtn && modal) {
-    openBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      modal.classList.add('open');
-    });
-  }
-
-  // Upload photo file from device (File Reader)
-  if (fileInput) {
-    fileInput.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-
-      if (!file.type.startsWith('image/')) {
-        showToast('Format tidak didukung. Harap pilih file gambar (JPG, PNG, WebP).', 'error');
-        return;
-      }
-
-      // Max size limit: 5MB
-      if (file.size > 5 * 1024 * 1024) {
-        showToast('Ukuran gambar terlalu besar (Maksimal 5MB).', 'error');
-        return;
-      }
-
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const base64Data = event.target.result;
-        applyAvatar(base64Data, true);
-        showToast('Foto profil berhasil diunggah & disimpan!', 'success');
-      };
-      reader.onerror = () => {
-        showToast('Gagal memproses file gambar.', 'error');
-      };
-      reader.readAsDataURL(file);
-    });
-  }
-
-  // Apply photo from external URL
-  if (applyUrlBtn && urlInput) {
-    applyUrlBtn.addEventListener('click', () => {
-      const url = urlInput.value.trim();
-      if (!url) {
-        showToast('Harap masukkan URL tautan gambar.', 'error');
-        return;
-      }
-
-      // Validate image URL by loading it into an Image object
-      const testImg = new Image();
-      testImg.onload = () => {
-        applyAvatar(url, true);
-        urlInput.value = '';
-        showToast('Foto profil berhasil diterapkan dari URL!', 'success');
-      };
-      testImg.onerror = () => {
-        showToast('Tidak dapat memuat gambar dari URL tersebut. Pastikan tautan langsung ke file gambar.', 'error');
-      };
-      testImg.src = url;
-    });
-  }
-
-  // Reset to default photo
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      localStorage.removeItem('daniel_custom_avatar');
-      applyAvatar('images/daniel-imsula.jpg', false);
-      if (fileInput) fileInput.value = '';
-      if (urlInput) urlInput.value = '';
-      showToast('Foto profil berhasil dikembalikan ke foto asli.', 'info');
-    });
-  }
-
-  function applyAvatar(src, saveToStorage = false) {
-    const heroImg = document.getElementById('hero-profile-img');
-    const modalPreview = document.getElementById('modal-photo-preview');
-    const resumeImg = document.getElementById('resume-modal-img');
-
-    if (heroImg) heroImg.src = src;
-    if (modalPreview) modalPreview.src = src;
-    if (resumeImg) resumeImg.src = src;
-
-    if (saveToStorage) {
-      try {
-        localStorage.setItem('daniel_custom_avatar', src);
-      } catch (err) {
-        console.warn('LocalStorage quota exceeded or unavailable.');
-      }
-    }
-  }
-}
-
-/* ==========================================================================
-   8. System Status Check
+   7. System Status Check
    ========================================================================== */
 async function checkServerHealth() {
   const statusPill = document.getElementById('server-status-pill');

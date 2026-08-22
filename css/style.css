@@ -581,41 +581,6 @@ section {
   z-index: 3;
 }
 
-.avatar-edit-trigger-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(10, 14, 23, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--border-glass-bright);
-  color: var(--text-primary);
-  padding: 0.4rem 0.85rem;
-  border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  transition: all var(--transition-fast);
-  z-index: 5;
-}
-
-.avatar-edit-trigger-btn:hover {
-  background: var(--gradient-brand);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
-}
-
-[data-theme="light"] .avatar-edit-trigger-btn {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text-primary);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
 [data-theme="light"] .avatar-overlay-badge {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
