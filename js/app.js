@@ -103,8 +103,9 @@ function initTypewriter() {
   if (!typewriterElem) return;
 
   const words = [
+    'PT Inovasi Eka Gemilang - Hanasui',
     'Creator of Handheld IMS & TMS',
-    'Inventory Controller - Associate',
+    'Inventory Controller & Specialist',
     'Somethinc - Beautyhaul (2022-2026)',
     'Aditya Manufaktur Indonesia (2015-2021)',
     'Supervisor & Warehouse Admin',
