@@ -1,195 +1,130 @@
 {
   "profile": {
     "name": "Daniel Imsula",
-    "role": "Inventory Controller - Associate & Warehouse Specialist",
-    "tagline": "Menciptakan akurasi inventaris maksimal (99.8%+), efisiensi alur pergudangan, dan perancangan sistem IMS/TMS terotomasi penuh.",
-    "status": "Tersedia untuk Peluang Karir & Konsultasi Inventory & Warehouse Tech",
-    "location": "Jakarta & Sekitarnya, Indonesia",
-    "email": "contact.inventory.pro@gmail.com",
-    "linkedin": "https://linkedin.com",
+    "role": "Supervisor Inventory • Inventory Controller • Inventory Specialist",
+    "tagline": "Spesialis Manajemen Inventaris & Operasional Pergudangan di Sektor Manufaktur & E-Commerce. Akurasi 99.8%+, supervisi tim, dan automasi AI.",
+    "status": "Peluang Terbuka: Supervisor Inventory • Inventory Controller • Inventory Specialist (Manufaktur & E-Commerce)",
+    "location": "Jakarta / Tangerang & Sekitarnya, Indonesia",
+    "email": "dhanielo.marthinz@gmail.com",
+    "whatsapp": "082210703118",
+    "phone": "+62 822-1070-3118",
     "photo": "images/daniel-imsula.jpg",
-    "stockAccuracy": "99.8%",
+    "stockAccuracy": "99.8%+",
     "skusManaged": "50,000+",
-    "shrinkageReduction": "-85%",
-    "opnameSuccessRate": "100%"
+    "shrinkageReduction": "-85%"
   },
-  "about": {
-    "summary": "Profesional Inventory Controller dan Warehouse Operations Specialist berdedikasi dengan keahlian ganda dalam manajemen operasional gudang dan perancangan sistem informasi pergudangan terotomasi penuh (IMS, TMS, & Queue Management). Berfokus pada sistem otomasi terintegrasi—bukan spreadsheet manual/Excel—sehingga seluruh transaksi backend, monitoring stok live, pencatatan Handheld Scanner, dan pelaporan driver berjalan otomatis di dalam sistem secara realtime.",
-    "highlights": [
-      {
-        "title": "Pengembangan Sistem IMS & Optimasi Picking Logic",
-        "description": "Membangun sistem IMS Handheld terotomasi serta merevolusi Picking Logic Picker yang meningkatkan produktivitas tim picker secara drastis dan mendongkrak akurasi stok dari 75% menjadi 99.99%+ tanpa olah data manual."
-      },
-      {
-        "title": "Transportation Management System (TMS) & Driver App",
-        "description": "Mengembangkan sistem TMS terpadu untuk scheduling jadwal kirim, live GPS tracking posisi armada antar-driver, serta modul pelaporan status pengiriman digital mobile driver."
-      },
-      {
-        "title": "Sistem Antrian Pickup Sameday & Paket Instan",
-        "description": "Merancang dan menerapkan sistem antrian digital serah-terima paket kurir instan/sameday (Grab/GoSend/SPX), memangkas waktu tunggu driver hingga 70% dan meniadakan bottleneck di staging area."
-      },
-      {
-        "title": "Akurasi Stok Maksimal (99.8%+) & Loss Prevention",
-        "description": "Menjalankan metodologi Cycle Count harian/mingguan terotomasi sistem, rekonsiliasi data fisik vs sistem WMS secara instan, kontrol FEFO/FIFO ketat, serta eliminasi selisih stok."
-      }
-    ]
-  },
-  "skills": [
-    {
-      "category": "Sistem & Inovasi Logistik",
-      "items": [
-        { "name": "Inventory Management System (IMS)", "level": 98, "icon": "fa-solid fa-server", "color": "#10b981" },
-        { "name": "Handheld Scanner & PDA Flow", "level": 97, "icon": "fa-solid fa-barcode", "color": "#06b6d4" },
-        { "name": "Transportation Mgmt System (TMS)", "level": 95, "icon": "fa-solid fa-truck-fast", "color": "#6366f1" },
-        { "name": "Driver Live Tracking & Mobile Reports", "level": 94, "icon": "fa-solid fa-location-crosshairs", "color": "#f59e0b" },
-        { "name": "Sameday & Instant Queue System", "level": 96, "icon": "fa-solid fa-stopwatch-20", "color": "#ec4899" }
-      ]
-    },
-    {
-      "category": "Core Inventory & Auditing",
-      "items": [
-        { "name": "Stock Accuracy & Auto-Reconciliation", "level": 99, "icon": "fa-solid fa-bullseye", "color": "#10b981" },
-        { "name": "Cycle Count & Stock Opname", "level": 98, "icon": "fa-solid fa-clipboard-check", "color": "#06b6d4" },
-        { "name": "Discrepancy & Root Cause Analysis (RCA)", "level": 96, "icon": "fa-solid fa-magnifying-glass-chart", "color": "#6366f1" },
-        { "name": "FIFO / FEFO & Batch Expiry Control", "level": 95, "icon": "fa-solid fa-boxes-packing", "color": "#f59e0b" },
-        { "name": "ABC Analysis & Slotting Layout", "level": 92, "icon": "fa-solid fa-arrow-down-wide-short", "color": "#38bdf8" }
-      ]
-    },
-    {
-      "category": "Data & Warehouse Systems",
-      "items": [
-        { "name": "Warehouse Backend System Automation", "level": 98, "icon": "fa-solid fa-code", "color": "#10b981" },
-        { "name": "WMS & Custom Inventory Database", "level": 95, "icon": "fa-solid fa-database", "color": "#00d2ff" },
-        { "name": "Inventory Discrepancy & Traceability Engine", "level": 94, "icon": "fa-solid fa-layer-group", "color": "#9d4edd" },
-        { "name": "Inbound & Outbound Handling", "level": 93, "icon": "fa-solid fa-truck-ramp-box", "color": "#f05032" },
-        { "name": "Standard Operating Procedure (SOP)", "level": 95, "icon": "fa-solid fa-list-check", "color": "#10b981" }
-      ]
-    }
-  ],
   "projects": [
     {
+      "id": "sys-queue",
+      "title": "Sistem Antrian Serah Terima Kurir Instan (Gojek, Shopee Express, Grab)",
+      "category": "tms-logistics",
+      "badge": "Developed by Daniel • Antrian Kurir",
+      "author": "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+      "description": "Sistem antrian digital serah-terima paket kurir instan dan sameday (Gojek, GoSend, Shopee Express / SPX, Grab), mengeliminasi kerumunan driver di area staging dan mempercepat waktu serah terima hingga 70%.",
+      "image": "images/instant_courier_queue.jpg",
+      "technologies": ["Queue Management", "Gojek / Grab / SPX Flow", "Sameday Logistics", "Staging Dispatch", "Barcode Handover"],
+      "metrics": "-70% Waktu Tunggu Driver • Zero Staging Bottleneck",
+      "problem": "Penumpukan puluhan driver kurir instan di area staging gudang saat jam sibuk promo e-commerce, menyebabkan kekacauan pencarian paket dan keterlambatan pickup.",
+      "solution": "Menerapkan sistem antrian berbasis pemindaian nomor resi dan penomoran slot staging sehingga paket langsung siap saat kurir tiba di pos serah-terima.",
+      "impact": "Waktu tunggu kurir berkurang 70%, kapasitas serah terima meningkat 3x lipat, dan area staging menjadi rapi serta bebas dari bottleneck."
+    },
+    {
+      "id": "sys-opname",
+      "title": "System-Driven Stock Opname & Automated Reconciliation Engine",
+      "category": "opname",
+      "badge": "Developed by Daniel • Engine Stock Opname",
+      "author": "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+      "description": "Sistem terotomasi untuk pelaksanaan Wall-to-Wall Stock Opname dan Cycle Count berkala. Memproses validasi hitung fisik vs saldo sistem WMS secara instan tanpa perlu olah manual di spreadsheet.",
+      "image": "images/stock_opname_system.jpg",
+      "technologies": ["Automated Reconciliation", "Stock Opname System", "Variance Matching", "WMS Realtime Sync", "Loss Prevention"],
+      "metrics": "Auto-Match Realtime • Zero Manual Spreadsheets",
+      "problem": "Proses Stock Opname konvensional yang memakan waktu berhari-hari karena rekapitulasi data fisik dilakukan manual di Excel, rawan human error, dan lambat dalam mendeteksi selisih.",
+      "solution": "Merancang sistem rekonsiliasi berbasis algoritma pencocokan otomatis (auto-variance matcher) yang langsung membandingkan hasil scan tim hitung dengan data sistem secara instan.",
+      "impact": "Memangkas durasi audit Stock Opname hingga 60%, laporan selisih selesai pada hari yang sama, dan akurasi data aset inventaris terjamin 100% transparan."
+    },
+    {
       "id": "sys-ims",
-      "title": "Handheld-Integrated IMS & Picking Logic Optimization",
+      "title": "Optimasi Picking Logic & Integrasi Handheld Scanner IMS",
       "category": "ims-tech",
-      "badge": "Sistem Buatan Sendiri (Handheld IMS)",
-      "description": "Merancang dan mengembangkan sistem Inventory Management System (IMS) terintegrasi untuk monitoring realtime, transaksi backend, serta kontrol pergerakan stok presisi via perangkat Handheld Scanner (PDA/Barcode). Berhasil mengubah dan mengoptimalkan Picking Logic Picker sehingga produktivitas picker meningkat drastis serta akurasi stok melonjak tajam dari 75% menjadi 99.99%+ tanpa olah spreadsheet manual.",
+      "badge": "Developed by Daniel • Handheld IMS",
+      "author": "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+      "description": "Pengembangan alur pemindaian Handheld Scanner (PDA/Barcode) dan perombakan Picking Logic untuk memangkas waktu ambil barang dan menaikkan akurasi stok secara drastis dari 75% ke 99.99%+.",
       "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["Handheld Scanner", "Picking Logic Engine", "Picker Productivity", "Backend Transaction", "Stock Accuracy 99.99%+"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "Akurasi 75% ➔ 99.99%+ • Peningkatan Produktivitas Picker"
+      "technologies": ["Handheld Scanner", "Picking Logic", "PDA Barcode", "WMS Sync", "Zero Manual Spreadsheets"],
+      "metrics": "Akurasi Stok 75% ➔ 99.99%+ • Peningkatan Produktivitas Tim Picker",
+      "problem": "Tingginya selisih stok fisik vs sistem akibat proses picking manual yang mengandalkan kertas/spreadsheet dan sering terjadi salah ambil varian SKU kosmetik.",
+      "solution": "Merancang alur validasi barcode wajib pada tiap item menggunakan perangkat Handheld PDA terintegrasi WMS, serta mengoptimalkan rute jalan (pathing) picker di area lorong rak gudang.",
+      "impact": "Akurasi stok melonjak hingga 99.99%+, waktu pemenuhan pesanan lebih cepat 40%, dan kesalahan salah kirim varian barang turun hingga mendekati nol."
     },
     {
       "id": "sys-tms",
       "title": "Transportation Management System (TMS) & Driver Live Tracking",
       "category": "tms-logistics",
-      "badge": "Sistem Buatan Sendiri (TMS Logistics)",
-      "description": "Membangun Transportation Management System (TMS) untuk penjadwalan pengiriman (delivery scheduling), koordinasi antar driver, live tracking posisi armada secara realtime, serta modul pelaporan status pengiriman digital berbasis mobile bagi driver.",
-      "image": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+      "badge": "Developed by Daniel • TMS Tracking",
+      "author": "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+      "description": "Sistem penjadwalan armada pengiriman barang, koordinasi rute driver, live tracking posisi armada, dan pelaporan bukti kirim digital secara mobile.",
+      "image": "images/tms_live_tracking.jpg",
       "technologies": ["TMS Logistics", "Live Tracking GPS", "Delivery Scheduling", "Mobile Driver Report", "Fleet Dispatch"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "100% Live Visibility • On-Time Delivery Terpantau"
+      "metrics": "100% Visibilitas Pengiriman • On-Time Delivery Terpantau",
+      "problem": "Sulitnya memonitor status kiriman barang antar cabang/outlet dan estimasi waktu sampai driver yang sering tidak akurat.",
+      "solution": "Membangun sistem TMS dengan modul rute harian, pelacakan koordinat GPS real-time, dan fitur upload bukti serah terima (e-POD) langsung dari smartphone driver.",
+      "impact": "Tingkat ketepatan waktu pengiriman meningkat drastis, keterlambatan terpantau secara proaktif, dan rekonsiliasi surat jalan selesai pada hari yang sama."
     },
     {
-      "id": "sys-queue",
-      "title": "Sameday & Instant Courier Pickup Queue Management System",
-      "category": "queue-system",
-      "badge": "Sistem Buatan Sendiri (Queue System)",
-      "description": "Mengembangkan sistem antrian serah-terima paket kurir instan dan sameday (Grab, GoSend, SPX, dll.) secara digital, mengeliminasi penumpukan antrian driver di area staging, dan mempercepat proses serah terima paket ke kurir secara drastis.",
-      "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["Queue Management", "Sameday Logistics", "Instant Courier Flow", "Staging Dispatch", "Barcode Handover"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "-70% Waktu Tunggu Driver • Zero Staging Bottleneck"
+      "id": "sys-ai",
+      "title": "Penerapan AI untuk Analisis Discrepancy & Otomasi SOP Gudang",
+      "category": "ai-tech",
+      "badge": "Integrasi AI • Discrepancy & SOP",
+      "author": "Penerapan & Integrasi Tools AI Modern",
+      "description": "Implementasi ekosistem AI, BI & no-code modern (ChatGPT, Gemini, Claude, Antigravity IDE, Google Stitch, OpenClaw, Google Apps Script, AppSheet, & Looker Studio) untuk analisis anomali selisih stok, pembuatan SOP operasional otomatis, dan otomasi visual workflow data gudang.",
+      "image": "images/ai_warehouse_analytics.jpg",
+      "technologies": ["ChatGPT", "Google Gemini", "Claude", "Antigravity IDE", "Google Stitch", "OpenClaw", "Google Apps Script", "AppSheet", "Looker Studio", "Prompt Engineering"],
+      "metrics": "Analisis RCA Otomatis • Pembuatan SOP 5x Lebih Cepat",
+      "problem": "Proses pembuatan Standard Operating Procedure (SOP), pelaporan investigasi 5-Why RCA, dan audit data selisih stok yang menyita banyak waktu jika disusun secara manual.",
+      "solution": "Memanfaatkan Claude dan ChatGPT untuk formulasi Root Cause Analysis mendalam, Gemini untuk pemindaian dokumen faktur/manifest, Antigravity & Antigravity IDE untuk pembuatan script otomasi sistem, Google Stitch untuk visual prototyping, OpenClaw untuk ekstraksi data marketplace, Google Apps Script & AppSheet untuk otomasi data internal, serta Looker Studio untuk dashboard analitik real-time.",
+      "impact": "Efisiensi administrasi meningkat 500%, SOP operasional terdokumentasi presisi, dan mitigasi selisih stok tertangani dengan standar analisa terdepan."
     },
     {
       "id": "inv-1",
-      "title": "BeautyHaul & Somethinc Stock Accuracy Transformation",
+      "title": "Setup WMS & Transformasi Akurasi Stok 99.85% di Somethinc",
       "category": "accuracy",
-      "badge": "Somethinc - Beautyhaul",
-      "description": "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel terotomatisasi di sistem, menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat sistem FEFO produk kosmetik.",
+      "badge": "Studi Kasus • Somethinc Beautyhaul",
+      "author": "Studi Kasus & Eksekusi Lapangan",
+      "description": "Kolaborasi aktif bersama Tim Tech dalam perancangan & setup sistem WMS baru, restrukturisasi Cycle Count rutin, dan pengendalian ketat FEFO produk kosmetik.",
       "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["Cycle Count", "FEFO System Control", "WMS Sync", "Omnichannel", "Automated Backend"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "Akurasi 99.85% • Zero Expired Discrepancy"
+      "technologies": ["Setup WMS", "Kolaborasi Tim Tech", "Cycle Count", "FEFO System Control", "Omnichannel Fulfillment", "RCA 5-Why"],
+      "metrics": "Akurasi Stok 99.85% • Sukses Implementasi WMS",
+      "problem": "Kebutuhan sistem pergudangan modern (WMS) yang presisi untuk menangani puluhan ribu SKU produk kecantikan fast-moving di channel online & retail tanpa risiko selisih stok.",
+      "solution": "Berkolaborasi langsung dengan Tim Tech dalam merumuskan kebutuhan alur operasional gudang, konfigurasi modul WMS, testing UAT, implementasi live, serta penegakan disiplin Cycle Count & FEFO.",
+      "impact": "Sistem WMS sukses go-live 100%, akurasi stok konsisten di 99.85%, dan dianugerahi penghargaan 'The Best Admin Excentric'."
     },
     {
       "id": "inv-2",
-      "title": "Manufacturing Warehouse Flow & Supervisory Optimization",
-      "category": "process",
-      "badge": "Aditya Manufaktur Indonesia",
-      "description": "Optimalisasi alur penerimaan bahan baku dan pengiriman barang jadi, penataan ulang layout rak, dan peningkatan kecepatan dispatch hingga mendapatkan promosi sebagai Supervisor Warehouse.",
-      "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["Warehouse Admin", "Supervisory", "Inbound/Outbound", "Slotting Layout"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "Promoted to Supervisor • +30% Operasional Flow"
+      "title": "Administrasi Spare Part, Transfer Stock Produksi & Stock Opname",
+      "category": "opname",
+      "badge": "Studi Kasus • PT Aditya Manufaktur",
+      "author": "Studi Kasus & Eksekusi Lapangan",
+      "description": "Pengelolaan administrasi spare part mesin manufaktur, eksekusi receipt barang masuk, transfer stock sesuai rencana produksi, monitoring buffer stock, hingga dipromosikan ke Supervisor Warehouse.",
+      "image": "images/sparepart_warehouse_mgmt.jpg",
+      "technologies": ["Administrasi Spare Part", "Receipt & Inbound", "Control Stock Suku Cadang", "Transfer Stock Produksi", "Stock Opname"],
+      "metrics": "Promosi ke Supervisor • Nol Downtime Mesin Produksi",
+      "problem": "Kritisnya ketersediaan spare part mesin manufaktur dan risiko terhentinya lini produksi jika suplai suku cadang terlambat atau terjadi selisih stok fisik.",
+      "solution": "Menerapkan sistem administrasi receipt barang masuk yang ketat, kontrol buffer stock spare part, transfer stock terencana sesuai jadwal produksi, dan eksekusi Stock Opname berkala.",
+      "impact": "Ketersediaan suku cadang mesin tercapai 100% tanpa delay produksi, selisih stok spare part terkendali, dan kinerja diakui dengan promosi jabatan menjadi Supervisor Warehouse."
     },
     {
       "id": "inv-3",
-      "title": "High-Volume Stock Opname & Discrepancy Elimination",
+      "title": "Inbound, Transaksi Produksi Assy & Wall-to-Wall Stock Opname",
       "category": "opname",
-      "badge": "Kirin Dinamika Sentosa",
-      "description": "Memimpin eksekusi Wall-to-Wall Stock Opname untuk puluhan ribu SKU barang manufaktur/distribusi, menurunkan selisih varians stok (shrinkage) hingga di bawah 0.05% dari nilai aset.",
+      "badge": "Studi Kasus • PT Kirin Dinamika Sentosa",
+      "author": "Studi Kasus & Eksekusi Lapangan",
+      "description": "Pengelolaan administrasi Inbound receiving material, pencatatan transaksi mutasi material untuk perakitan produksi (Assy), pengendalian stok harian, dan eksekusi Wall-to-Wall Stock Opname.",
       "image": "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["Stock Opname", "Variance Investigation", "Barcode Audit", "Shrinkage Control"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "Varians < 0.05% • 100% Selesai Tepat Waktu"
-    },
-    {
-      "id": "inv-4",
-      "title": "System-Driven Stock Opname & Auto-Reconciliation Engine",
-      "category": "opname",
-      "badge": "Otomasi Sistem IMS",
-      "description": "Algoritma rekonsiliasi otomatis yang terintegrasi langsung di backend sistem IMS untuk memproses puluhan ribu baris data hitung fisik vs WMS secara instan tanpa perlu olah manual di spreadsheet/Excel.",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-      "technologies": ["Backend Engine", "Auto-Reconciliation", "System Validation", "Variance Matching"],
-      "liveDemo": "#inventory-studio-section",
-      "github": "#",
-      "metrics": "Auto-Match Realtime • Zero Manual Spreadsheets"
-    }
-  ],
-  "experience": [
-    {
-      "company": "PT Inovasi Eka Gemilang (Hanasui Cosmetics)",
-      "role": "Inventory Controller & Warehouse Specialist",
-      "period": "18 Agustus 2026 – Sekarang (Present)",
-      "employmentType": "Aktif / Present",
-      "description": "Bertanggung jawab atas pengawasan dan pengendalian akurasi total inventaris produk kecantikan dan kosmetik brand Hanasui. Memimpin implementasi alur sistem pergudangan terintegrasi, monitoring stok realtime, pengawasan ketat FEFO/FIFO produk kosmetik, audit penerimaan barang, serta optimasi alur fulfillment distribusi multi-channel."
-    },
-    {
-      "company": "Somethinc - Beautyhaul (PT Beauty Haul Indonesia)",
-      "role": "Inventory Controller - Associate",
-      "period": "Maret 2022 – Agustus 2026",
-      "employmentType": "Permanent",
-      "award": "Sertifikat 'The Best Admin Excentric'",
-      "description": "Menerima Penghargaan Sertifikat 'The Best Admin Excentric' atas pencapaian dedikasi dan performa administrasi & kontrol stok terbaik. Bertanggung jawab atas akurasi total inventaris puluhan ribu SKU produk Somethinc & Beautyhaul di gudang pusat multi-channel fulfillment (E-Commerce & Retail). Memimpin Cycle Count rutin harian/mingguan, pengawasan ketat sistem FEFO/FIFO produk kosmetik, rekonsiliasi otomatis data WMS vs stok fisik, serta mempertahankan Stock Accuracy rate konsisten di level 99.8%+ sesuai target KPI perusahaan."
-    },
-    {
-      "company": "PT Aditya Manufaktur Indonesia",
-      "role": "Administrator Warehouse ➔ Up To Supervisor Warehouse",
-      "period": "Januari 2015 – Mei 2021",
-      "employmentType": "Permanent",
-      "promotion": "Administrator Warehouse (Januari 2015 – April 2021) • Up To Supervisor Warehouse (Februari – Mei 2021)",
-      "description": "Mengelola administrasi menyeluruh operasional pergudangan manufaktur dan logistik Inbound/Outbound. Bertanggung jawab atas penerimaan bahan baku, kontrol barang jadi, slotting rak gudang, hingga dipromosikan sebagai Supervisor Warehouse (Februari – Mei 2021) untuk memimpin tim pelaksana gudang dan kelancaran alur operasional secara keseluruhan."
-    },
-    {
-      "company": "PT Kirin Dinamika Sentosa",
-      "role": "Administrator Warehouse",
-      "period": "Januari 2014 – Desember 2015",
-      "employmentType": "Contract",
-      "description": "Bertanggung jawab atas pencatatan dan administrasi stok barang gudang, verifikasi dokumen surat jalan & packing list Inbound/Outbound, pemutakhiran data sistem inventaris, penanganan investigasi selisih barang, serta pelaksanaan Wall-to-Wall Stock Opname berkala."
-    }
-  ],
-  "education": [
-    {
-      "period": "Pendidikan & Sertifikasi Profesional",
-      "degree": "Warehouse & Inventory Systems Specialist",
-      "institution": "Sertifikasi & Pelatihan Profesional Inventory Management & System Architecture",
-      "description": "Spesialisasi dalam Warehouse Management System (WMS), Cycle Counting Methodology, Root Cause Analysis (RCA), Discrepancy Prevention, Handheld Scanner Automation, dan Supply Chain Optimization."
+      "technologies": ["Inbound Receiving", "Transaksi Produksi Assy", "Stock Control", "Wall-to-Wall Opname", "Shrinkage Reduction"],
+      "metrics": "Varians < 0.05% • 100% Suplai Assy Tepat Waktu",
+      "problem": "Kebutuhan suplai komponen tepat waktu untuk jalur perakitan (Assy) serta tantangan rekonsiliasi selisih stok material pada audit tutup buku pabrik.",
+      "solution": "Menerapkan administrasi Inbound terintegrasi, verifikasi fisik berkala, standardisasi pencatatan pengeluaran barang ke jalur perakitan produksi, serta skema hitung ganda Stock Opname.",
+      "impact": "Kelancaran suplai komponen ke lini perakitan (Assy) terjamin 100%, selisih varians stok ditekan hingga < 0.05%, dan administrasi pergudangan terekam akurat."
     }
   ]
 }
