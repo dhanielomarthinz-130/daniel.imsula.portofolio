@@ -51,9 +51,9 @@ const NoteJS = (function () {
     },
     {
       id: 'inv_note_3',
-      title: '💡 Rumus & Matriks Kontrol Stok Excel',
-      content: "Rumus penting dalam analisa persediaan:\n- **Inventory Accuracy %** = (Jumlah SKU Akurat / Total SKU Dihitung) * 100%\n- **Safety Stock** = (Max Daily Usage * Max Lead Time) - (Avg Daily Usage * Avg Lead Time)\n- **Reorder Point (ROP)** = (Lead Time * Avg Daily Demand) + Safety Stock\n- **Formula Rekonsiliasi**: =XLOOKUP(SKU_Fisik, Data_WMS[SKU], Data_WMS[Qty], 0) - Qty_Fisik",
-      tag: 'Rumus & Excel',
+      title: '⚙️ Arsitektur Logika Otomasi Rekonsiliasi Sistem (IMS Backend)',
+      content: "-- Algoritma Otomasi Rekonsiliasi Stok Sistem Terintegrasi:\n-- 1. Auto-Reconcile: Membandingkan scanning Handheld fisik vs snapshot database WMS secara realtime\n-- 2. Auto-Discrepancy Trigger: Flagging otomatis saat selisih > 0 unit tanpa intervensi manual spreadsheet\n-- 3. Dynamic Safety Stock & ROP Calculator Engine terintegrasi langsung di backend database sistem\nSELECT \n    i.sku_code, \n    i.system_qty, \n    h.scanned_qty, \n    (h.scanned_qty - i.system_qty) AS variance_qty,\n    CASE WHEN h.scanned_qty = i.system_qty THEN 'MATCH_100' ELSE 'AUTO_DISCREPANCY_FLAG' END AS audit_status\nFROM inventory_master i\nINNER JOIN handheld_scans h ON i.sku_code = h.sku_code;",
+      tag: 'Otomasi Sistem',
       type: 'code',
       language: 'sql',
       pinned: false,

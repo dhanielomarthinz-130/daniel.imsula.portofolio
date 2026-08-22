@@ -270,9 +270,9 @@ function setupDefaultProjects() {
       title: "BeautyHaul & Somethinc Stock Accuracy Transformation",
       category: "accuracy",
       badge: "Somethinc - Beautyhaul",
-      description: "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel (E-commerce + Offline Store), berhasil menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat FEFO produk kosmetik.",
+      description: "Restrukturisasi proses Cycle Count harian dan rekonsiliasi omnichannel terotomatisasi di sistem, menaikkan akurasi stok dari 96.2% menjadi 99.85% dengan kontrol ketat sistem FEFO produk kosmetik.",
       image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Cycle Count", "FEFO Control", "WMS Sync", "Omnichannel", "Excel Dashboard"],
+      technologies: ["Cycle Count", "FEFO System Control", "WMS Sync", "Omnichannel", "Automated Backend"],
       liveDemo: "#inventory-studio-section",
       github: "#",
       metrics: "Akurasi 99.85% • Zero Expired Discrepancy"
@@ -300,6 +300,18 @@ function setupDefaultProjects() {
       liveDemo: "#inventory-studio-section",
       github: "#",
       metrics: "Varians < 0.05% • 100% Selesai Tepat Waktu"
+    },
+    {
+      id: "inv-4",
+      title: "System-Driven Stock Opname & Auto-Reconciliation Engine",
+      category: "opname",
+      badge: "Otomasi Sistem IMS",
+      description: "Algoritma rekonsiliasi otomatis yang terintegrasi langsung di backend sistem IMS untuk memproses puluhan ribu baris data hitung fisik vs WMS secara instan tanpa perlu olah manual di spreadsheet/Excel.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Backend Engine", "Auto-Reconciliation", "System Validation", "Variance Matching"],
+      liveDemo: "#inventory-studio-section",
+      github: "#",
+      metrics: "Auto-Match Realtime • Zero Manual Spreadsheets"
     }
   ];
 
