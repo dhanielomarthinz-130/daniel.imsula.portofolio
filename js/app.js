@@ -220,10 +220,12 @@ async function initPortfolioData() {
       author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
       description: "Aplikasi delegasi tugas 5R (Ringkas, Rapi, Resik, Rawat, Rajin) dan koordinasi briefing harian tim per divisi gudang. Dilengkapi modul unggah foto bukti kerja dan auto-generate format laporan otomatis yang langsung dibagikan ke WhatsApp grup dengan rapi.",
       image: "images/system_5r_briefing.jpg",
-      technologies: ["Sistem 5R / 5S Lean", "Task Assignment", "Team Briefing App", "Photo Evidence Upload", "WhatsApp Web Share", "Standardized SOP Reporting"],
+      adminPanel: "Monitoring delegasi tugas 5R per divisi, approval validasi foto before-after, evaluasi skor kebersihan area, dan generator otomatis pesan rekapitulasi WhatsApp ke grup manajemen.",
+      operatorPanel: "Checklist harian area kerja 5R per shift, ambil & unggah foto bukti kebersihan/kerapian langsung dari kamera HP, konfirmasi penyelesaian task, dan absensi briefing tim.",
+      technologies: ["Dual Panel (Desktop Admin & Mobile PIC)", "Sistem 5R / 5S Lean", "Task Assignment", "Team Briefing App", "Photo Evidence Upload", "WhatsApp Web Share", "Standardized SOP Reporting"],
       metrics: "100% Kepatuhan 5R • Otomasi Laporan Foto ke WhatsApp",
       problem: "Briefing harian dan pembagian area 5R yang sering tidak terpantau pertanggungjawabannya, serta pelaporan bukti kebersihan/kerapian yang lambat dan formatnya berantakan saat dilaporkan ke manajemen.",
-      solution: "Membangun sistem task management 5R per divisi dengan checklist area kerja, form upload foto before-after, serta tombol generator caption laporan otomatis yang langsung tersinkronisasi ke WhatsApp grup tim.",
+      solution: "Membangun arsitektur Dual Panel: Panel Admin Desktop untuk delegasi zona & rekap laporan, serta Panel PIC Mobile untuk eksekusi checklist lapangan dan upload foto before-after langsung ke WhatsApp.",
       impact: "Disiplin area kerja 5R meningkat 100%, dokumentasi kebersihan gudang tersentralisasi, dan manajemen menerima laporan foto briefing secara instan setiap pergantian shift."
     },
     {
@@ -234,10 +236,12 @@ async function initPortfolioData() {
       author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
       description: "Sistem digital patroli keamanan fasilitas gudang & pabrik. Memandu petugas security melakukan kontrol titik pos keliling (checkpoint barcode/NFC), pencatatan insiden mobile, dan pelaporan status patroli shift secara live.",
       image: "images/system_security_patrol.jpg",
-      technologies: ["Security Patrol App", "Checkpoint Verification", "Live Shift Handover", "Incident Photo Report", "Facility Security Log", "Real-Time Monitoring"],
+      adminPanel: "Command Center interaktif pemetaan rute patroli, monitoring status realtime pos checkpoint fasilitas gudang, log anomali/insiden keamanan, dan arsip digital serah terima shift.",
+      operatorPanel: "Pemindaian barcode/NFC pada setiap titik pos keliling, input catatan kondisi/insiden disertai foto temuan, dan submit laporan patroli per shift secara live tanpa buku manual.",
+      technologies: ["Dual Panel (Desktop Admin & Mobile Security)", "Security Patrol App", "Checkpoint Verification", "Live Shift Handover", "Incident Photo Report", "Facility Security Log", "Real-Time Monitoring"],
       metrics: "Zero Missed Checkpoints • Live Shift Handover Real-Time",
       problem: "Pencatatan patroli keamanan konvensional dengan buku manual yang rawan dipalsukan, titik rawan gudang yang terlewat, serta serah terima laporan shift antar petugas yang lambat.",
-      solution: "Merancang aplikasi Security Patrol dengan validasi titik pos wajib, pemantauan waktu tempuh rute, modul upload foto temuan anomali/insiden, dan ringkasan otomatis laporan shift yang langsung terkirim ke supervisor keamanan.",
+      solution: "Menerapkan sistem Dual Panel: Panel Admin Desktop untuk pantau seluruh rute keamanan dan Panel Security Mobile/PDA untuk verifikasi scan checkpoint serta pelaporan insiden real-time.",
       impact: "Tingkat kepatuhan rute patroli security mencapai 100%, respon penanganan anomali keamanan gudang lebih cepat, dan laporan shift terekam digital tanpa kertas."
     },
     {
@@ -248,10 +252,12 @@ async function initPortfolioData() {
       author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
       description: "Sistem antrian digital serah-terima paket kurir instan dan sameday (Gojek, GoSend, Shopee Express / SPX, Grab), mengeliminasi kerumunan driver di area staging dan mempercepat waktu serah terima hingga 70%.",
       image: "images/instant_courier_queue.jpg",
-      technologies: ["Queue Management", "Gojek / Grab / SPX Flow", "Sameday Logistics", "Staging Dispatch", "Barcode Handover"],
+      adminPanel: "Live monitor antrian slot staging kurir, manajemen nomor antrian driver (Gojek, Grab, SPX), analitik kecepatan dispatch per jam, dan rekapitulasi SLA serah terima.",
+      operatorPanel: "Scan barcode resi di staging slot, verifikasi nomor slot paket kurir saat driver tiba, konfirmasi serah terima paket secara instan langsung di pos dispatch.",
+      technologies: ["Dual Panel (Desktop Admin & Handheld Operator)", "Queue Management", "Gojek / Grab / SPX Flow", "Sameday Logistics", "Staging Dispatch", "Barcode Handover"],
       metrics: "-70% Waktu Tunggu Driver • Zero Staging Bottleneck",
       problem: "Penumpukan puluhan driver kurir instan di area staging gudang saat jam sibuk promo e-commerce, menyebabkan kekacauan pencarian paket dan keterlambatan pickup.",
-      solution: "Menerapkan sistem antrian berbasis pemindaian nomor resi dan penomoran slot staging sehingga paket langsung siap saat kurir tiba di pos serah-terima.",
+      solution: "Menerapkan sistem Dual Panel: Panel Admin Desktop untuk alokasi slot staging dan Panel Handheld Operator untuk scan barcode resi saat kurir tiba di pos serah-terima.",
       impact: "Waktu tunggu kurir berkurang 70%, kapasitas serah terima meningkat 3x lipat, dan area staging menjadi rapi serta bebas dari bottleneck."
     },
     {
@@ -262,10 +268,12 @@ async function initPortfolioData() {
       author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
       description: "Sistem terotomasi untuk pelaksanaan Wall-to-Wall Stock Opname dan Cycle Count berkala. Memproses validasi hitung fisik vs saldo sistem WMS secara instan tanpa perlu olah manual di spreadsheet.",
       image: "images/stock_opname_system.jpg",
-      technologies: ["Automated Reconciliation", "Stock Opname System", "Variance Matching", "WMS Realtime Sync", "Loss Prevention"],
+      adminPanel: "Setup master audit & cycle count, pemrosesan algoritma auto-variance matcher, visualisasi peta selisih per zona, approval penyesuaian saldo sistem, dan ekspor laporan selisih resmi.",
+      operatorPanel: "Scan barcode lokasi rak/bin, scan barcode SKU produk, input jumlah hitung fisik real-time langsung di lorong gudang tanpa kertas / spreadsheet.",
+      technologies: ["Dual Panel (Desktop Admin & Handheld Counter)", "Automated Reconciliation", "Stock Opname System", "Variance Matching", "WMS Realtime Sync", "Loss Prevention"],
       metrics: "Auto-Match Realtime • Zero Manual Spreadsheets",
       problem: "Proses Stock Opname konvensional yang memakan waktu berhari-hari karena rekapitulasi data fisik dilakukan manual di Excel, rawan human error, dan lambat dalam mendeteksi selisih.",
-      solution: "Merancang sistem rekonsiliasi berbasis algoritma pencocokan otomatis (auto-variance matcher) yang langsung membandingkan hasil scan tim hitung dengan data sistem secara instan.",
+      solution: "Merancang arsitektur Dual Panel: Panel Admin Desktop untuk eksekusi algoritma auto-variance matching dan Panel Handheld PDA bagi tim counter untuk scan fisik di lorong gudang.",
       impact: "Memangkas durasi audit Stock Opname hingga 60%, laporan selisih selesai pada hari yang sama, dan akurasi data aset inventaris terjamin 100% transparan."
     },
     {
@@ -276,10 +284,12 @@ async function initPortfolioData() {
       author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
       description: "Pengembangan alur pemindaian Handheld Scanner (PDA/Barcode) dan perombakan Picking Logic untuk memangkas waktu ambil barang dan menaikkan akurasi stok secara drastis dari 75% ke 99.99%+.",
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Handheld Scanner", "Picking Logic", "PDA Barcode", "WMS Sync", "Zero Manual Spreadsheets"],
+      adminPanel: "Manajemen gelombang pesanan (wave picking), alokasi penugasan picker per zona lorong, pemantauan backlog order, dan live SLA kecepatan picking.",
+      operatorPanel: "Pemandu rute lorong terpendek (pathing), validasi scan barcode SKU wajib untuk mencegah salah ambil varian barang, dan konfirmasi penyelesaian picklist.",
+      technologies: ["Dual Panel (Desktop Admin & Handheld Picker)", "Handheld Scanner", "Picking Logic", "PDA Barcode", "WMS Sync", "Zero Manual Spreadsheets"],
       metrics: "Akurasi Stok 75% ➔ 99.99%+ • Peningkatan Produktivitas Tim Picker",
       problem: "Tingginya selisih stok fisik vs sistem akibat proses picking manual yang mengandalkan kertas/spreadsheet dan sering terjadi salah ambil varian SKU kosmetik.",
-      solution: "Merancang alur validasi barcode wajib pada tiap item menggunakan perangkat Handheld PDA terintegrasi WMS, serta mengoptimalkan rute jalan (pathing) picker di area lorong rak gudang.",
+      solution: "Merancang Dual Panel terintegrasi: Panel Admin Desktop untuk alokasi batch order dan Panel Handheld PDA untuk validasi scan barcode wajib saat picking di lorong rak.",
       impact: "Akurasi stok melonjak hingga 99.99%+, waktu pemenuhan pesanan lebih cepat 40%, dan kesalahan salah kirim varian barang turun hingga mendekati nol."
     },
     {
@@ -290,10 +300,12 @@ async function initPortfolioData() {
       author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
       description: "Sistem penjadwalan armada pengiriman barang, koordinasi rute driver, live tracking posisi armada, dan pelaporan bukti kirim digital secara mobile.",
       image: "images/tms_live_tracking.jpg",
-      technologies: ["TMS Logistics", "Live Tracking GPS", "Delivery Scheduling", "Mobile Driver Report", "Fleet Dispatch"],
+      adminPanel: "Penjadwalan ritase armada pengiriman, optimasi rute multi-drop, monitoring GPS live tracking posisi armada di peta digital, dan verifikasi status surat jalan.",
+      operatorPanel: "Panduan rute pengiriman harian pada smartphone driver, pencatatan waktu tiba di outlet/cabang, dan upload foto bukti serah terima (e-POD / tanda tangan digital).",
+      technologies: ["Dual Panel (Desktop Admin & Mobile Driver)", "TMS Logistics", "Live Tracking GPS", "Delivery Scheduling", "Mobile Driver Report", "Fleet Dispatch"],
       metrics: "100% Visibilitas Pengiriman • On-Time Delivery Terpantau",
       problem: "Sulitnya memonitor status kiriman barang antar cabang/outlet dan estimasi waktu sampai driver yang sering tidak akurat.",
-      solution: "Membangun sistem TMS dengan modul rute harian, pelacakan koordinat GPS real-time, dan fitur upload bukti serah terima (e-POD) langsung dari smartphone driver.",
+      solution: "Membangun sistem Dual Panel: Panel Admin Desktop untuk manajemen rute & live dispatch, serta Panel Driver Mobile untuk navigasi dan upload bukti e-POD langsung dari HP.",
       impact: "Tingkat ketepatan waktu pengiriman meningkat drastis, keterlambatan terpantau secara proaktif, dan rekonsiliasi surat jalan selesai pada hari yang sama."
     },
     {
@@ -304,10 +316,12 @@ async function initPortfolioData() {
       author: "Penerapan & Integrasi Tools AI Modern",
       description: "Implementasi ekosistem AI, BI & no-code modern (ChatGPT, Gemini, Claude, Antigravity IDE, Google Stitch, OpenClaw, Google Apps Script, AppSheet, & Looker Studio) untuk analisis anomali selisih stok, pembuatan SOP operasional otomatis, dan otomasi visual workflow data gudang.",
       image: "images/ai_warehouse_analytics.jpg",
-      technologies: ["ChatGPT", "Google Gemini", "Claude", "Antigravity IDE", "Google Stitch", "OpenClaw", "Google Apps Script", "AppSheet", "Looker Studio", "Prompt Engineering"],
+      adminPanel: "Dashboard eksekutif Looker Studio, formulasi prompt analisis 5-Why RCA menggunakan Claude/ChatGPT, ekstraksi data OpenClaw, dan pembuatan SOP digital otomatis.",
+      operatorPanel: "Form digital AppSheet / Mobile Web untuk input cepat anomali barang rusak/selisih langsung dari lantai gudang serta akses instan panduan SOP interaktif.",
+      technologies: ["Dual Panel (Desktop Admin & Mobile AppSheet)", "ChatGPT", "Google Gemini", "Claude", "Antigravity IDE", "Google Stitch", "OpenClaw", "Google Apps Script", "AppSheet", "Looker Studio"],
       metrics: "Analisis RCA Otomatis • Pembuatan SOP 5x Lebih Cepat",
       problem: "Proses pembuatan Standard Operating Procedure (SOP), pelaporan investigasi 5-Why RCA, dan audit data selisih stok yang menyita banyak waktu jika disusun secara manual.",
-      solution: "Memanfaatkan Claude dan ChatGPT untuk formulasi Root Cause Analysis mendalam, Gemini untuk pemindaian dokumen faktur/manifest, Antigravity & Antigravity IDE untuk pembuatan script otomasi sistem, Google Stitch untuk visual prototyping, OpenClaw untuk ekstraksi data marketplace, Google Apps Script & AppSheet untuk otomasi data internal, serta Looker Studio untuk dashboard analitik real-time.",
+      solution: "Mengembangkan ekosistem Dual Panel dengan bantuan AI: Dashboard Desktop untuk analisis RCA mendalam dan Form Mobile AppSheet untuk input data anomali langsung oleh tim lapangan.",
       impact: "Efisiensi administrasi meningkat 500%, SOP operasional terdokumentasi presisi, dan mitigasi selisih stok tertangani dengan standar analisa terdepan."
     },
     {
@@ -326,7 +340,7 @@ async function initPortfolioData() {
     },
     {
       id: "inv-2",
-      title: "Administrasi Spare Part, Transfer Stock Produksi & Stock Opname",
+      title": "Administrasi Spare Part, Transfer Stock Produksi & Stock Opname",
       category: "opname",
       badge: "Studi Kasus • PT Aditya Manufaktur",
       author: "Studi Kasus & Eksekusi Lapangan",
@@ -340,7 +354,7 @@ async function initPortfolioData() {
     },
     {
       id: "inv-3",
-      title: "Inbound, Transaksi Produksi Assy & Wall-to-Wall Stock Opname",
+      title": "Inbound, Transaksi Produksi Assy & Wall-to-Wall Stock Opname",
       category: "opname",
       badge: "Studi Kasus • PT Kirin Dinamika Sentosa",
       author: "Studi Kasus & Eksekusi Lapangan",
@@ -399,6 +413,14 @@ function renderProjects(projects) {
           </div>
         ` : ''}
         <h3>${proj.title}</h3>
+        
+        ${proj.adminPanel && proj.operatorPanel ? `
+          <div class="project-dual-panels">
+            <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+            <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+          </div>
+        ` : ''}
+
         <p>${proj.description}</p>
         
         <div class="project-tech-tags">
@@ -474,6 +496,24 @@ window.openProjectModal = function (projectId) {
         </span>
         <strong style="color: var(--text-primary); font-size: 0.92rem;">${roleText}</strong>
       </div>
+
+      ${project.adminPanel && project.operatorPanel ? `
+        <div class="modal-dual-panels-box">
+          <h4 style="color: var(--text-primary); margin-bottom: 0.75rem; font-size: 0.95rem; display: flex; align-items: center; gap: 0.45rem;">
+            <i class="fa-solid fa-layer-group text-emerald"></i> Arsitektur 2 Panel (Dual-Panel Interface)
+          </h4>
+          <div class="dual-panel-columns">
+            <div class="panel-col panel-col-admin">
+              <div class="panel-header"><i class="fa-solid fa-desktop text-blue"></i> <strong>Panel Admin (Desktop PC / Web)</strong></div>
+              <p>${project.adminPanel}</p>
+            </div>
+            <div class="panel-col panel-col-operator">
+              <div class="panel-header"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Panel PIC / Operator (Mobile / Handheld PDA)</strong></div>
+              <p>${project.operatorPanel}</p>
+            </div>
+          </div>
+        </div>
+      ` : ''}
 
       <div>
         <h4 style="color: var(--text-primary); margin-bottom: 0.35rem;"><i class="fa-solid fa-triangle-exclamation text-amber"></i> Latar Belakang & Tantangan</h4>

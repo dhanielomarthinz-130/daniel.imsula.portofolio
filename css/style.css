@@ -1306,6 +1306,79 @@ section {
   color: var(--accent-blue);
 }
 
+.project-dual-panels {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin: 0.2rem 0 0.85rem;
+}
+
+.panel-chip {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.modal-dual-panels-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 0.5rem;
+}
+
+.dual-panel-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .dual-panel-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel-col {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.panel-col-admin {
+  border-left: 3px solid var(--accent-blue);
+}
+
+.panel-col-operator {
+  border-left: 3px solid var(--accent-emerald);
+}
+
+.panel-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.panel-col p {
+  font-size: 0.83rem !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
+}
+
 /* ==========================================================================
    6. Career Timeline
    ========================================================================== */
