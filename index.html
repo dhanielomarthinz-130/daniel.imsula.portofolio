@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=7.0" />
+  <link rel="stylesheet" href="css/style.css?v=7.1" />
 </head>
 
 <body>
@@ -710,9 +710,381 @@
             Perusahaan</button>
         </div>
 
-        <!-- Projects Grid Container -->
+        <!-- Projects Grid Container (Pre-rendered for Instant Display & Fast Load) -->
         <div class="projects-grid" id="projects-grid-container">
-          <!-- Rendered dynamically by app.js -->
+          
+          <!-- 1. Sistem Assign Task 5R & Briefing Tim -->
+          <div class="project-card" data-category="ai-tech">
+            <div class="project-image-wrapper">
+              <img src="images/system_5r_briefing.jpg" alt="Sistem Assign Task 5R &amp; Briefing Tim Per Divisi" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <i class="fa-solid fa-code"></i> Developed by Daniel • Sistem 5R &amp; Briefing
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <i class="fa-solid fa-laptop-code"></i> <span>Sistem Dikembangkan Sendiri oleh Daniel Imsula</span>
+              </div>
+              <h3>Sistem Assign Task 5R &amp; Briefing Tim Per Divisi (Auto Share WA)</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Aplikasi delegasi tugas 5R (Ringkas, Rapi, Resik, Rawat, Rajin) dan koordinasi briefing harian tim per divisi gudang. Dilengkapi modul unggah foto bukti kerja dan auto-generate format laporan otomatis yang langsung dibagikan ke WhatsApp grup dengan rapi.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Mobile PIC)</span>
+                <span class="tech-tag">Sistem 5R / 5S Lean</span>
+                <span class="tech-tag">Task Assignment</span>
+                <span class="tech-tag">Team Briefing App</span>
+                <span class="tech-tag">Photo Evidence Upload</span>
+                <span class="tech-tag">WhatsApp Web Share</span>
+                <span class="tech-tag">Standardized SOP Reporting</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> 100% Kepatuhan 5R • Otomasi Laporan Foto ke WhatsApp
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-5r')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Security Patrol Management System -->
+          <div class="project-card" data-category="tms-logistics">
+            <div class="project-image-wrapper">
+              <img src="images/system_security_patrol.jpg" alt="Security Patrol Management System &amp; Live Shift Report" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <i class="fa-solid fa-code"></i> Developed by Daniel • Security Patrol
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <i class="fa-solid fa-laptop-code"></i> <span>Sistem Dikembangkan Sendiri oleh Daniel Imsula</span>
+              </div>
+              <h3>Security Patrol Management System &amp; Live Shift Report</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Sistem digital patroli keamanan fasilitas gudang &amp; pabrik. Memandu petugas security melakukan kontrol titik pos keliling (checkpoint barcode/NFC), pencatatan insiden mobile, dan pelaporan status patroli shift secara live.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Mobile Security)</span>
+                <span class="tech-tag">Security Patrol App</span>
+                <span class="tech-tag">Checkpoint Verification</span>
+                <span class="tech-tag">Live Shift Handover</span>
+                <span class="tech-tag">Incident Photo Report</span>
+                <span class="tech-tag">Facility Security Log</span>
+                <span class="tech-tag">Real-Time Monitoring</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Zero Missed Checkpoints • Live Shift Handover Real-Time
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-patrol')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Sistem Antrian Serah Terima Kurir Instan -->
+          <div class="project-card" data-category="tms-logistics">
+            <div class="project-image-wrapper">
+              <img src="images/instant_courier_queue.jpg" alt="Sistem Antrian Serah Terima Kurir Instan" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <i class="fa-solid fa-code"></i> Developed by Daniel • Antrian Kurir
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <i class="fa-solid fa-laptop-code"></i> <span>Sistem Dikembangkan Sendiri oleh Daniel Imsula</span>
+              </div>
+              <h3>Sistem Antrian Serah Terima Kurir Instan (Gojek, Shopee Express, Grab)</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Sistem antrian digital serah-terima paket kurir instan dan sameday (Gojek, GoSend, Shopee Express / SPX, Grab), mengeliminasi kerumunan driver di area staging dan mempercepat waktu serah terima hingga 70%.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Handheld Operator)</span>
+                <span class="tech-tag">Queue Management</span>
+                <span class="tech-tag">Gojek / Grab / SPX Flow</span>
+                <span class="tech-tag">Sameday Logistics</span>
+                <span class="tech-tag">Staging Dispatch</span>
+                <span class="tech-tag">Barcode Handover</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> -70% Waktu Tunggu Driver • Zero Staging Bottleneck
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-queue')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Engine Stock Opname & Automated Reconciliation -->
+          <div class="project-card" data-category="opname">
+            <div class="project-image-wrapper">
+              <img src="images/stock_opname_system.jpg" alt="System-Driven Stock Opname &amp; Automated Reconciliation Engine" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <i class="fa-solid fa-code"></i> Developed by Daniel • Engine Stock Opname
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <i class="fa-solid fa-laptop-code"></i> <span>Sistem Dikembangkan Sendiri oleh Daniel Imsula</span>
+              </div>
+              <h3>System-Driven Stock Opname &amp; Automated Reconciliation Engine</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Sistem terotomasi untuk pelaksanaan Wall-to-Wall Stock Opname dan Cycle Count berkala. Memproses validasi hitung fisik vs saldo sistem WMS secara instan tanpa perlu olah manual di spreadsheet.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Handheld Counter)</span>
+                <span class="tech-tag">Automated Reconciliation</span>
+                <span class="tech-tag">Stock Opname System</span>
+                <span class="tech-tag">Variance Matching</span>
+                <span class="tech-tag">WMS Realtime Sync</span>
+                <span class="tech-tag">Loss Prevention</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Auto-Match Realtime • Zero Manual Spreadsheets
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-opname')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Optimasi Picking Logic & Integrasi Handheld Scanner IMS -->
+          <div class="project-card" data-category="ims-tech">
+            <div class="project-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Optimasi Picking Logic &amp; Integrasi Handheld Scanner IMS" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <i class="fa-solid fa-code"></i> Developed by Daniel • Handheld IMS
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <i class="fa-solid fa-laptop-code"></i> <span>Sistem Dikembangkan Sendiri oleh Daniel Imsula</span>
+              </div>
+              <h3>Optimasi Picking Logic &amp; Integrasi Handheld Scanner IMS</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Pengembangan alur pemindaian Handheld Scanner (PDA/Barcode) dan perombakan Picking Logic untuk memangkas waktu ambil barang dan menaikkan akurasi stok secara drastis dari 75% ke 99.99%+.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Handheld Picker)</span>
+                <span class="tech-tag">Handheld Scanner</span>
+                <span class="tech-tag">Picking Logic</span>
+                <span class="tech-tag">PDA Barcode</span>
+                <span class="tech-tag">WMS Sync</span>
+                <span class="tech-tag">Zero Manual Spreadsheets</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Akurasi Stok 75% ➔ 99.99%+ • Peningkatan Produktivitas Tim Picker
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-ims')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Transportation Management System (TMS) -->
+          <div class="project-card" data-category="tms-logistics">
+            <div class="project-image-wrapper">
+              <img src="images/tms_live_tracking.jpg" alt="Transportation Management System (TMS) &amp; Driver Live Tracking" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <i class="fa-solid fa-code"></i> Developed by Daniel • TMS Tracking
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <i class="fa-solid fa-laptop-code"></i> <span>Sistem Dikembangkan Sendiri oleh Daniel Imsula</span>
+              </div>
+              <h3>Transportation Management System (TMS) &amp; Driver Live Tracking</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Sistem penjadwalan armada pengiriman barang, koordinasi rute driver, live tracking posisi armada di peta digital, dan pelaporan bukti kirim digital secara mobile.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Mobile Driver)</span>
+                <span class="tech-tag">TMS Logistics</span>
+                <span class="tech-tag">Live Tracking GPS</span>
+                <span class="tech-tag">Delivery Scheduling</span>
+                <span class="tech-tag">Mobile Driver Report</span>
+                <span class="tech-tag">Fleet Dispatch</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> 100% Visibilitas Pengiriman • On-Time Delivery Terpantau
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-tms')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Penerapan AI untuk Analisis Discrepancy & SOP -->
+          <div class="project-card" data-category="ai-tech">
+            <div class="project-image-wrapper">
+              <img src="images/ai_warehouse_analytics.jpg" alt="Penerapan AI untuk Analisis Discrepancy &amp; Otomasi SOP Gudang" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-ai">
+                <i class="fa-solid fa-brain"></i> Integrasi AI • Discrepancy &amp; SOP
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-ai">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Penerapan &amp; Integrasi Tools AI Modern</span>
+              </div>
+              <h3>Penerapan AI untuk Analisis Discrepancy &amp; Otomasi SOP Gudang</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Implementasi ekosistem AI, BI &amp; no-code modern (ChatGPT, Gemini, Claude, Antigravity IDE, Google Stitch, OpenClaw, Google Apps Script, AppSheet, &amp; Looker Studio) untuk analisis anomali selisih stok, pembuatan SOP operasional otomatis, dan otomasi visual workflow data gudang.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Mobile AppSheet)</span>
+                <span class="tech-tag">ChatGPT</span>
+                <span class="tech-tag">Google Gemini</span>
+                <span class="tech-tag">Claude</span>
+                <span class="tech-tag">Antigravity IDE</span>
+                <span class="tech-tag">Google Stitch</span>
+                <span class="tech-tag">OpenClaw</span>
+                <span class="tech-tag">Google Apps Script</span>
+                <span class="tech-tag">AppSheet</span>
+                <span class="tech-tag">Looker Studio</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Analisis RCA Otomatis • Pembuatan SOP 5x Lebih Cepat
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-ai')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Studi Kasus Somethinc Beautyhaul -->
+          <div class="project-card" data-category="accuracy">
+            <div class="project-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Setup WMS &amp; Transformasi Akurasi Stok 99.85% di Somethinc" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-case-study">
+                <i class="fa-solid fa-building"></i> Studi Kasus • Somethinc Beautyhaul
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-case">
+                <i class="fa-solid fa-briefcase"></i> <span>Studi Kasus &amp; Eksekusi Lapangan</span>
+              </div>
+              <h3>Setup WMS &amp; Transformasi Akurasi Stok 99.85% di Somethinc</h3>
+              <p>Kolaborasi aktif bersama Tim Tech dalam perancangan &amp; setup sistem WMS baru, restrukturisasi Cycle Count rutin, dan pengendalian ketat FEFO produk kosmetik.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Setup WMS</span>
+                <span class="tech-tag">Kolaborasi Tim Tech</span>
+                <span class="tech-tag">Cycle Count</span>
+                <span class="tech-tag">FEFO System Control</span>
+                <span class="tech-tag">Omnichannel Fulfillment</span>
+                <span class="tech-tag">RCA 5-Why</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Akurasi Stok 99.85% • Sukses Implementasi WMS
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('inv-1')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Studi Kasus PT Aditya Manufaktur -->
+          <div class="project-card" data-category="opname">
+            <div class="project-image-wrapper">
+              <img src="images/sparepart_warehouse_mgmt.jpg" alt="Administrasi Spare Part, Transfer Stock Produksi &amp; Stock Opname" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-case-study">
+                <i class="fa-solid fa-building"></i> Studi Kasus • PT Aditya Manufaktur
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-case">
+                <i class="fa-solid fa-briefcase"></i> <span>Studi Kasus &amp; Eksekusi Lapangan</span>
+              </div>
+              <h3>Administrasi Spare Part, Transfer Stock Produksi &amp; Stock Opname</h3>
+              <p>Pengelolaan administrasi spare part mesin manufaktur, eksekusi receipt barang masuk, transfer stock sesuai rencana produksi, monitoring buffer stock, hingga dipromosikan ke Supervisor Warehouse.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Administrasi Spare Part</span>
+                <span class="tech-tag">Receipt &amp; Inbound</span>
+                <span class="tech-tag">Control Stock Suku Cadang</span>
+                <span class="tech-tag">Transfer Stock Produksi</span>
+                <span class="tech-tag">Stock Opname</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Promosi ke Supervisor • Nol Downtime Mesin Produksi
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('inv-2')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Studi Kasus PT Kirin Dinamika Sentosa -->
+          <div class="project-card" data-category="opname">
+            <div class="project-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Inbound, Transaksi Produksi Assy &amp; Wall-to-Wall Stock Opname" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-case-study">
+                <i class="fa-solid fa-building"></i> Studi Kasus • PT Kirin Dinamika Sentosa
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-case">
+                <i class="fa-solid fa-briefcase"></i> <span>Studi Kasus &amp; Eksekusi Lapangan</span>
+              </div>
+              <h3>Inbound, Transaksi Produksi Assy &amp; Wall-to-Wall Stock Opname</h3>
+              <p>Pengelolaan administrasi Inbound receiving material, pencatatan transaksi mutasi material untuk perakitan produksi (Assy), pengendalian stok harian, dan eksekusi Wall-to-Wall Stock Opname.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Inbound Receiving</span>
+                <span class="tech-tag">Transaksi Produksi Assy</span>
+                <span class="tech-tag">Stock Control</span>
+                <span class="tech-tag">Wall-to-Wall Opname</span>
+                <span class="tech-tag">Shrinkage Reduction</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Varians &lt; 0.05% • 100% Suplai Assy Tepat Waktu
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('inv-3')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1808,7 +2180,7 @@
   <div class="toast-container" id="toast-container"></div>
 
   <!-- Main JavaScript -->
-  <script src="js/app.js?v=6.1"></script>
+  <script src="js/app.js?v=7.1"></script>
 </body>
 
 </html>

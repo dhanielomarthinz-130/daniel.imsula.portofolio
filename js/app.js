@@ -197,179 +197,18 @@ function initNavigation() {
 let allProjectsData = [];
 
 async function initPortfolioData() {
+  initProjectFilters();
   try {
     const res = await fetch('data/portfolio.json');
     if (res.ok) {
       const json = await res.json();
-      allProjectsData = json.projects || [];
-      renderProjects(allProjectsData);
-      initProjectFilters();
-      return;
+      if (json.projects && json.projects.length) {
+        allProjectsData = json.projects;
+      }
     }
   } catch (err) {
-    console.log('Fetching portfolio.json fallback.');
+    console.log('Using local fallback data.');
   }
-
-  // Fallback if fetch is unavailable
-  allProjectsData = [
-    {
-      id: "sys-5r",
-      title: "Sistem Assign Task 5R & Briefing Tim Per Divisi (Auto Share WA)",
-      category: "ai-tech",
-      badge: "Developed by Daniel • Sistem 5R & Briefing",
-      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
-      description: "Aplikasi delegasi tugas 5R (Ringkas, Rapi, Resik, Rawat, Rajin) dan koordinasi briefing harian tim per divisi gudang. Dilengkapi modul unggah foto bukti kerja dan auto-generate format laporan otomatis yang langsung dibagikan ke WhatsApp grup dengan rapi.",
-      image: "images/system_5r_briefing.jpg",
-      adminPanel: "Monitoring delegasi tugas 5R per divisi, approval validasi foto before-after, evaluasi skor kebersihan area, dan generator otomatis pesan rekapitulasi WhatsApp ke grup manajemen.",
-      operatorPanel: "Checklist harian area kerja 5R per shift, ambil & unggah foto bukti kebersihan/kerapian langsung dari kamera HP, konfirmasi penyelesaian task, dan absensi briefing tim.",
-      technologies: ["Dual Panel (Desktop Admin & Mobile PIC)", "Sistem 5R / 5S Lean", "Task Assignment", "Team Briefing App", "Photo Evidence Upload", "WhatsApp Web Share", "Standardized SOP Reporting"],
-      metrics: "100% Kepatuhan 5R • Otomasi Laporan Foto ke WhatsApp",
-      problem: "Briefing harian dan pembagian area 5R yang sering tidak terpantau pertanggungjawabannya, serta pelaporan bukti kebersihan/kerapian yang lambat dan formatnya berantakan saat dilaporkan ke manajemen.",
-      solution: "Membangun arsitektur Dual Panel: Panel Admin Desktop untuk delegasi zona & rekap laporan, serta Panel PIC Mobile untuk eksekusi checklist lapangan dan upload foto before-after langsung ke WhatsApp.",
-      impact: "Disiplin area kerja 5R meningkat 100%, dokumentasi kebersihan gudang tersentralisasi, dan manajemen menerima laporan foto briefing secara instan setiap pergantian shift."
-    },
-    {
-      id: "sys-patrol",
-      title: "Security Patrol Management System & Live Shift Report",
-      category: "tms-logistics",
-      badge: "Developed by Daniel • Security Patrol",
-      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
-      description: "Sistem digital patroli keamanan fasilitas gudang & pabrik. Memandu petugas security melakukan kontrol titik pos keliling (checkpoint barcode/NFC), pencatatan insiden mobile, dan pelaporan status patroli shift secara live.",
-      image: "images/system_security_patrol.jpg",
-      adminPanel: "Command Center interaktif pemetaan rute patroli, monitoring status realtime pos checkpoint fasilitas gudang, log anomali/insiden keamanan, dan arsip digital serah terima shift.",
-      operatorPanel: "Pemindaian barcode/NFC pada setiap titik pos keliling, input catatan kondisi/insiden disertai foto temuan, dan submit laporan patroli per shift secara live tanpa buku manual.",
-      technologies: ["Dual Panel (Desktop Admin & Mobile Security)", "Security Patrol App", "Checkpoint Verification", "Live Shift Handover", "Incident Photo Report", "Facility Security Log", "Real-Time Monitoring"],
-      metrics: "Zero Missed Checkpoints • Live Shift Handover Real-Time",
-      problem: "Pencatatan patroli keamanan konvensional dengan buku manual yang rawan dipalsukan, titik rawan gudang yang terlewat, serta serah terima laporan shift antar petugas yang lambat.",
-      solution: "Menerapkan sistem Dual Panel: Panel Admin Desktop untuk pantau seluruh rute keamanan dan Panel Security Mobile/PDA untuk verifikasi scan checkpoint serta pelaporan insiden real-time.",
-      impact: "Tingkat kepatuhan rute patroli security mencapai 100%, respon penanganan anomali keamanan gudang lebih cepat, dan laporan shift terekam digital tanpa kertas."
-    },
-    {
-      id: "sys-queue",
-      title: "Sistem Antrian Serah Terima Kurir Instan (Gojek, Shopee Express, Grab)",
-      category: "tms-logistics",
-      badge: "Developed by Daniel • Antrian Kurir",
-      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
-      description: "Sistem antrian digital serah-terima paket kurir instan dan sameday (Gojek, GoSend, Shopee Express / SPX, Grab), mengeliminasi kerumunan driver di area staging dan mempercepat waktu serah terima hingga 70%.",
-      image: "images/instant_courier_queue.jpg",
-      adminPanel: "Live monitor antrian slot staging kurir, manajemen nomor antrian driver (Gojek, Grab, SPX), analitik kecepatan dispatch per jam, dan rekapitulasi SLA serah terima.",
-      operatorPanel: "Scan barcode resi di staging slot, verifikasi nomor slot paket kurir saat driver tiba, konfirmasi serah terima paket secara instan langsung di pos dispatch.",
-      technologies: ["Dual Panel (Desktop Admin & Handheld Operator)", "Queue Management", "Gojek / Grab / SPX Flow", "Sameday Logistics", "Staging Dispatch", "Barcode Handover"],
-      metrics: "-70% Waktu Tunggu Driver • Zero Staging Bottleneck",
-      problem: "Penumpukan puluhan driver kurir instan di area staging gudang saat jam sibuk promo e-commerce, menyebabkan kekacauan pencarian paket dan keterlambatan pickup.",
-      solution: "Menerapkan sistem Dual Panel: Panel Admin Desktop untuk alokasi slot staging dan Panel Handheld Operator untuk scan barcode resi saat kurir tiba di pos serah-terima.",
-      impact: "Waktu tunggu kurir berkurang 70%, kapasitas serah terima meningkat 3x lipat, dan area staging menjadi rapi serta bebas dari bottleneck."
-    },
-    {
-      id: "sys-opname",
-      title: "System-Driven Stock Opname & Automated Reconciliation Engine",
-      category: "opname",
-      badge: "Developed by Daniel • Engine Stock Opname",
-      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
-      description: "Sistem terotomasi untuk pelaksanaan Wall-to-Wall Stock Opname dan Cycle Count berkala. Memproses validasi hitung fisik vs saldo sistem WMS secara instan tanpa perlu olah manual di spreadsheet.",
-      image: "images/stock_opname_system.jpg",
-      adminPanel: "Setup master audit & cycle count, pemrosesan algoritma auto-variance matcher, visualisasi peta selisih per zona, approval penyesuaian saldo sistem, dan ekspor laporan selisih resmi.",
-      operatorPanel: "Scan barcode lokasi rak/bin, scan barcode SKU produk, input jumlah hitung fisik real-time langsung di lorong gudang tanpa kertas / spreadsheet.",
-      technologies: ["Dual Panel (Desktop Admin & Handheld Counter)", "Automated Reconciliation", "Stock Opname System", "Variance Matching", "WMS Realtime Sync", "Loss Prevention"],
-      metrics: "Auto-Match Realtime • Zero Manual Spreadsheets",
-      problem: "Proses Stock Opname konvensional yang memakan waktu berhari-hari karena rekapitulasi data fisik dilakukan manual di Excel, rawan human error, dan lambat dalam mendeteksi selisih.",
-      solution: "Merancang arsitektur Dual Panel: Panel Admin Desktop untuk eksekusi algoritma auto-variance matching dan Panel Handheld PDA bagi tim counter untuk scan fisik di lorong gudang.",
-      impact: "Memangkas durasi audit Stock Opname hingga 60%, laporan selisih selesai pada hari yang sama, dan akurasi data aset inventaris terjamin 100% transparan."
-    },
-    {
-      id: "sys-ims",
-      title: "Optimasi Picking Logic & Integrasi Handheld Scanner IMS",
-      category: "ims-tech",
-      badge: "Developed by Daniel • Handheld IMS",
-      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
-      description: "Pengembangan alur pemindaian Handheld Scanner (PDA/Barcode) dan perombakan Picking Logic untuk memangkas waktu ambil barang dan menaikkan akurasi stok secara drastis dari 75% ke 99.99%+.",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-      adminPanel: "Manajemen gelombang pesanan (wave picking), alokasi penugasan picker per zona lorong, pemantauan backlog order, dan live SLA kecepatan picking.",
-      operatorPanel: "Pemandu rute lorong terpendek (pathing), validasi scan barcode SKU wajib untuk mencegah salah ambil varian barang, dan konfirmasi penyelesaian picklist.",
-      technologies: ["Dual Panel (Desktop Admin & Handheld Picker)", "Handheld Scanner", "Picking Logic", "PDA Barcode", "WMS Sync", "Zero Manual Spreadsheets"],
-      metrics: "Akurasi Stok 75% ➔ 99.99%+ • Peningkatan Produktivitas Tim Picker",
-      problem: "Tingginya selisih stok fisik vs sistem akibat proses picking manual yang mengandalkan kertas/spreadsheet dan sering terjadi salah ambil varian SKU kosmetik.",
-      solution: "Merancang Dual Panel terintegrasi: Panel Admin Desktop untuk alokasi batch order dan Panel Handheld PDA untuk validasi scan barcode wajib saat picking di lorong rak.",
-      impact: "Akurasi stok melonjak hingga 99.99%+, waktu pemenuhan pesanan lebih cepat 40%, dan kesalahan salah kirim varian barang turun hingga mendekati nol."
-    },
-    {
-      id: "sys-tms",
-      title: "Transportation Management System (TMS) & Driver Live Tracking",
-      category: "tms-logistics",
-      badge: "Developed by Daniel • TMS Tracking",
-      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
-      description: "Sistem penjadwalan armada pengiriman barang, koordinasi rute driver, live tracking posisi armada, dan pelaporan bukti kirim digital secara mobile.",
-      image: "images/tms_live_tracking.jpg",
-      adminPanel: "Penjadwalan ritase armada pengiriman, optimasi rute multi-drop, monitoring GPS live tracking posisi armada di peta digital, dan verifikasi status surat jalan.",
-      operatorPanel: "Panduan rute pengiriman harian pada smartphone driver, pencatatan waktu tiba di outlet/cabang, dan upload foto bukti serah terima (e-POD / tanda tangan digital).",
-      technologies: ["Dual Panel (Desktop Admin & Mobile Driver)", "TMS Logistics", "Live Tracking GPS", "Delivery Scheduling", "Mobile Driver Report", "Fleet Dispatch"],
-      metrics: "100% Visibilitas Pengiriman • On-Time Delivery Terpantau",
-      problem: "Sulitnya memonitor status kiriman barang antar cabang/outlet dan estimasi waktu sampai driver yang sering tidak akurat.",
-      solution: "Membangun sistem Dual Panel: Panel Admin Desktop untuk manajemen rute & live dispatch, serta Panel Driver Mobile untuk navigasi dan upload bukti e-POD langsung dari HP.",
-      impact: "Tingkat ketepatan waktu pengiriman meningkat drastis, keterlambatan terpantau secara proaktif, dan rekonsiliasi surat jalan selesai pada hari yang sama."
-    },
-    {
-      id: "sys-ai",
-      title: "Penerapan AI untuk Analisis Discrepancy & Otomasi SOP Gudang",
-      category: "ai-tech",
-      badge: "Integrasi AI • Discrepancy & SOP",
-      author: "Penerapan & Integrasi Tools AI Modern",
-      description: "Implementasi ekosistem AI, BI & no-code modern (ChatGPT, Gemini, Claude, Antigravity IDE, Google Stitch, OpenClaw, Google Apps Script, AppSheet, & Looker Studio) untuk analisis anomali selisih stok, pembuatan SOP operasional otomatis, dan otomasi visual workflow data gudang.",
-      image: "images/ai_warehouse_analytics.jpg",
-      adminPanel: "Dashboard eksekutif Looker Studio, formulasi prompt analisis 5-Why RCA menggunakan Claude/ChatGPT, ekstraksi data OpenClaw, dan pembuatan SOP digital otomatis.",
-      operatorPanel: "Form digital AppSheet / Mobile Web untuk input cepat anomali barang rusak/selisih langsung dari lantai gudang serta akses instan panduan SOP interaktif.",
-      technologies: ["Dual Panel (Desktop Admin & Mobile AppSheet)", "ChatGPT", "Google Gemini", "Claude", "Antigravity IDE", "Google Stitch", "OpenClaw", "Google Apps Script", "AppSheet", "Looker Studio"],
-      metrics: "Analisis RCA Otomatis • Pembuatan SOP 5x Lebih Cepat",
-      problem: "Proses pembuatan Standard Operating Procedure (SOP), pelaporan investigasi 5-Why RCA, dan audit data selisih stok yang menyita banyak waktu jika disusun secara manual.",
-      solution: "Mengembangkan ekosistem Dual Panel dengan bantuan AI: Dashboard Desktop untuk analisis RCA mendalam dan Form Mobile AppSheet untuk input data anomali langsung oleh tim lapangan.",
-      impact: "Efisiensi administrasi meningkat 500%, SOP operasional terdokumentasi presisi, dan mitigasi selisih stok tertangani dengan standar analisa terdepan."
-    },
-    {
-      id: "inv-1",
-      "title": "Setup WMS & Transformasi Akurasi Stok 99.85% di Somethinc",
-      category: "accuracy",
-      badge: "Studi Kasus • Somethinc Beautyhaul",
-      author: "Studi Kasus & Eksekusi Lapangan",
-      description: "Kolaborasi aktif bersama Tim Tech dalam perancangan & setup sistem WMS baru, restrukturisasi Cycle Count rutin, dan pengendalian ketat FEFO produk kosmetik.",
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Setup WMS", "Kolaborasi Tim Tech", "Cycle Count", "FEFO System Control", "Omnichannel Fulfillment", "RCA 5-Why"],
-      metrics: "Akurasi Stok 99.85% • Sukses Implementasi WMS",
-      problem: "Kebutuhan sistem pergudangan modern (WMS) yang presisi untuk menangani puluhan ribu SKU produk kecantikan fast-moving di channel online & retail tanpa risiko selisih stok.",
-      solution: "Berkolaborasi langsung dengan Tim Tech dalam merumuskan kebutuhan alur operasional gudang, konfigurasi modul WMS, testing UAT, implementasi live, serta penegakan disiplin Cycle Count & FEFO.",
-      impact: "Sistem WMS sukses go-live 100%, akurasi stok konsisten di 99.85%, dan dianugerahi penghargaan 'The Best Admin Excentric'."
-    },
-    {
-      id: "inv-2",
-      title": "Administrasi Spare Part, Transfer Stock Produksi & Stock Opname",
-      category: "opname",
-      badge: "Studi Kasus • PT Aditya Manufaktur",
-      author: "Studi Kasus & Eksekusi Lapangan",
-      description: "Pengelolaan administrasi spare part mesin manufaktur, eksekusi receipt barang masuk, transfer stock sesuai rencana produksi, monitoring buffer stock, hingga dipromosikan ke Supervisor Warehouse.",
-      image: "images/sparepart_warehouse_mgmt.jpg",
-      technologies: ["Administrasi Spare Part", "Receipt & Inbound", "Control Stock Suku Cadang", "Transfer Stock Produksi", "Stock Opname"],
-      metrics: "Promosi ke Supervisor • Nol Downtime Mesin Produksi",
-      problem: "Kritisnya ketersediaan spare part mesin manufaktur dan risiko terhentinya lini produksi jika suplai suku cadang terlambat atau terjadi selisih stok fisik.",
-      solution: "Menerapkan sistem administrasi receipt barang masuk yang ketat, kontrol buffer stock spare part, transfer stock terencana sesuai jadwal produksi, dan eksekusi Stock Opname berkala.",
-      impact: "Ketersediaan suku cadang mesin tercapai 100% tanpa delay produksi, selisih stok spare part terkendali, dan kinerja diakui dengan promosi jabatan menjadi Supervisor Warehouse."
-    },
-    {
-      id: "inv-3",
-      title": "Inbound, Transaksi Produksi Assy & Wall-to-Wall Stock Opname",
-      category: "opname",
-      badge: "Studi Kasus • PT Kirin Dinamika Sentosa",
-      author: "Studi Kasus & Eksekusi Lapangan",
-      description: "Pengelolaan administrasi Inbound receiving material, pencatatan transaksi mutasi material untuk perakitan produksi (Assy), pengendalian stok harian, dan eksekusi Wall-to-Wall Stock Opname.",
-      image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Inbound Receiving", "Transaksi Produksi Assy", "Stock Control", "Wall-to-Wall Opname", "Shrinkage Reduction"],
-      metrics: "Varians < 0.05% • 100% Suplai Assy Tepat Waktu",
-      problem: "Kebutuhan suplai komponen tepat waktu untuk jalur perakitan (Assy) serta tantangan rekonsiliasi selisih stok material pada audit tutup buku pabrik.",
-      solution: "Menerapkan administrasi Inbound terintegrasi, verifikasi fisik berkala, standardisasi pencatatan pengeluaran barang ke jalur perakitan produksi, serta skema hitung ganda Stock Opname.",
-      impact: "Kelancaran suplai komponen ke lini perakitan (Assy) terjamin 100%, selisih varians stok ditekan hingga < 0.05%, dan administrasi pergudangan terekam akurat."
-    }
-  ];
-
-  renderProjects(allProjectsData);
-  initProjectFilters();
 }
 
 function renderProjects(projects) {
@@ -453,12 +292,16 @@ function initProjectFilters() {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
-      if (filter === 'all') {
-        renderProjects(allProjectsData);
-      } else {
-        const filtered = allProjectsData.filter(p => p.category === filter);
-        renderProjects(filtered);
-      }
+      const cards = document.querySelectorAll('#projects-grid-container .project-card');
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (filter === 'all' || cat === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 }
