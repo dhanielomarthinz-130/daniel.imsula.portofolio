@@ -213,6 +213,34 @@ async function initPortfolioData() {
   // Fallback if fetch is unavailable
   allProjectsData = [
     {
+      id: "sys-5r",
+      title: "Sistem Assign Task 5R & Briefing Tim Per Divisi (Auto Share WA)",
+      category: "ai-tech",
+      badge: "Developed by Daniel • Sistem 5R & Briefing",
+      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+      description: "Aplikasi delegasi tugas 5R (Ringkas, Rapi, Resik, Rawat, Rajin) dan koordinasi briefing harian tim per divisi gudang. Dilengkapi modul unggah foto bukti kerja dan auto-generate format laporan otomatis yang langsung dibagikan ke WhatsApp grup dengan rapi.",
+      image: "images/system_5r_briefing.jpg",
+      technologies: ["Sistem 5R / 5S Lean", "Task Assignment", "Team Briefing App", "Photo Evidence Upload", "WhatsApp Web Share", "Standardized SOP Reporting"],
+      metrics: "100% Kepatuhan 5R • Otomasi Laporan Foto ke WhatsApp",
+      problem: "Briefing harian dan pembagian area 5R yang sering tidak terpantau pertanggungjawabannya, serta pelaporan bukti kebersihan/kerapian yang lambat dan formatnya berantakan saat dilaporkan ke manajemen.",
+      solution: "Membangun sistem task management 5R per divisi dengan checklist area kerja, form upload foto before-after, serta tombol generator caption laporan otomatis yang langsung tersinkronisasi ke WhatsApp grup tim.",
+      impact: "Disiplin area kerja 5R meningkat 100%, dokumentasi kebersihan gudang tersentralisasi, dan manajemen menerima laporan foto briefing secara instan setiap pergantian shift."
+    },
+    {
+      id: "sys-patrol",
+      title: "Security Patrol Management System & Live Shift Report",
+      category: "tms-logistics",
+      badge: "Developed by Daniel • Security Patrol",
+      author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+      description: "Sistem digital patroli keamanan fasilitas gudang & pabrik. Memandu petugas security melakukan kontrol titik pos keliling (checkpoint barcode/NFC), pencatatan insiden mobile, dan pelaporan status patroli shift secara live.",
+      image: "images/system_security_patrol.jpg",
+      technologies: ["Security Patrol App", "Checkpoint Verification", "Live Shift Handover", "Incident Photo Report", "Facility Security Log", "Real-Time Monitoring"],
+      metrics: "Zero Missed Checkpoints • Live Shift Handover Real-Time",
+      problem: "Pencatatan patroli keamanan konvensional dengan buku manual yang rawan dipalsukan, titik rawan gudang yang terlewat, serta serah terima laporan shift antar petugas yang lambat.",
+      solution: "Merancang aplikasi Security Patrol dengan validasi titik pos wajib, pemantauan waktu tempuh rute, modul upload foto temuan anomali/insiden, dan ringkasan otomatis laporan shift yang langsung terkirim ke supervisor keamanan.",
+      impact: "Tingkat kepatuhan rute patroli security mencapai 100%, respon penanganan anomali keamanan gudang lebih cepat, dan laporan shift terekam digital tanpa kertas."
+    },
+    {
       id: "sys-queue",
       title: "Sistem Antrian Serah Terima Kurir Instan (Gojek, Shopee Express, Grab)",
       category: "tms-logistics",
