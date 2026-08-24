@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=7.3" />
+  <link rel="stylesheet" href="css/style.css?v=7.4" />
 </head>
 
 <body>
@@ -707,6 +707,47 @@
         <!-- Projects Grid Container (Pre-rendered for Instant Display & Fast Load) -->
         <div class="projects-grid" id="projects-grid-container">
           
+          <!-- 0. Sistem Kontrol Inbound QC, Batch Number & FEFO Expiry Date (Somethinc-Beautyhaul) -->
+          <div class="project-card" data-category="ims-tech">
+            <div class="project-image-wrapper">
+              <img src="images/somethinc_inbound_qc_fefo.jpg" alt="Sistem Kontrol Inbound QC, Batch Number &amp; FEFO Expiry Date" loading="lazy" onerror="this.src='images/instant_courier_queue.jpg'" />
+              <span class="project-badge-pill pill-self-made">
+                <img src="images/logos/logo_beautyhaul.png" alt="Logo Somethinc" class="chip-logo-img mini-badge-logo" style="width: 17px; height: 17px; border-radius: 4px; object-fit: contain; background: #ffffff; padding: 1px; vertical-align: middle; margin-right: 5px;" />
+                Developed by Daniel • Digunakan di Somethinc-Beautyhaul
+              </span>
+            </div>
+            <div class="project-body">
+              <div class="project-author-badge author-self">
+                <img src="images/logos/logo_beautyhaul.png" alt="Logo Somethinc" class="chip-logo-img mini-badge-logo" style="width: 16px; height: 16px; border-radius: 3px; object-fit: contain; background: #ffffff; padding: 1px; vertical-align: middle; margin-right: 5px;" />
+                <span>Sistem Dikembangkan Sendiri &amp; Digunakan di Somethinc-Beautyhaul</span>
+              </div>
+              <h3>Sistem Kontrol Inbound QC, Batch Number &amp; FEFO Expiry Date</h3>
+              <div class="project-dual-panels">
+                <span class="panel-chip"><i class="fa-solid fa-desktop text-blue"></i> <strong>Desktop:</strong> Admin</span>
+                <span class="panel-chip"><i class="fa-solid fa-mobile-screen text-emerald"></i> <strong>Mobile/PDA:</strong> PIC/Operator</span>
+              </div>
+              <p>Sistem manajemen mutu penerimaan barang masuk (Inbound QC), validasi nomor batch produksi, dan kontrol otomatis alur FEFO (First Expired, First Out) produk kosmetik &amp; skincare. Menjamin setiap batch yang masuk terverifikasi masa kadaluwarsanya dan teralokasi ke bin rak yang tepat secara otomatis.</p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Dual Panel (Desktop Admin &amp; Mobile PDA)</span>
+                <span class="tech-tag">Inbound QC Inspection</span>
+                <span class="tech-tag">Batch Number Tracking</span>
+                <span class="tech-tag">FEFO Automation</span>
+                <span class="tech-tag">Handheld Barcode Scanner</span>
+                <span class="tech-tag">Expiry Date Alert Engine</span>
+                <span class="tech-tag">Cosmetics Supply Chain</span>
+              </div>
+              <div class="project-metrics-badge">
+                <i class="fa-solid fa-chart-line"></i> Zero Expired Stock Shipped • 100% Validasi Batch Number
+              </div>
+              <div class="project-footer-links">
+                <button class="project-link-btn" onclick="openProjectModal('sys-somethinc-qc')">
+                  <span>Lihat Detail &amp; Solusi Sistem</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
           <!-- 1. Sistem Assign Task 5R & Briefing Tim -->
           <div class="project-card" data-category="ai-tech">
             <div class="project-image-wrapper">
@@ -1918,6 +1959,7 @@
           <h4><i class="fa-solid fa-brain text-indigo"></i> Inovasi Sistem &amp; Ekosistem AI (Arsitektur Dual-Panel)</h4>
           <p>
             <strong>Arsitektur Sistem Dual-Panel (Desktop Web Admin &amp; Mobile/Handheld PIC):</strong><br />
+            • <strong>Sistem Kontrol Inbound QC &amp; FEFO Expiry (Digunakan di Somethinc-Beautyhaul)</strong>: Desktop Admin (expired alert engine &amp; batch QA log) + Mobile PDA QC (barcode scan, physical checklist &amp; FEFO label print).<br />
             • <strong>Sistem Assign Task 5R &amp; Briefing Tim</strong>: Desktop Admin (monitoring &amp; WA auto-share) + Mobile PIC (checklist 5R &amp; upload foto bukti).<br />
             • <strong>Security Patrol Management System</strong>: Desktop Admin (command center &amp; route log) + Mobile Security (checkpoint scan NFC/Barcode &amp; live report shift).<br />
             • <strong>Sistem Antrian Kurir Instan (Gojek/Grab/SPX)</strong>: Desktop Admin (staging queue monitor) + Handheld Dispatcher (resi scan &amp; handover).<br />
@@ -2174,7 +2216,7 @@
   <div class="toast-container" id="toast-container"></div>
 
   <!-- Main JavaScript -->
-  <script src="js/app.js?v=7.2"></script>
+  <script src="js/app.js?v=7.4"></script>
 </body>
 
 </html>

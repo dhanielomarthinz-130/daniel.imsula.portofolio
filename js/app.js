@@ -193,6 +193,23 @@ function initNavigation() {
    ========================================================================== */
 let allProjectsData = [
   {
+    id: "sys-somethinc-qc",
+    title: "Sistem Kontrol Inbound QC, Batch Number & FEFO Expiry Date",
+    category: "ims-tech",
+    badge: "Developed by Daniel • Digunakan di Somethinc-Beautyhaul",
+    author: "Sistem Dikembangkan Sendiri & Digunakan di Somethinc-Beautyhaul",
+    companyLogo: "images/logos/logo_beautyhaul.png",
+    description: "Sistem manajemen mutu penerimaan barang masuk (Inbound QC), validasi nomor batch produksi, dan kontrol otomatis alur FEFO (First Expired, First Out) produk kosmetik & skincare. Menjamin setiap batch yang masuk terverifikasi masa kadaluwarsanya dan teralokasi ke bin rak yang tepat secara otomatis.",
+    image: "images/somethinc_inbound_qc_fefo.jpg",
+    adminPanel: "Master data registrasi batch SKU kosmetik, ambang batas expired alert (6-12 bulan), dashboard monitoring pass/fail QC harian, persetujuan karantina batch bermasalah, dan rekapitulasi audit kepatuhan FEFO per kategori produk.",
+    operatorPanel: "Scanning barcode SKU & input batch number saat receiving di area Inbound, checklist uji fisik produk kosmetik (sealing, tekstur, kemasan), penentuan status Lolos QC/Reject, dan cetak label barcode FEFO langsung via portable Bluetooth printer.",
+    technologies: ["Dual Panel (Desktop Admin & Mobile PDA)", "Inbound QC Inspection", "Batch Number Tracking", "FEFO Automation", "Handheld Barcode Scanner", "Expiry Date Alert Engine", "Cosmetics Supply Chain"],
+    metrics: "Zero Expired Stock Shipped • 100% Validasi Batch Number",
+    problem: "Tingginya volume receiving puluhan ribu item skincare fast-moving dengan variasi nomor batch dan tanggal kadaluwarsa yang berbeda-beda, berisiko besar barang expired terdistribusi ke customer jika dicatat manual.",
+    solution: "Membangun ekosistem Dual Panel: Panel Admin Desktop untuk kontrol alert expired & master batch, serta Panel PDA Inbound bagi tim QC lantai gudang untuk scan validasi batch dan penetapan status FEFO secara instan.",
+    impact: "Sistem aktif digunakan di operasional Somethinc-Beautyhaul, mengeliminasi 100% risiko pengiriman produk expired, memangkas waktu inspeksi receiving hingga 50%, dan menjamin kepatuhan audit BPOM & standar mutu ritel kecantikan."
+  },
+  {
     id: "sys-5r",
     title: "Sistem Assign Task 5R & Briefing Tim Per Divisi (Auto Share WA)",
     category: "ai-tech",
@@ -389,6 +406,11 @@ function renderProjects(projects) {
       authorIcon = '<i class="fa-solid fa-wand-magic-sparkles"></i> ';
     }
 
+    if (proj.companyLogo) {
+      badgeIcon = `<img src="${proj.companyLogo}" alt="Logo" style="width: 17px; height: 17px; border-radius: 4px; object-fit: contain; background: #ffffff; padding: 1px; vertical-align: middle; margin-right: 5px;" />`;
+      authorIcon = `<img src="${proj.companyLogo}" alt="Logo" style="width: 16px; height: 16px; border-radius: 3px; object-fit: contain; background: #ffffff; padding: 1px; vertical-align: middle; margin-right: 5px;" />`;
+    }
+
     return `
     <div class="project-card" data-category="${proj.category}">
       <div class="project-image-wrapper">
@@ -476,7 +498,10 @@ window.openProjectModal = function (projectId) {
 
   modalContent.innerHTML = `
     <div style="margin-bottom: 1.25rem;">
-      <span class="section-badge" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-trophy"></i> ${project.badge}</span>
+      <span class="section-badge" style="margin-bottom: 0.5rem;">
+        ${project.companyLogo ? `<img src="${project.companyLogo}" alt="Logo" style="width: 18px; height: 18px; border-radius: 4px; object-fit: contain; background: #ffffff; padding: 1px; vertical-align: middle; margin-right: 5px;" />` : '<i class="fa-solid fa-trophy"></i>'} 
+        ${project.badge}
+      </span>
       <h2 style="font-size: 1.5rem; line-height: 1.3; margin-top: 0.25rem;">${project.title}</h2>
     </div>
 
