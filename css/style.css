@@ -880,16 +880,31 @@ section {
 }
 
 .chip-text strong {
-  font-size: 0.82rem;
+  font-size: 0.81rem;
   font-weight: 700;
   line-height: 1.25;
+  color: var(--text-primary);
   white-space: normal;
 }
 
-.chip-text span {
+.chip-text .chip-role {
   font-size: 0.72rem;
-  color: var(--accent-emerald);
-  font-weight: 600;
+  font-weight: 700;
+  margin: 0.1rem 0;
+  line-height: 1.2;
+  white-space: normal;
+  display: block;
+}
+
+.chip-hanasui .chip-role { color: var(--accent-pink); }
+.chip-somethinc .chip-role { color: var(--accent-emerald); }
+.chip-aditya .chip-role { color: var(--accent-blue); }
+.chip-kirin .chip-role { color: var(--accent-amber); }
+
+.chip-text .chip-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 500;
   line-height: 1.2;
   white-space: normal;
 }
@@ -2261,17 +2276,25 @@ section {
   }
 
   .chip-text strong {
-    font-size: 0.76rem;
+    font-size: 0.75rem;
     font-weight: 700;
     line-height: 1.25;
     white-space: normal;
     word-break: normal;
   }
 
-  .chip-text span {
+  .chip-text .chip-role {
     font-size: 0.68rem;
-    color: var(--accent-emerald);
-    font-weight: 600;
+    font-weight: 700;
+    margin: 0.08rem 0;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .chip-text .chip-sub {
+    font-size: 0.64rem;
+    color: var(--text-muted);
+    font-weight: 500;
     line-height: 1.2;
     white-space: normal;
   }
@@ -2413,17 +2436,26 @@ section {
   }
 
   .chip-text strong {
-    font-size: 0.72rem;
-    line-height: 1.25;
+    font-size: 0.71rem;
+    line-height: 1.2;
     white-space: normal;
     word-break: normal;
   }
 
-  .chip-text span {
+  .chip-text .chip-role {
     font-size: 0.64rem;
-    line-height: 1.2;
+    font-weight: 700;
+    margin: 0.06rem 0;
+    line-height: 1.15;
     white-space: normal;
-    color: var(--accent-emerald);
+  }
+
+  .chip-text .chip-sub {
+    font-size: 0.60rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.15;
+    white-space: normal;
   }
 }
 

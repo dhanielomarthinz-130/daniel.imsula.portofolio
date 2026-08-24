@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=6.6" />
+  <link rel="stylesheet" href="css/style.css?v=6.7" />
 </head>
 
 <body>
@@ -39,7 +39,8 @@
   <header class="navbar" id="main-navbar">
     <div class="container">
       <a href="#hero" class="nav-brand" id="nav-brand-logo">
-        <div class="nav-logo-badge" id="header-inventory-logo" style="cursor: pointer;" title="Daniel Imsula - Klik 3x untuk Akses Statistik (PIN: 0000)">
+        <div class="nav-logo-badge" id="header-inventory-logo" style="cursor: pointer;"
+          title="Daniel Imsula - Klik 3x untuk Akses Statistik (PIN: 0000)">
           <i class="fa-solid fa-boxes-stacked"></i>
         </div>
         <div class="nav-brand-info">
@@ -109,7 +110,8 @@
       <!-- Header Action Controls -->
       <div class="nav-actions">
         <!-- Single Icon Theme Toggle Button -->
-        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Ganti Tema (Gelap/Terang)" title="Ganti Tema (Gelap/Terang)">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Ganti Tema (Gelap/Terang)"
+          title="Ganti Tema (Gelap/Terang)">
           <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
         </button>
 
@@ -143,11 +145,16 @@
     </div>
     <div class="mobile-nav-body">
       <ul class="mobile-nav-links">
-        <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user-tie"></i> <span>Tentang Saya</span></a></li>
-        <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-gears"></i> <span>Keahlian Teknis</span></a></li>
-        <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-diagram-project"></i> <span>Sistem &amp; Proyek</span></a></li>
-        <li><a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> <span>Pengalaman Karir</span></a></li>
-        <li><a href="#contact" class="mobile-nav-link"><i class="fa-regular fa-envelope"></i> <span>Hubungi Saya</span></a></li>
+        <li><a href="#about" class="mobile-nav-link"><i class="fa-solid fa-user-tie"></i> <span>Tentang Saya</span></a>
+        </li>
+        <li><a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-gears"></i> <span>Keahlian Teknis</span></a>
+        </li>
+        <li><a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-diagram-project"></i> <span>Sistem &amp;
+              Proyek</span></a></li>
+        <li><a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> <span>Pengalaman
+              Karir</span></a></li>
+        <li><a href="#contact" class="mobile-nav-link"><i class="fa-regular fa-envelope"></i> <span>Hubungi
+              Saya</span></a></li>
       </ul>
     </div>
     <div class="mobile-nav-footer">
@@ -253,23 +260,26 @@
                 <img src="images/logos/logo_hanasui.jpg" alt="Logo Hanasui" class="chip-logo-img" />
                 <div class="chip-text">
                   <strong>PT Inovasi Eka Gemilang</strong>
-                  <span>E-Commerce Skincare • Brand Hanasui</span>
+                  <span class="chip-role">Level: Inventory Controller</span>
+                  <span class="chip-sub">E-Commerce Skincare • Brand Hanasui</span>
                 </div>
               </div>
 
               <div class="company-chip chip-somethinc">
                 <img src="images/logos/logo_beautyhaul.png" alt="Logo Beautyhaul Somethinc" class="chip-logo-img" />
                 <div class="chip-text">
-                  <strong>Somethinc Beautyhaul</strong>
-                  <span>E-Commerce Skincare • Brand Somethinc</span>
+                  <strong>Somethinc-Beautyhaul</strong>
+                  <span class="chip-role">Level: Inventory Controller</span>
+                  <span class="chip-sub">E-Commerce Skincare • Brand Somethinc</span>
                 </div>
               </div>
 
               <div class="company-chip chip-aditya">
                 <img src="images/logos/logo_aditya.png" alt="Logo PT Aditya Manufaktur" class="chip-logo-img" />
                 <div class="chip-text">
-                  <strong>PT Aditya Manufaktur</strong>
-                  <span>Manufaktur Elektronik • Brand Kirin</span>
+                  <strong>PT Aditya Manufaktur Indonesia</strong>
+                  <span class="chip-role">Level: Administrator</span>
+                  <span class="chip-sub">Manufaktur Elektronik • Brand Kirin</span>
                 </div>
               </div>
 
@@ -277,7 +287,8 @@
                 <img src="images/logos/logo_kirin.jpg" alt="Logo PT Kirin Dinamika Sentosa" class="chip-logo-img" />
                 <div class="chip-text">
                   <strong>PT Kirin Dinamika Sentosa</strong>
-                  <span>Manufaktur Elektronik • Brand Kirin</span>
+                  <span class="chip-role">Level: Operator Warehouse</span>
+                  <span class="chip-sub">Manufaktur Elektronik • Brand Kirin</span>
                 </div>
               </div>
             </div>
@@ -286,829 +297,901 @@
       </div>
     </section>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        About Section (Nilai Unggul & Metodologi)
        ======================================================================== -->
-  <section id="about" class="section-alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">
-          <i class="fa-solid fa-bullseye"></i> Nilai Unggul &amp; Metodologi
-        </span>
-        <h2 class="section-title">Keahlian Lintas Sektor: Manufaktur &amp; E-Commerce</h2>
-        <p class="section-subtitle">
-          Kombinasi kepemimpinan operasional pabrik, audit fisik terstruktur, kepatuhan SOP pergudangan, analisis data
-          selisih, adopsi AI terdepan, dan integrasi sistem WMS untuk menjamin kelancaran rantai pasok.
-        </p>
+    <section id="about" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-bullseye"></i> Nilai Unggul &amp; Metodologi
+          </span>
+          <h2 class="section-title">Keahlian Lintas Sektor: Manufaktur &amp; E-Commerce</h2>
+          <p class="section-subtitle">
+            Kombinasi kepemimpinan operasional pabrik, audit fisik terstruktur, kepatuhan SOP pergudangan, analisis data
+            selisih, adopsi AI terdepan, dan integrasi sistem WMS untuk menjamin kelancaran rantai pasok.
+          </p>
+        </div>
+
+        <div class="about-pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon-box pillar-green">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <h3>Akurasi Stok Maksimal (99,98%)</h3>
+            <p>
+              Menerapkan metodologi Cycle Count harian/mingguan dengan segmentasi ABC Analysis, rekonsiliasi data fisik
+              vs
+              WMS, serta audit berkala untuk menjamin integritas data stok secara menyeluruh.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box pillar-blue">
+              <i class="fa-solid fa-arrows-split-up-and-left"></i>
+            </div>
+            <h3>Automasi Inbound, Marketplace &amp; Shipper</h3>
+            <p>
+              Memberikan continuous improvement alur proses di divisi Inbound receiving, Marketplace Fulfillment
+              (Shopee,
+              Tokped, TikTok Shop), dan integrasi Shipper kurir logistik untuk meniadakan bottleneck operasional.
+            </p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-box pillar-indigo">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Report Real-Time &amp; Analisis AI</h3>
+            <p>
+              Membangun sistem pelaporan live dashboard untuk memonitor backlog pesanan, status mutasi stok, SLA
+              dispatch
+              kurir secara instan, serta Root Cause Analysis (RCA) selisih stok berbantuan AI.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="about-pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon-box pillar-green">
-            <i class="fa-solid fa-clipboard-check"></i>
-          </div>
-          <h3>Akurasi Stok Maksimal (99,98%)</h3>
-          <p>
-            Menerapkan metodologi Cycle Count harian/mingguan dengan segmentasi ABC Analysis, rekonsiliasi data fisik vs
-            WMS, serta audit berkala untuk menjamin integritas data stok secara menyeluruh.
-          </p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box pillar-blue">
-            <i class="fa-solid fa-arrows-split-up-and-left"></i>
-          </div>
-          <h3>Automasi Inbound, Marketplace &amp; Shipper</h3>
-          <p>
-            Memberikan continuous improvement alur proses di divisi Inbound receiving, Marketplace Fulfillment (Shopee,
-            Tokped, TikTok Shop), dan integrasi Shipper kurir logistik untuk meniadakan bottleneck operasional.
-          </p>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box pillar-indigo">
-            <i class="fa-solid fa-chart-line"></i>
-          </div>
-          <h3>Report Real-Time &amp; Analisis AI</h3>
-          <p>
-            Membangun sistem pelaporan live dashboard untuk memonitor backlog pesanan, status mutasi stok, SLA dispatch
-            kurir secara instan, serta Root Cause Analysis (RCA) selisih stok berbantuan AI.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        Skills & Competencies Section
        ======================================================================== -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">
-          <i class="fa-solid fa-list-check"></i> Kompetensi &amp; Keahlian
-        </span>
-        <h2 class="section-title">Keahlian Teknis, Sistem &amp; Ekosistem AI</h2>
-        <p class="section-subtitle">
-          Kombinasi keahlian manajemen inventaris di pabrik manufaktur dan hub e-commerce, sistem aplikasi pergudangan,
-          serta adopsi *Artificial Intelligence* (AI).
-        </p>
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-list-check"></i> Kompetensi &amp; Keahlian
+          </span>
+          <h2 class="section-title">Keahlian Teknis, Sistem &amp; Ekosistem AI</h2>
+          <p class="section-subtitle">
+            Kombinasi keahlian manajemen inventaris di pabrik manufaktur dan hub e-commerce, sistem aplikasi
+            pergudangan,
+            serta adopsi *Artificial Intelligence* (AI).
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Core Inventory & Auditing -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon icon-green"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Manajemen &amp; Audit Inventaris</h3>
+            </div>
+            <div class="skill-tags-group">
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Stock Accuracy 99,98%</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Cycle Count Program</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Wall-to-Wall Stock Opname</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Root Cause Analysis (5-Why)</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> FEFO / FIFO Control</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> ABC Product Classification</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Shrinkage &amp; Loss Prevention</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Systems & Tools -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon icon-blue"><i class="fa-solid fa-laptop-code"></i></div>
+              <h3>Sistem &amp; Aplikasi Pergudangan</h3>
+            </div>
+            <div class="skill-tags-group">
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Warehouse Management System (WMS)</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Real-Time Reporting &amp;
+                Dashboards</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Handheld PDA &amp; Barcode Scanner</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Transportation Mgmt System (TMS)</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Instant Courier Queue Handling</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Advanced Microsoft Excel / Google
+                Sheets</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Accurate &amp; ERP Database Sync</span>
+            </div>
+          </div>
+
+          <!-- Category 3: AI & Advanced Engineering Tools -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon icon-indigo"><i class="fa-solid fa-brain"></i></div>
+              <h3>Penerapan AI &amp; Modern Tools</h3>
+            </div>
+            <div class="skill-tags-group">
+              <!-- ChatGPT (OpenAI) -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="#10A37F">
+                  <path
+                    d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1683a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4947zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1683a.0757.0757 0 0 1-.071 0l-4.8303-2.7866A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zM20.0768 5.23a4.4755 4.4755 0 0 1 .5346 3.0089l-.142-.0804-4.783-2.763a.7712.7712 0 0 0-.7806 0L9.063 8.764V6.4317a.0804.0804 0 0 1 .0332-.0615L14.0754 3.56a4.4992 4.4992 0 0 1 6.0014 1.67zM9.549 14.398l-2.006-1.1635v-2.3325l2.006-1.1635 2.02 1.1635v2.3325z" />
+                </svg>
+                <span>ChatGPT (OpenAI)</span>
+              </span>
+
+              <!-- Google Gemini -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"
+                    fill="url(#gemini-logo-grad)" />
+                  <defs>
+                    <linearGradient id="gemini-logo-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#4E8CFF" />
+                      <stop offset="0.5" stop-color="#9B72CB" />
+                      <stop offset="1" stop-color="#D96570" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span>Google Gemini</span>
+              </span>
+
+              <!-- Claude (Anthropic) -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="#D97706">
+                  <path
+                    d="M12 2a1.5 1.5 0 0 1 1.5 1.5v3.25a1.5 1.5 0 0 1-3 0V3.5A1.5 1.5 0 0 1 12 2zm7.07 3.93a1.5 1.5 0 0 1 0 2.12l-2.3 2.3a1.5 1.5 0 0 1-2.12-2.12l2.3-2.3a1.5 1.5 0 0 1 2.12 0zM22 12a1.5 1.5 0 0 1-1.5 1.5h-3.25a1.5 1.5 0 0 1 0-3h3.25A1.5 1.5 0 0 1 22 12zm-2.93 7.07a1.5 1.5 0 0 1-2.12 0l-2.3-2.3a1.5 1.5 0 0 1 2.12-2.12l2.3 2.3a1.5 1.5 0 0 1 0 2.12zM12 22a1.5 1.5 0 0 1-1.5-1.5v-3.25a1.5 1.5 0 0 1 3 0v3.25A1.5 1.5 0 0 1 12 22zm-7.07-2.93a1.5 1.5 0 0 1 0-2.12l2.3-2.3a1.5 1.5 0 0 1 2.12 2.12l-2.3 2.3a1.5 1.5 0 0 1-2.12 0zM2 12a1.5 1.5 0 0 1 1.5-1.5h3.25a1.5 1.5 0 0 1 0 3H3.5A1.5 1.5 0 0 1 2 12zm2.93-7.07a1.5 1.5 0 0 1 2.12 0l2.3 2.3a1.5 1.5 0 0 1-2.12 2.12l-2.3-2.3a1.5 1.5 0 0 1 0-2.12z" />
+                </svg>
+                <span>Claude (Anthropic)</span>
+              </span>
+
+              <!-- Antigravity & Antigravity IDE -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9.5" stroke="url(#antigravity-badge-grad)" stroke-width="2" />
+                  <path d="M7 12h10M12 7v10M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="url(#antigravity-badge-grad)"
+                    stroke-width="1.8" stroke-linecap="round" />
+                  <defs>
+                    <linearGradient id="antigravity-badge-grad" x1="0" y1="0" x2="24" y2="24"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#06B6D4" />
+                      <stop offset="0.5" stop-color="#8B5CF6" />
+                      <stop offset="1" stop-color="#EC4899" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span>Antigravity &amp; Antigravity IDE</span>
+              </span>
+
+              <!-- Google Stitch -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="8" height="8" rx="2" fill="#4285F4" />
+                  <rect x="13" y="3" width="8" height="8" rx="2" fill="#EA4335" />
+                  <rect x="3" y="13" width="8" height="8" rx="2" fill="#34A853" />
+                  <rect x="13" y="13" width="8" height="8" rx="2" fill="#FBBC05" />
+                </svg>
+                <span>Google Stitch</span>
+              </span>
+
+              <!-- OpenClaw -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <!-- Authentic Robotic Claw & Intelligent Data Hook -->
+                  <path
+                    d="M4 4C2.5 7.5 3 11.5 6.5 14L9 12.5C7 10 6.5 7.5 8 5.5L4 4zM20 4c1.5 3.5 1 7.5-2.5 10l-2.5-1.5c2-2.5 2.5-5 1-7L20 4z"
+                    fill="#10B981" />
+                  <path d="M12 2v6M8 8h8M12 8v6" stroke="#10B981" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="12" cy="16.5" r="3.2" stroke="#10B981" stroke-width="1.8" fill="rgba(16,185,129,0.2)" />
+                  <circle cx="12" cy="16.5" r="1.3" fill="#10B981" />
+                </svg>
+                <span>OpenClaw</span>
+              </span>
+
+              <!-- Google Apps Script -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5.5" fill="#4285F4" />
+                  <path d="M7 8l-3.5 4 3.5 4M17 8l3.5 4-3.5 4M13.5 6.5l-3 11" stroke="#FFFFFF" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Google Apps Script</span>
+              </span>
+
+              <!-- Google AppSheet -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5.5" fill="#00838F" />
+                  <circle cx="7" cy="8" r="3" fill="#FFFFFF" />
+                  <circle cx="17" cy="8" r="3" fill="#FFFFFF" />
+                  <circle cx="12" cy="16.5" r="3" fill="#FFFFFF" />
+                  <path d="M7 8l5 8.5 5-8.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="7" cy="8" r="1.3" fill="#00838F" />
+                  <circle cx="17" cy="8" r="1.3" fill="#00838F" />
+                  <circle cx="12" cy="16.5" r="1.3" fill="#00838F" />
+                </svg>
+                <span>Google AppSheet</span>
+              </span>
+
+              <!-- Looker Studio -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5.5" fill="#1A73E8" />
+                  <rect x="4.5" y="11" width="3" height="8" rx="1.5" fill="#FBBC04" />
+                  <rect x="10.5" y="5" width="3" height="14" rx="1.5" fill="#FFFFFF" />
+                  <rect x="16.5" y="8" width="3" height="11" rx="1.5" fill="#34A853" />
+                </svg>
+                <span>Looker Studio</span>
+              </span>
+
+              <!-- Prompt Engineering for Logistics -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="16" rx="3" stroke="#6366F1" stroke-width="2" fill="none" />
+                  <path d="M8 9l3 3-3 3M13 15h4" stroke="#6366F1" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <span>Prompt Engineering for Logistics</span>
+              </span>
+
+              <!-- Automated SOP & RCA Generation -->
+              <span class="skill-badge-tag tag-ai">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#F59E0B" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                  <polyline points="14 2 14 8 20 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" fill="none" />
+                  <path d="M9 13h6M9 17h4" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <span>Automated SOP &amp; RCA Generation</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Category 4: Warehouse Operations & Leadership -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon icon-amber"><i class="fa-solid fa-warehouse"></i></div>
+              <h3>Operasional &amp; Kepemimpinan</h3>
+            </div>
+            <div class="skill-tags-group">
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Flow Automasi Inbound &amp; Putaway</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Marketplace Fulfillment
+                (Shopee/Tokped/TikTok)</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Integrasi Shipper &amp; Ekspedisi</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Supervisi Tim Gudang Pabrik</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Outbound Dispatch &amp; Staging</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Racking Slotting &amp; Layouting</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> SOP Drafting &amp; Enforcement</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Music Production & Audio Engineering (DAW) -->
+          <div class="skill-category-card" style="grid-column: 1 / -1;">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon icon-pink"><i class="fa-solid fa-music"></i></div>
+              <h3>Produksi Musik &amp; Audio Engineering (DAW)</h3>
+            </div>
+            <div class="skill-tags-group">
+              <!-- FL Studio -->
+              <span class="skill-badge-tag tag-daw">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2c1 0 2 1.5 2 3 0 1-.5 2-1 2.5 3 0 7 3 7 8.5 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-5.5 4-8.5 7-8.5-.5-.5-1-1.5-1-2.5 0-1.5 1-3 2-3z"
+                    fill="url(#fl-grad)" />
+                  <path d="M12 2c.5 1.5 1.5 3 3 3.5M12 2c-.5 1.5-1.5 3-3 3.5" stroke="#10B981" stroke-width="1.5"
+                    stroke-linecap="round" />
+                  <defs>
+                    <linearGradient id="fl-grad" x1="4" y1="5" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FF5722" />
+                      <stop offset="1" stop-color="#E64A19" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span>FL Studio</span>
+              </span>
+
+              <!-- Ableton Live -->
+              <span class="skill-badge-tag tag-daw">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5" fill="#111827" />
+                  <rect x="4.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                  <rect x="7.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                  <rect x="10.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                  <rect x="13.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                  <rect x="17" y="6" width="3.5" height="1.6" fill="#F8FAFC" />
+                  <rect x="17" y="9.5" width="3.5" height="1.6" fill="#F8FAFC" />
+                  <rect x="17" y="13" width="3.5" height="1.6" fill="#F8FAFC" />
+                  <rect x="17" y="16.5" width="3.5" height="1.6" fill="#F8FAFC" />
+                </svg>
+                <span>Ableton Live</span>
+              </span>
+
+              <!-- Studio One -->
+              <span class="skill-badge-tag tag-daw">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5" fill="#0284C7" />
+                  <path d="M15 7h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9" stroke="#FFFFFF"
+                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="15.5" cy="7" r="1.3" fill="#BAE6FD" />
+                  <circle cx="8.5" cy="19" r="1.3" fill="#BAE6FD" />
+                </svg>
+                <span>Studio One</span>
+              </span>
+
+              <!-- Cubase -->
+              <span class="skill-badge-tag tag-daw">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5" fill="#E11D48" />
+                  <path d="M12 5l7 4v6l-7 4-7-4V9l7-4z" stroke="#FFFFFF" stroke-width="1.8"
+                    fill="rgba(255,255,255,0.18)" />
+                  <path d="M12 5v14M5 9l14 6M19 9l-14 6" stroke="#FFFFFF" stroke-width="1.2" />
+                </svg>
+                <span>Cubase</span>
+              </span>
+
+              <!-- Logic Pro -->
+              <span class="skill-badge-tag tag-daw">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5" fill="#1E293B" />
+                  <circle cx="12" cy="12" r="7.5" stroke="#94A3B8" stroke-width="1.8" fill="none" />
+                  <circle cx="12" cy="12" r="4.5" fill="#38BDF8" />
+                  <path d="M12 4.5V8M19.5 12H16M12 19.5V16M4.5 12H8" stroke="#F8FAFC" stroke-width="1.5"
+                    stroke-linecap="round" />
+                </svg>
+                <span>Logic Pro</span>
+              </span>
+
+              <!-- Pro Tools -->
+              <span class="skill-badge-tag tag-daw">
+                <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5" fill="#7E22CE" />
+                  <path d="M8 6h5a3.5 3.5 0 0 1 0 7H8V6zm0 7v5" stroke="#FFFFFF" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="13" cy="9.5" r="1.5" fill="#D8B4FE" />
+                </svg>
+                <span>Pro Tools</span>
+              </span>
+
+              <!-- Workflow Skills -->
+              <span class="skill-badge-tag"><i class="fa-solid fa-sliders text-pink"></i> Produksi Musik &amp;
+                Aransemen</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-microphone-lines text-pink"></i> Audio Recording &amp;
+                Tracking</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-wave-square text-pink"></i> Mixing &amp; Equalization
+                (EQ)</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-volume-high text-pink"></i> Mastering (LUFS
+                Loudness)</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-film text-pink"></i> Film Scoring &amp;
+                Soundtrack</span>
+              <span class="skill-badge-tag"><i class="fa-solid fa-headphones text-pink"></i> Sound Design &amp;
+                Foley</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="skills-grid">
-        <!-- Category 1: Core Inventory & Auditing -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-cat-icon icon-green"><i class="fa-solid fa-bullseye"></i></div>
-            <h3>Manajemen &amp; Audit Inventaris</h3>
-          </div>
-          <div class="skill-tags-group">
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Stock Accuracy 99,98%</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Cycle Count Program</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Wall-to-Wall Stock Opname</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Root Cause Analysis (5-Why)</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> FEFO / FIFO Control</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> ABC Product Classification</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Shrinkage &amp; Loss Prevention</span>
-          </div>
-        </div>
-
-        <!-- Category 2: Systems & Tools -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-cat-icon icon-blue"><i class="fa-solid fa-laptop-code"></i></div>
-            <h3>Sistem &amp; Aplikasi Pergudangan</h3>
-          </div>
-          <div class="skill-tags-group">
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Warehouse Management System (WMS)</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Real-Time Reporting &amp; Dashboards</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Handheld PDA &amp; Barcode Scanner</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Transportation Mgmt System (TMS)</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Instant Courier Queue Handling</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Advanced Microsoft Excel / Google
-              Sheets</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Accurate &amp; ERP Database Sync</span>
-          </div>
-        </div>
-
-        <!-- Category 3: AI & Advanced Engineering Tools -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-cat-icon icon-indigo"><i class="fa-solid fa-brain"></i></div>
-            <h3>Penerapan AI &amp; Modern Tools</h3>
-          </div>
-          <div class="skill-tags-group">
-            <!-- ChatGPT (OpenAI) -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="#10A37F">
-                <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1683a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4947zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1683a.0757.0757 0 0 1-.071 0l-4.8303-2.7866A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zM20.0768 5.23a4.4755 4.4755 0 0 1 .5346 3.0089l-.142-.0804-4.783-2.763a.7712.7712 0 0 0-.7806 0L9.063 8.764V6.4317a.0804.0804 0 0 1 .0332-.0615L14.0754 3.56a4.4992 4.4992 0 0 1 6.0014 1.67zM9.549 14.398l-2.006-1.1635v-2.3325l2.006-1.1635 2.02 1.1635v2.3325z"/>
-              </svg>
-              <span>ChatGPT (OpenAI)</span>
-            </span>
-
-            <!-- Google Gemini -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24">
-                <path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z" fill="url(#gemini-logo-grad)"/>
-                <defs>
-                  <linearGradient id="gemini-logo-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#4E8CFF"/>
-                    <stop offset="0.5" stop-color="#9B72CB"/>
-                    <stop offset="1" stop-color="#D96570"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span>Google Gemini</span>
-            </span>
-
-            <!-- Claude (Anthropic) -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="#D97706">
-                <path d="M12 2a1.5 1.5 0 0 1 1.5 1.5v3.25a1.5 1.5 0 0 1-3 0V3.5A1.5 1.5 0 0 1 12 2zm7.07 3.93a1.5 1.5 0 0 1 0 2.12l-2.3 2.3a1.5 1.5 0 0 1-2.12-2.12l2.3-2.3a1.5 1.5 0 0 1 2.12 0zM22 12a1.5 1.5 0 0 1-1.5 1.5h-3.25a1.5 1.5 0 0 1 0-3h3.25A1.5 1.5 0 0 1 22 12zm-2.93 7.07a1.5 1.5 0 0 1-2.12 0l-2.3-2.3a1.5 1.5 0 0 1 2.12-2.12l2.3 2.3a1.5 1.5 0 0 1 0 2.12zM12 22a1.5 1.5 0 0 1-1.5-1.5v-3.25a1.5 1.5 0 0 1 3 0v3.25A1.5 1.5 0 0 1 12 22zm-7.07-2.93a1.5 1.5 0 0 1 0-2.12l2.3-2.3a1.5 1.5 0 0 1 2.12 2.12l-2.3 2.3a1.5 1.5 0 0 1-2.12 0zM2 12a1.5 1.5 0 0 1 1.5-1.5h3.25a1.5 1.5 0 0 1 0 3H3.5A1.5 1.5 0 0 1 2 12zm2.93-7.07a1.5 1.5 0 0 1 2.12 0l2.3 2.3a1.5 1.5 0 0 1-2.12 2.12l-2.3-2.3a1.5 1.5 0 0 1 0-2.12z"/>
-              </svg>
-              <span>Claude (Anthropic)</span>
-            </span>
-
-            <!-- Antigravity & Antigravity IDE -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9.5" stroke="url(#antigravity-badge-grad)" stroke-width="2"/>
-                <path d="M7 12h10M12 7v10M8.5 8.5l7 7M15.5 8.5l-7 7" stroke="url(#antigravity-badge-grad)" stroke-width="1.8" stroke-linecap="round"/>
-                <defs>
-                  <linearGradient id="antigravity-badge-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#06B6D4"/>
-                    <stop offset="0.5" stop-color="#8B5CF6"/>
-                    <stop offset="1" stop-color="#EC4899"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span>Antigravity &amp; Antigravity IDE</span>
-            </span>
-
-            <!-- Google Stitch -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24">
-                <rect x="3" y="3" width="8" height="8" rx="2" fill="#4285F4"/>
-                <rect x="13" y="3" width="8" height="8" rx="2" fill="#EA4335"/>
-                <rect x="3" y="13" width="8" height="8" rx="2" fill="#34A853"/>
-                <rect x="13" y="13" width="8" height="8" rx="2" fill="#FBBC05"/>
-              </svg>
-              <span>Google Stitch</span>
-            </span>
-
-            <!-- OpenClaw -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <!-- Authentic Robotic Claw & Intelligent Data Hook -->
-                <path d="M4 4C2.5 7.5 3 11.5 6.5 14L9 12.5C7 10 6.5 7.5 8 5.5L4 4zM20 4c1.5 3.5 1 7.5-2.5 10l-2.5-1.5c2-2.5 2.5-5 1-7L20 4z" fill="#10B981"/>
-                <path d="M12 2v6M8 8h8M12 8v6" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="12" cy="16.5" r="3.2" stroke="#10B981" stroke-width="1.8" fill="rgba(16,185,129,0.2)"/>
-                <circle cx="12" cy="16.5" r="1.3" fill="#10B981"/>
-              </svg>
-              <span>OpenClaw</span>
-            </span>
-
-            <!-- Google Apps Script -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5.5" fill="#4285F4"/>
-                <path d="M7 8l-3.5 4 3.5 4M17 8l3.5 4-3.5 4M13.5 6.5l-3 11" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Google Apps Script</span>
-            </span>
-
-            <!-- Google AppSheet -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5.5" fill="#00838F"/>
-                <circle cx="7" cy="8" r="3" fill="#FFFFFF"/>
-                <circle cx="17" cy="8" r="3" fill="#FFFFFF"/>
-                <circle cx="12" cy="16.5" r="3" fill="#FFFFFF"/>
-                <path d="M7 8l5 8.5 5-8.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="7" cy="8" r="1.3" fill="#00838F"/>
-                <circle cx="17" cy="8" r="1.3" fill="#00838F"/>
-                <circle cx="12" cy="16.5" r="1.3" fill="#00838F"/>
-              </svg>
-              <span>Google AppSheet</span>
-            </span>
-
-            <!-- Looker Studio -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5.5" fill="#1A73E8"/>
-                <rect x="4.5" y="11" width="3" height="8" rx="1.5" fill="#FBBC04"/>
-                <rect x="10.5" y="5" width="3" height="14" rx="1.5" fill="#FFFFFF"/>
-                <rect x="16.5" y="8" width="3" height="11" rx="1.5" fill="#34A853"/>
-              </svg>
-              <span>Looker Studio</span>
-            </span>
-
-            <!-- Prompt Engineering for Logistics -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24">
-                <rect x="3" y="4" width="18" height="16" rx="3" stroke="#6366F1" stroke-width="2" fill="none"/>
-                <path d="M8 9l3 3-3 3M13 15h4" stroke="#6366F1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Prompt Engineering for Logistics</span>
-            </span>
-
-            <!-- Automated SOP & RCA Generation -->
-            <span class="skill-badge-tag tag-ai">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <polyline points="14 2 14 8 20 8" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <path d="M9 13h6M9 17h4" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span>Automated SOP &amp; RCA Generation</span>
-            </span>
-          </div>
-        </div>
-
-        <!-- Category 4: Warehouse Operations & Leadership -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="skill-cat-icon icon-amber"><i class="fa-solid fa-warehouse"></i></div>
-            <h3>Operasional &amp; Kepemimpinan</h3>
-          </div>
-          <div class="skill-tags-group">
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Flow Automasi Inbound &amp; Putaway</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Marketplace Fulfillment
-              (Shopee/Tokped/TikTok)</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Integrasi Shipper &amp; Ekspedisi</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Supervisi Tim Gudang Pabrik</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Outbound Dispatch &amp; Staging</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> Racking Slotting &amp; Layouting</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-check"></i> SOP Drafting &amp; Enforcement</span>
-          </div>
-        </div>
-
-        <!-- Category 5: Music Production & Audio Engineering (DAW) -->
-        <div class="skill-category-card" style="grid-column: 1 / -1;">
-          <div class="skill-category-header">
-            <div class="skill-cat-icon icon-pink"><i class="fa-solid fa-music"></i></div>
-            <h3>Produksi Musik &amp; Audio Engineering (DAW)</h3>
-          </div>
-          <div class="skill-tags-group">
-            <!-- FL Studio -->
-            <span class="skill-badge-tag tag-daw">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2c1 0 2 1.5 2 3 0 1-.5 2-1 2.5 3 0 7 3 7 8.5 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-5.5 4-8.5 7-8.5-.5-.5-1-1.5-1-2.5 0-1.5 1-3 2-3z" fill="url(#fl-grad)"/>
-                <path d="M12 2c.5 1.5 1.5 3 3 3.5M12 2c-.5 1.5-1.5 3-3 3.5" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
-                <defs>
-                  <linearGradient id="fl-grad" x1="4" y1="5" x2="20" y2="22" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#FF5722"/>
-                    <stop offset="1" stop-color="#E64A19"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span>FL Studio</span>
-            </span>
-
-            <!-- Ableton Live -->
-            <span class="skill-badge-tag tag-daw">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5" fill="#111827"/>
-                <rect x="4.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                <rect x="7.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                <rect x="10.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                <rect x="13.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                <rect x="17" y="6" width="3.5" height="1.6" fill="#F8FAFC"/>
-                <rect x="17" y="9.5" width="3.5" height="1.6" fill="#F8FAFC"/>
-                <rect x="17" y="13" width="3.5" height="1.6" fill="#F8FAFC"/>
-                <rect x="17" y="16.5" width="3.5" height="1.6" fill="#F8FAFC"/>
-              </svg>
-              <span>Ableton Live</span>
-            </span>
-
-            <!-- Studio One -->
-            <span class="skill-badge-tag tag-daw">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5" fill="#0284C7"/>
-                <path d="M15 7h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="15.5" cy="7" r="1.3" fill="#BAE6FD"/>
-                <circle cx="8.5" cy="19" r="1.3" fill="#BAE6FD"/>
-              </svg>
-              <span>Studio One</span>
-            </span>
-
-            <!-- Cubase -->
-            <span class="skill-badge-tag tag-daw">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5" fill="#E11D48"/>
-                <path d="M12 5l7 4v6l-7 4-7-4V9l7-4z" stroke="#FFFFFF" stroke-width="1.8" fill="rgba(255,255,255,0.18)"/>
-                <path d="M12 5v14M5 9l14 6M19 9l-14 6" stroke="#FFFFFF" stroke-width="1.2"/>
-              </svg>
-              <span>Cubase</span>
-            </span>
-
-            <!-- Logic Pro -->
-            <span class="skill-badge-tag tag-daw">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5" fill="#1E293B"/>
-                <circle cx="12" cy="12" r="7.5" stroke="#94A3B8" stroke-width="1.8" fill="none"/>
-                <circle cx="12" cy="12" r="4.5" fill="#38BDF8"/>
-                <path d="M12 4.5V8M19.5 12H16M12 19.5V16M4.5 12H8" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-              <span>Logic Pro</span>
-            </span>
-
-            <!-- Pro Tools -->
-            <span class="skill-badge-tag tag-daw">
-              <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                <rect width="24" height="24" rx="5" fill="#7E22CE"/>
-                <path d="M8 6h5a3.5 3.5 0 0 1 0 7H8V6zm0 7v5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="13" cy="9.5" r="1.5" fill="#D8B4FE"/>
-              </svg>
-              <span>Pro Tools</span>
-            </span>
-
-            <!-- Workflow Skills -->
-            <span class="skill-badge-tag"><i class="fa-solid fa-sliders text-pink"></i> Produksi Musik &amp; Aransemen</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-microphone-lines text-pink"></i> Audio Recording &amp; Tracking</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-wave-square text-pink"></i> Mixing &amp; Equalization (EQ)</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-volume-high text-pink"></i> Mastering (LUFS Loudness)</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-film text-pink"></i> Film Scoring &amp; Soundtrack</span>
-            <span class="skill-badge-tag"><i class="fa-solid fa-headphones text-pink"></i> Sound Design &amp; Foley</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
+    <!-- ========================================================================
        Featured Projects & Case Studies
        ======================================================================== -->
-  <section id="projects" class="section-alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">
-          <i class="fa-solid fa-code"></i> Sistem Mandiri &amp; Studi Kasus
-        </span>
-        <h2 class="section-title">Sistem Dikembangkan Sendiri &amp; Solusi Lapangan</h2>
-        <p class="section-subtitle">
-          Sistem-sistem operasional pergudangan berikut (Antrian Kurir, Engine Stock Opname, Handheld Scanner IMS, dan TMS Live Tracking) dirancang &amp; <strong>dikembangkan sendiri oleh Daniel Imsula</strong> untuk memecahkan hambatan logistik nyata, dilengkapi implementasi tools AI modern dan studi kasus korporat.
-        </p>
-      </div>
+    <section id="projects" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-code"></i> Sistem Mandiri &amp; Studi Kasus
+          </span>
+          <h2 class="section-title">Sistem Dikembangkan Sendiri &amp; Solusi Lapangan</h2>
+          <p class="section-subtitle">
+            Sistem-sistem operasional pergudangan berikut (Antrian Kurir, Engine Stock Opname, Handheld Scanner IMS, dan
+            TMS Live Tracking) dirancang &amp; <strong>dikembangkan sendiri oleh Daniel Imsula</strong> untuk memecahkan
+            hambatan logistik nyata, dilengkapi implementasi tools AI modern dan studi kasus korporat.
+          </p>
+        </div>
 
-      <!-- Filter Tabs -->
-      <div class="projects-filter-bar" id="projects-filter-bar">
-        <button class="filter-btn active" data-filter="all">Semua Sistem &amp; Proyek</button>
-        <button class="filter-btn" data-filter="tms-logistics"><i class="fa-solid fa-truck-fast"></i> Antrian Kurir &amp; TMS</button>
-        <button class="filter-btn" data-filter="opname"><i class="fa-solid fa-clipboard-check"></i> Sistem Stock Opname</button>
-        <button class="filter-btn" data-filter="ims-tech"><i class="fa-solid fa-barcode"></i> Handheld IMS</button>
-        <button class="filter-btn" data-filter="ai-tech"><i class="fa-solid fa-brain"></i> AI &amp; Otomasi</button>
-        <button class="filter-btn" data-filter="accuracy"><i class="fa-solid fa-building"></i> Studi Kasus Perusahaan</button>
-      </div>
+        <!-- Filter Tabs -->
+        <div class="projects-filter-bar" id="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">Semua Sistem &amp; Proyek</button>
+          <button class="filter-btn" data-filter="tms-logistics"><i class="fa-solid fa-truck-fast"></i> Antrian Kurir
+            &amp; TMS</button>
+          <button class="filter-btn" data-filter="opname"><i class="fa-solid fa-clipboard-check"></i> Sistem Stock
+            Opname</button>
+          <button class="filter-btn" data-filter="ims-tech"><i class="fa-solid fa-barcode"></i> Handheld IMS</button>
+          <button class="filter-btn" data-filter="ai-tech"><i class="fa-solid fa-brain"></i> AI &amp; Otomasi</button>
+          <button class="filter-btn" data-filter="accuracy"><i class="fa-solid fa-building"></i> Studi Kasus
+            Perusahaan</button>
+        </div>
 
-      <!-- Projects Grid Container -->
-      <div class="projects-grid" id="projects-grid-container">
-        <!-- Rendered dynamically by app.js -->
+        <!-- Projects Grid Container -->
+        <div class="projects-grid" id="projects-grid-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        Experience & Career Timeline (Manufaktur & E-Commerce Categorized)
        ======================================================================== -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">
-          <i class="fa-solid fa-briefcase"></i> Pengalaman Kerja
-        </span>
-        <h2 class="section-title">Perjalanan Karir Profesional</h2>
-        <p class="section-subtitle">
-          Rekam jejak kepemimpinan inventaris dan operasional pergudangan di industri e-commerce dan pabrik manufaktur.
-        </p>
-      </div>
-
-      <div class="timeline-container">
-        <!-- Experience 1: PT Inovasi Eka Gemilang (Hanasui) -->
-        <div class="timeline-item">
-          <div class="timeline-node node-pink"></div>
-          <div class="timeline-card">
-            <span class="sector-badge sector-ecommerce"><i class="fa-solid fa-cart-shopping"></i> Sektor E-Commerce
-              &amp; Retail Kosmetik</span>
-            <div class="timeline-header-row">
-              <div class="timeline-company-title-wrap">
-                <img src="images/logos/logo_hanasui.jpg" alt="Logo Hanasui" class="company-brand-logo" />
-                <div>
-                  <h3 class="timeline-role">Inventory Controller</h3>
-                  <h4 class="timeline-company text-pink">PT Inovasi Eka Gemilang (Brand Hanasui)</h4>
-                </div>
-              </div>
-              <div class="timeline-badge-group">
-                <span class="timeline-period">18 Agustus 2026 – Sekarang</span>
-                <span class="badge-status-pill badge-active"><i class="fa-solid fa-circle"></i> Aktif (Sedang
-                  Berjalan)</span>
-              </div>
-            </div>
-            <p class="timeline-desc">
-              Baru memulai karir sebagai <strong>Inventory Controller</strong> dan saat ini sedang aktif memimpin
-              inisiatif <em>continuous improvement</em> di seluruh area inventory dan pergudangan brand
-              <strong>Hanasui</strong>:
-            </p>
-            <ul
-              style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
-              <li><strong>Continuous Improvement di Area Inventory:</strong> Mengidentifikasi celah operasional dan
-                merestrukturisasi alur inventory guna meningkatkan akurasi stok fisik vs sistem WMS, penegakan kontrol
-                FEFO/FIFO produk kecantikan, dan mitigasi selisih barang.</li>
-              <li><strong>Flow Process Automation Lintas Divisi:</strong> Mengakselerasi efisiensi alur proses automasi
-                di divisi <strong>Inbound</strong> (receiving &amp; putaway), <strong>Fulfillment Marketplace</strong>
-                (Shopee, Tokopedia, TikTok Shop, Lazada), dan <strong>Shipper</strong> (integrasi kurir &amp; dispatch).
-              </li>
-              <li><strong>Penyusunan Report Real-Time:</strong> Membangun sistem pelaporan dan live monitoring dashboard
-                untuk melacak mutasi stok, backlog pemenuhan order e-commerce, dan status pengiriman secara instan.</li>
-            </ul>
-          </div>
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-solid fa-briefcase"></i> Pengalaman Kerja
+          </span>
+          <h2 class="section-title">Perjalanan Karir Profesional</h2>
+          <p class="section-subtitle">
+            Rekam jejak kepemimpinan inventaris dan operasional pergudangan di industri e-commerce dan pabrik
+            manufaktur.
+          </p>
         </div>
 
-        <!-- Experience 2: Somethinc - Beautyhaul -->
-        <div class="timeline-item">
-          <div class="timeline-node node-emerald"></div>
-          <div class="timeline-card">
-            <span class="sector-badge sector-ecommerce"><i class="fa-solid fa-bag-shopping"></i> Sektor E-Commerce B2C
-              &amp; B2B Fulfillment</span>
-            <div class="timeline-header-row">
-              <div class="timeline-company-title-wrap">
-                <img src="images/logos/logo_beautyhaul.png" alt="Logo Beautyhaul Somethinc"
-                  class="company-brand-logo" />
-                <div>
-                  <h3 class="timeline-role">Inventory Controller - Associate</h3>
-                  <h4 class="timeline-company text-emerald">Somethinc - Beautyhaul (PT Beauty Haul Indonesia)</h4>
+        <div class="timeline-container">
+          <!-- Experience 1: PT Inovasi Eka Gemilang (Hanasui) -->
+          <div class="timeline-item">
+            <div class="timeline-node node-pink"></div>
+            <div class="timeline-card">
+              <span class="sector-badge sector-ecommerce"><i class="fa-solid fa-cart-shopping"></i> Sektor E-Commerce
+                &amp; Retail Kosmetik</span>
+              <div class="timeline-header-row">
+                <div class="timeline-company-title-wrap">
+                  <img src="images/logos/logo_hanasui.jpg" alt="Logo Hanasui" class="company-brand-logo" />
+                  <div>
+                    <h3 class="timeline-role">Inventory Controller</h3>
+                    <h4 class="timeline-company text-pink">PT Inovasi Eka Gemilang (Brand Hanasui)</h4>
+                  </div>
+                </div>
+                <div class="timeline-badge-group">
+                  <span class="timeline-period">18 Agustus 2026 – Sekarang</span>
+                  <span class="badge-status-pill badge-active"><i class="fa-solid fa-circle"></i> Aktif (Sedang
+                    Berjalan)</span>
                 </div>
               </div>
-              <div class="timeline-badge-group">
-                <span class="timeline-period">Maret 2022 – Agustus 2026</span>
-                <span class="badge-status-pill badge-permanent">Permanent</span>
-              </div>
+              <p class="timeline-desc">
+                Baru memulai karir sebagai <strong>Inventory Controller</strong> dan saat ini sedang aktif memimpin
+                inisiatif <em>continuous improvement</em> di seluruh area inventory dan pergudangan brand
+                <strong>Hanasui</strong>:
+              </p>
+              <ul
+                style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
+                <li><strong>Continuous Improvement di Area Inventory:</strong> Mengidentifikasi celah operasional dan
+                  merestrukturisasi alur inventory guna meningkatkan akurasi stok fisik vs sistem WMS, penegakan kontrol
+                  FEFO/FIFO produk kecantikan, dan mitigasi selisih barang.</li>
+                <li><strong>Flow Process Automation Lintas Divisi:</strong> Mengakselerasi efisiensi alur proses
+                  automasi
+                  di divisi <strong>Inbound</strong> (receiving &amp; putaway), <strong>Fulfillment Marketplace</strong>
+                  (Shopee, Tokopedia, TikTok Shop, Lazada), dan <strong>Shipper</strong> (integrasi kurir &amp;
+                  dispatch).
+                </li>
+                <li><strong>Penyusunan Report Real-Time:</strong> Membangun sistem pelaporan dan live monitoring
+                  dashboard
+                  untuk melacak mutasi stok, backlog pemenuhan order e-commerce, dan status pengiriman secara instan.
+                </li>
+              </ul>
             </div>
-
-            <div class="timeline-award-box">
-              <i class="fa-solid fa-award award-icon"></i>
-              <div>
-                <strong>Penerima Sertifikat Penghargaan 'The Best Admin Excentric':</strong>
-                <p>Penghargaan atas dedikasi luar biasa dan performa administrasi &amp; pengendalian stok terbaik di
-                  Somethinc - Beautyhaul.</p>
-              </div>
-            </div>
-
-            <p class="timeline-desc">
-              Memegang peranan kunci dalam integrasi sistem dan pengendalian akurasi total inventaris puluhan ribu SKU
-              kosmetik di gudang pusat omnichannel:
-            </p>
-            <ul
-              style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
-              <li><strong>Kolaborasi Tim Tech &amp; Setup WMS:</strong> Berkolaborasi intensif bersama Tim
-                Tech/Engineering dalam perancangan alur proses pergudangan, konfigurasi modul, User Acceptance Testing
-                (UAT), hingga sukses go-live implementasi sistem <em>Warehouse Management System (WMS)</em> baru.</li>
-              <li><strong>Automasi Inbound, Marketplace &amp; Shipper:</strong> Mengoptimalkan kecepatan alur
-                picking-packing marketplace saat peak campaign dan koordinasi serah terima dengan pihak Shipper /
-                ekspedisi.</li>
-              <li><strong>Stock Accuracy &amp; Cycle Count (99,98%):</strong> Memimpin pelaksanaan Cycle Count rutin
-                harian/mingguan, rekonsiliasi otomatis data WMS vs stok fisik, penyusunan report live, dan investigasi
-                selisih barang (Root Cause Analysis 5-Why).</li>
-              <li><strong>FEFO/FIFO &amp; Batch Expiry Control:</strong> Menegakkan pengawasan ketat rotasi barang
-                kosmetik sesuai tanggal kedaluwarsa guna menjamin nol kerugian akibat <em>expired stock</em>.</li>
-            </ul>
           </div>
-        </div>
 
-        <!-- Experience 3: PT Aditya Manufaktur Indonesia -->
-        <div class="timeline-item">
-          <div class="timeline-node node-blue"></div>
-          <div class="timeline-card">
-            <span class="sector-badge sector-manufacture"><i class="fa-solid fa-industry"></i> Sektor Industri
-              Manufaktur &amp; Spare Part Mesin Pabrik</span>
-            <div class="timeline-header-row">
-              <div class="timeline-company-title-wrap">
-                <img src="images/logos/logo_aditya.png" alt="Logo PT Aditya Manufaktur" class="company-brand-logo" />
-                <div>
-                  <h3 class="timeline-role">Administrator Spare Part ➔ Promosi ke Supervisor Warehouse</h3>
-                  <h4 class="timeline-company text-blue">PT Aditya Manufaktur Indonesia</h4>
+          <!-- Experience 2: Somethinc - Beautyhaul -->
+          <div class="timeline-item">
+            <div class="timeline-node node-emerald"></div>
+            <div class="timeline-card">
+              <span class="sector-badge sector-ecommerce"><i class="fa-solid fa-bag-shopping"></i> Sektor E-Commerce B2C
+                &amp; B2B Fulfillment</span>
+              <div class="timeline-header-row">
+                <div class="timeline-company-title-wrap">
+                  <img src="images/logos/logo_beautyhaul.png" alt="Logo Beautyhaul Somethinc"
+                    class="company-brand-logo" />
+                  <div>
+                    <h3 class="timeline-role">Inventory Controller - Associate</h3>
+                    <h4 class="timeline-company text-emerald">Somethinc - Beautyhaul (PT Beauty Haul Indonesia)</h4>
+                  </div>
+                </div>
+                <div class="timeline-badge-group">
+                  <span class="timeline-period">Maret 2022 – Agustus 2026</span>
+                  <span class="badge-status-pill badge-permanent">Permanent</span>
                 </div>
               </div>
-              <div class="timeline-badge-group">
-                <span class="timeline-period">Januari 2015 – Mei 2021</span>
-                <span class="badge-status-pill badge-permanent">Permanent</span>
-              </div>
-            </div>
 
-            <div class="timeline-promotion-box">
-              <i class="fa-solid fa-arrow-trend-up promo-icon"></i>
-              <div>
-                <strong>Jalur Promosi Karir:</strong>
-                <p>• Administrator Spare Part: Januari 2015 – April 2021<br />• Promoted to Supervisor Warehouse:
-                  Februari – Mei 2021</p>
+              <div class="timeline-award-box">
+                <i class="fa-solid fa-award award-icon"></i>
+                <div>
+                  <strong>Penerima Sertifikat Penghargaan 'The Best Admin Excentric':</strong>
+                  <p>Penghargaan atas dedikasi luar biasa dan performa administrasi &amp; pengendalian stok terbaik di
+                    Somethinc - Beautyhaul.</p>
+                </div>
               </div>
-            </div>
 
-            <p class="timeline-desc">
-              Memegang kendali penuh atas administrasi suku cadang mesin, material manufaktur, dan alur suplai
-              operasional pabrik:
-            </p>
-            <ul
-              style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
-              <li><strong>Receipt &amp; Inbound Spare Part:</strong> Menangani penerimaan (receipt) seluruh suku cadang
-                mesin, komponen elektrik/mekanik, dan material pabrik serta verifikasi kesesuaian dokumen PO/faktur
-                dengan fisik barang.</li>
-              <li><strong>Control Stock Spare Part:</strong> Melakukan pengawasan ketat saldo stok spare part, memonitor
-                <em>buffer stock</em> komponen kritis guna mencegah <em>downtime</em> mesin produksi, dan investigasi
-                selisih barang.
-              </li>
-              <li><strong>Transfer Stock Rencana Produksi:</strong> Mengatur dan mengeksekusi mutasi transfer stok
-                material dan spare part sesuai jadwal rencana produksi pabrik secara tepat waktu.</li>
-              <li><strong>Stock Opname Berkala:</strong> Memimpin pelaksanaan Stock Opname berkala untuk seluruh
-                inventory suku cadang dan material pabrik hingga rekonsiliasi tuntas.</li>
-            </ul>
+              <p class="timeline-desc">
+                Memegang peranan kunci dalam integrasi sistem dan pengendalian akurasi total inventaris puluhan ribu SKU
+                kosmetik di gudang pusat omnichannel:
+              </p>
+              <ul
+                style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
+                <li><strong>Kolaborasi Tim Tech &amp; Setup WMS:</strong> Berkolaborasi intensif bersama Tim
+                  Tech/Engineering dalam perancangan alur proses pergudangan, konfigurasi modul, User Acceptance Testing
+                  (UAT), hingga sukses go-live implementasi sistem <em>Warehouse Management System (WMS)</em> baru.</li>
+                <li><strong>Automasi Inbound, Marketplace &amp; Shipper:</strong> Mengoptimalkan kecepatan alur
+                  picking-packing marketplace saat peak campaign dan koordinasi serah terima dengan pihak Shipper /
+                  ekspedisi.</li>
+                <li><strong>Stock Accuracy &amp; Cycle Count (99,98%):</strong> Memimpin pelaksanaan Cycle Count rutin
+                  harian/mingguan, rekonsiliasi otomatis data WMS vs stok fisik, penyusunan report live, dan investigasi
+                  selisih barang (Root Cause Analysis 5-Why).</li>
+                <li><strong>FEFO/FIFO &amp; Batch Expiry Control:</strong> Menegakkan pengawasan ketat rotasi barang
+                  kosmetik sesuai tanggal kedaluwarsa guna menjamin nol kerugian akibat <em>expired stock</em>.</li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <!-- Experience 4: PT Kirin Dinamika Sentosa -->
-        <div class="timeline-item">
-          <div class="timeline-node node-amber"></div>
-          <div class="timeline-card">
-            <span class="sector-badge sector-manufacture"><i class="fa-solid fa-warehouse"></i> Sektor Industri
-              Manufaktur &amp; Logistik Perakitan (Assy)</span>
-            <div class="timeline-header-row">
-              <div class="timeline-company-title-wrap">
-                <img src="images/logos/logo_kirin.jpg" alt="Logo PT Kirin Dinamika Sentosa"
-                  class="company-brand-logo" />
-                <div>
-                  <h3 class="timeline-role">Administrator Warehouse</h3>
-                  <h4 class="timeline-company text-amber">PT Kirin Dinamika Sentosa</h4>
+          <!-- Experience 3: PT Aditya Manufaktur Indonesia -->
+          <div class="timeline-item">
+            <div class="timeline-node node-blue"></div>
+            <div class="timeline-card">
+              <span class="sector-badge sector-manufacture"><i class="fa-solid fa-industry"></i> Sektor Industri
+                Manufaktur &amp; Spare Part Mesin Pabrik</span>
+              <div class="timeline-header-row">
+                <div class="timeline-company-title-wrap">
+                  <img src="images/logos/logo_aditya.png" alt="Logo PT Aditya Manufaktur" class="company-brand-logo" />
+                  <div>
+                    <h3 class="timeline-role">Administrator Spare Part ➔ Promosi ke Supervisor Warehouse</h3>
+                    <h4 class="timeline-company text-blue">PT Aditya Manufaktur Indonesia</h4>
+                  </div>
+                </div>
+                <div class="timeline-badge-group">
+                  <span class="timeline-period">Januari 2015 – Mei 2021</span>
+                  <span class="badge-status-pill badge-permanent">Permanent</span>
                 </div>
               </div>
-              <div class="timeline-badge-group">
-                <span class="timeline-period">Januari 2014 – Desember 2015</span>
-                <span class="badge-status-pill badge-contract">Contract</span>
+
+              <div class="timeline-promotion-box">
+                <i class="fa-solid fa-arrow-trend-up promo-icon"></i>
+                <div>
+                  <strong>Jalur Promosi Karir:</strong>
+                  <p>• Administrator Spare Part: Januari 2015 – April 2021<br />• Promoted to Supervisor Warehouse:
+                    Februari – Mei 2021</p>
+                </div>
               </div>
+
+              <p class="timeline-desc">
+                Memegang kendali penuh atas administrasi suku cadang mesin, material manufaktur, dan alur suplai
+                operasional pabrik:
+              </p>
+              <ul
+                style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
+                <li><strong>Receipt &amp; Inbound Spare Part:</strong> Menangani penerimaan (receipt) seluruh suku
+                  cadang
+                  mesin, komponen elektrik/mekanik, dan material pabrik serta verifikasi kesesuaian dokumen PO/faktur
+                  dengan fisik barang.</li>
+                <li><strong>Control Stock Spare Part:</strong> Melakukan pengawasan ketat saldo stok spare part,
+                  memonitor
+                  <em>buffer stock</em> komponen kritis guna mencegah <em>downtime</em> mesin produksi, dan investigasi
+                  selisih barang.
+                </li>
+                <li><strong>Transfer Stock Rencana Produksi:</strong> Mengatur dan mengeksekusi mutasi transfer stok
+                  material dan spare part sesuai jadwal rencana produksi pabrik secara tepat waktu.</li>
+                <li><strong>Stock Opname Berkala:</strong> Memimpin pelaksanaan Stock Opname berkala untuk seluruh
+                  inventory suku cadang dan material pabrik hingga rekonsiliasi tuntas.</li>
+              </ul>
             </div>
-            <p class="timeline-desc">
-              Bertanggung jawab penuh atas administrasi dan pengendalian operasional stok pergudangan manufaktur:
-            </p>
-            <ul
-              style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
-              <li><strong>Inbound &amp; Receiving:</strong> Menangani penerimaan barang masuk/material, pemeriksaan
-                fisik kuantitas/kualitas, dan verifikasi dokumen surat jalan &amp; packing list ke dalam sistem.</li>
-              <li><strong>Transaksi Produksi untuk Assy (Assembly):</strong> Mengontrol pengeluaran komponen/material
-                dan mencatat transaksi mutasi barang untuk kebutuhan jalur perakitan (<em>assembly line</em>) produksi
-                secara tepat waktu.</li>
-              <li><strong>Control Stock &amp; Discrepancy:</strong> Melakukan monitoring saldo stok harian, menjaga
-                ketersediaan <em>buffer stock</em> produksi, dan menginvestigasi potensi selisih stok
-                (<em>shrinkage</em>).</li>
-              <li><strong>Stock Opname:</strong> Memimpin eksekusi <em>Wall-to-Wall Stock Opname</em> dan <em>Cycle
-                  Count</em> berkala puluhan ribu SKU komponen manufaktur hingga tuntas tanpa selisih signifikan.</li>
-            </ul>
           </div>
-        </div>
 
-        <!-- Experience 5: Freelance Music Producer & Audio Engineer -->
-        <div class="timeline-item">
-          <div class="timeline-node" style="background: var(--accent-pink); box-shadow: 0 0 12px rgba(236, 72, 153, 0.4);"></div>
-          <div class="timeline-card">
-            <span class="sector-badge" style="background: rgba(236, 72, 153, 0.1); color: #ec4899; border-color: rgba(236, 72, 153, 0.3);">
-              <i class="fa-solid fa-music"></i> Audio Engineering, Music Production &amp; Film Scoring
-            </span>
-            <div class="timeline-header-row">
-              <div class="timeline-company-title-wrap">
-                <div style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: linear-gradient(135deg, #8B5CF6, #EC4899); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(236,72,153,0.35); flex-shrink: 0;">
-                  <i class="fa-solid fa-compact-disc"></i>
+          <!-- Experience 4: PT Kirin Dinamika Sentosa -->
+          <div class="timeline-item">
+            <div class="timeline-node node-amber"></div>
+            <div class="timeline-card">
+              <span class="sector-badge sector-manufacture"><i class="fa-solid fa-warehouse"></i> Sektor Industri
+                Manufaktur &amp; Logistik Perakitan (Assy)</span>
+              <div class="timeline-header-row">
+                <div class="timeline-company-title-wrap">
+                  <img src="images/logos/logo_kirin.jpg" alt="Logo PT Kirin Dinamika Sentosa"
+                    class="company-brand-logo" />
+                  <div>
+                    <h3 class="timeline-role">Administrator Warehouse</h3>
+                    <h4 class="timeline-company text-amber">PT Kirin Dinamika Sentosa</h4>
+                  </div>
                 </div>
-                <div>
-                  <h3 class="timeline-role">Freelance Music Producer &amp; Audio Engineer</h3>
-                  <h4 class="timeline-company" style="color: #ec4899;">Independent Music Studio &amp; Audio Production</h4>
+                <div class="timeline-badge-group">
+                  <span class="timeline-period">Januari 2014 – Desember 2015</span>
+                  <span class="badge-status-pill badge-contract">Contract</span>
                 </div>
               </div>
-              <div class="timeline-badge-group">
-                <span class="timeline-period">2018 – Sekarang</span>
-                <span class="badge-status-pill" style="background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3);">Freelance / Creative</span>
-              </div>
+              <p class="timeline-desc">
+                Bertanggung jawab penuh atas administrasi dan pengendalian operasional stok pergudangan manufaktur:
+              </p>
+              <ul
+                style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
+                <li><strong>Inbound &amp; Receiving:</strong> Menangani penerimaan barang masuk/material, pemeriksaan
+                  fisik kuantitas/kualitas, dan verifikasi dokumen surat jalan &amp; packing list ke dalam sistem.</li>
+                <li><strong>Transaksi Produksi untuk Assy (Assembly):</strong> Mengontrol pengeluaran komponen/material
+                  dan mencatat transaksi mutasi barang untuk kebutuhan jalur perakitan (<em>assembly line</em>) produksi
+                  secara tepat waktu.</li>
+                <li><strong>Control Stock &amp; Discrepancy:</strong> Melakukan monitoring saldo stok harian, menjaga
+                  ketersediaan <em>buffer stock</em> produksi, dan menginvestigasi potensi selisih stok
+                  (<em>shrinkage</em>).</li>
+                <li><strong>Stock Opname:</strong> Memimpin eksekusi <em>Wall-to-Wall Stock Opname</em> dan <em>Cycle
+                    Count</em> berkala puluhan ribu SKU komponen manufaktur hingga tuntas tanpa selisih signifikan.</li>
+              </ul>
             </div>
+          </div>
 
-            <p class="timeline-desc">
-              Spesialis produksi audio profesional lintas platform, perancangan komposisi musik, rekaman instrumen/vokal, mixing &amp; mastering bertaraf industri, serta pembuatan latar musik sinematik (<em>film scoring</em>):
-            </p>
-
-            <ul style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
-              <li><strong>Produksi Musik &amp; Aransemen:</strong> Menggubah aransemen musik, komposisi melodi/harmoni, <em>beat making</em>, dan struktur lagu lintas genre komersial maupun independen.</li>
-              <li><strong>Audio Recording &amp; Tracking:</strong> Menangani sesi rekaman vokal dan instrumen dengan <em>gain staging</em> presisi, manajemen sinyal audio, dan penataan akustik optimal.</li>
-              <li><strong>Audio Mixing:</strong> Melakukan penyeimbangan level (<em>gain balance</em>), <em>stereo imaging &amp; spatial panning</em>, Dynamic EQ, Multiband Compression, Sidechaining, serta modulasi reverb/delay untuk <em>clarity</em> dan <em>punch</em> audio maksimal.</li>
-              <li><strong>Audio Mastering:</strong> Pemrosesan <em>final mastering chain</em> (Limiter, Dynamic Loudness Control) guna mencapai standar volume industri (LUFS) untuk distribusi platform streaming (Spotify, Apple Music, YouTube) dan media penyiaran.</li>
-              <li><strong>Film Scoring &amp; Sound Design:</strong> Merancang musik latar sinematik (*original score/soundtrack*), atmosfer audio, dan efek suara (*sound design/foley*) untuk video komersial, film pendek, dan konten visual digital.</li>
-            </ul>
-
-            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
-              <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; margin-bottom: 0.65rem;">
-                <i class="fa-solid fa-sliders text-pink"></i> Digital Audio Workstation (DAW) &amp; Software yang Dikuasai:
+          <!-- Experience 5: Freelance Music Producer & Audio Engineer -->
+          <div class="timeline-item">
+            <div class="timeline-node"
+              style="background: var(--accent-pink); box-shadow: 0 0 12px rgba(236, 72, 153, 0.4);"></div>
+            <div class="timeline-card">
+              <span class="sector-badge"
+                style="background: rgba(236, 72, 153, 0.1); color: #ec4899; border-color: rgba(236, 72, 153, 0.3);">
+                <i class="fa-solid fa-music"></i> Audio Engineering, Music Production &amp; Film Scoring
               </span>
-              <div class="skill-tags-group">
-                <!-- FL Studio -->
-                <span class="skill-badge-tag tag-daw">
-                  <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2c1 0 2 1.5 2 3 0 1-.5 2-1 2.5 3 0 7 3 7 8.5 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-5.5 4-8.5 7-8.5-.5-.5-1-1.5-1-2.5 0-1.5 1-3 2-3z" fill="url(#fl-grad-exp)"/>
-                    <path d="M12 2c.5 1.5 1.5 3 3 3.5M12 2c-.5 1.5-1.5 3-3 3.5" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
-                    <defs>
-                      <linearGradient id="fl-grad-exp" x1="4" y1="5" x2="20" y2="22" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#FF5722"/>
-                        <stop offset="1" stop-color="#E64A19"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <span>FL Studio</span>
-                </span>
+              <div class="timeline-header-row">
+                <div class="timeline-company-title-wrap">
+                  <div
+                    style="width: 44px; height: 44px; border-radius: var(--radius-sm); background: linear-gradient(135deg, #8B5CF6, #EC4899); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.25rem; box-shadow: 0 4px 12px rgba(236,72,153,0.35); flex-shrink: 0;">
+                    <i class="fa-solid fa-compact-disc"></i>
+                  </div>
+                  <div>
+                    <h3 class="timeline-role">Freelance Music Producer &amp; Audio Engineer</h3>
+                    <h4 class="timeline-company" style="color: #ec4899;">Independent Music Studio &amp; Audio Production
+                    </h4>
+                  </div>
+                </div>
+                <div class="timeline-badge-group">
+                  <span class="timeline-period">2018 – Sekarang</span>
+                  <span class="badge-status-pill"
+                    style="background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3);">Freelance
+                    / Creative</span>
+                </div>
+              </div>
 
-                <!-- Ableton Live -->
-                <span class="skill-badge-tag tag-daw">
-                  <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                    <rect width="24" height="24" rx="5" fill="#111827"/>
-                    <rect x="4.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                    <rect x="7.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                    <rect x="10.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                    <rect x="13.5" y="6" width="1.6" height="12" fill="#F8FAFC"/>
-                    <rect x="17" y="6" width="3.5" height="1.6" fill="#F8FAFC"/>
-                    <rect x="17" y="9.5" width="3.5" height="1.6" fill="#F8FAFC"/>
-                    <rect x="17" y="13" width="3.5" height="1.6" fill="#F8FAFC"/>
-                    <rect x="17" y="16.5" width="3.5" height="1.6" fill="#F8FAFC"/>
-                  </svg>
-                  <span>Ableton Live</span>
-                </span>
+              <p class="timeline-desc">
+                Spesialis produksi audio profesional lintas platform, perancangan komposisi musik, rekaman
+                instrumen/vokal, mixing &amp; mastering bertaraf industri, serta pembuatan latar musik sinematik
+                (<em>film scoring</em>):
+              </p>
 
-                <!-- Studio One -->
-                <span class="skill-badge-tag tag-daw">
-                  <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                    <rect width="24" height="24" rx="5" fill="#0284C7"/>
-                    <path d="M15 7h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="15.5" cy="7" r="1.3" fill="#BAE6FD"/>
-                    <circle cx="8.5" cy="19" r="1.3" fill="#BAE6FD"/>
-                  </svg>
-                  <span>Studio One</span>
-                </span>
+              <ul
+                style="margin: 0.65rem 0 0 1.25rem; color: var(--text-secondary); font-size: 0.94rem; line-height: 1.75;">
+                <li><strong>Produksi Musik &amp; Aransemen:</strong> Menggubah aransemen musik, komposisi
+                  melodi/harmoni, <em>beat making</em>, dan struktur lagu lintas genre komersial maupun independen.</li>
+                <li><strong>Audio Recording &amp; Tracking:</strong> Menangani sesi rekaman vokal dan instrumen dengan
+                  <em>gain staging</em> presisi, manajemen sinyal audio, dan penataan akustik optimal.</li>
+                <li><strong>Audio Mixing:</strong> Melakukan penyeimbangan level (<em>gain balance</em>), <em>stereo
+                    imaging &amp; spatial panning</em>, Dynamic EQ, Multiband Compression, Sidechaining, serta modulasi
+                  reverb/delay untuk <em>clarity</em> dan <em>punch</em> audio maksimal.</li>
+                <li><strong>Audio Mastering:</strong> Pemrosesan <em>final mastering chain</em> (Limiter, Dynamic
+                  Loudness Control) guna mencapai standar volume industri (LUFS) untuk distribusi platform streaming
+                  (Spotify, Apple Music, YouTube) dan media penyiaran.</li>
+                <li><strong>Film Scoring &amp; Sound Design:</strong> Merancang musik latar sinematik (*original
+                  score/soundtrack*), atmosfer audio, dan efek suara (*sound design/foley*) untuk video komersial, film
+                  pendek, dan konten visual digital.</li>
+              </ul>
 
-                <!-- Cubase -->
-                <span class="skill-badge-tag tag-daw">
-                  <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                    <rect width="24" height="24" rx="5" fill="#E11D48"/>
-                    <path d="M12 5l7 4v6l-7 4-7-4V9l7-4z" stroke="#FFFFFF" stroke-width="1.8" fill="rgba(255,255,255,0.18)"/>
-                    <path d="M12 5v14M5 9l14 6M19 9l-14 6" stroke="#FFFFFF" stroke-width="1.2"/>
-                  </svg>
-                  <span>Cubase</span>
+              <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+                <span
+                  style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); display: block; margin-bottom: 0.65rem;">
+                  <i class="fa-solid fa-sliders text-pink"></i> Digital Audio Workstation (DAW) &amp; Software yang
+                  Dikuasai:
                 </span>
+                <div class="skill-tags-group">
+                  <!-- FL Studio -->
+                  <span class="skill-badge-tag tag-daw">
+                    <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M12 2c1 0 2 1.5 2 3 0 1-.5 2-1 2.5 3 0 7 3 7 8.5 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-5.5 4-8.5 7-8.5-.5-.5-1-1.5-1-2.5 0-1.5 1-3 2-3z"
+                        fill="url(#fl-grad-exp)" />
+                      <path d="M12 2c.5 1.5 1.5 3 3 3.5M12 2c-.5 1.5-1.5 3-3 3.5" stroke="#10B981" stroke-width="1.5"
+                        stroke-linecap="round" />
+                      <defs>
+                        <linearGradient id="fl-grad-exp" x1="4" y1="5" x2="20" y2="22" gradientUnits="userSpaceOnUse">
+                          <stop stop-color="#FF5722" />
+                          <stop offset="1" stop-color="#E64A19" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <span>FL Studio</span>
+                  </span>
 
-                <!-- Logic Pro -->
-                <span class="skill-badge-tag tag-daw">
-                  <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                    <rect width="24" height="24" rx="5" fill="#1E293B"/>
-                    <circle cx="12" cy="12" r="7.5" stroke="#94A3B8" stroke-width="1.8" fill="none"/>
-                    <circle cx="12" cy="12" r="4.5" fill="#38BDF8"/>
-                    <path d="M12 4.5V8M19.5 12H16M12 19.5V16M4.5 12H8" stroke="#F8FAFC" stroke-width="1.5" stroke-linecap="round"/>
-                  </svg>
-                  <span>Logic Pro</span>
-                </span>
+                  <!-- Ableton Live -->
+                  <span class="skill-badge-tag tag-daw">
+                    <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="5" fill="#111827" />
+                      <rect x="4.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                      <rect x="7.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                      <rect x="10.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                      <rect x="13.5" y="6" width="1.6" height="12" fill="#F8FAFC" />
+                      <rect x="17" y="6" width="3.5" height="1.6" fill="#F8FAFC" />
+                      <rect x="17" y="9.5" width="3.5" height="1.6" fill="#F8FAFC" />
+                      <rect x="17" y="13" width="3.5" height="1.6" fill="#F8FAFC" />
+                      <rect x="17" y="16.5" width="3.5" height="1.6" fill="#F8FAFC" />
+                    </svg>
+                    <span>Ableton Live</span>
+                  </span>
 
-                <!-- Pro Tools -->
-                <span class="skill-badge-tag tag-daw">
-                  <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
-                    <rect width="24" height="24" rx="5" fill="#7E22CE"/>
-                    <path d="M8 6h5a3.5 3.5 0 0 1 0 7H8V6zm0 7v5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="13" cy="9.5" r="1.5" fill="#D8B4FE"/>
-                  </svg>
-                  <span>Pro Tools</span>
-                </span>
+                  <!-- Studio One -->
+                  <span class="skill-badge-tag tag-daw">
+                    <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="5" fill="#0284C7" />
+                      <path d="M15 7h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H9"
+                        stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                      <circle cx="15.5" cy="7" r="1.3" fill="#BAE6FD" />
+                      <circle cx="8.5" cy="19" r="1.3" fill="#BAE6FD" />
+                    </svg>
+                    <span>Studio One</span>
+                  </span>
+
+                  <!-- Cubase -->
+                  <span class="skill-badge-tag tag-daw">
+                    <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="5" fill="#E11D48" />
+                      <path d="M12 5l7 4v6l-7 4-7-4V9l7-4z" stroke="#FFFFFF" stroke-width="1.8"
+                        fill="rgba(255,255,255,0.18)" />
+                      <path d="M12 5v14M5 9l14 6M19 9l-14 6" stroke="#FFFFFF" stroke-width="1.2" />
+                    </svg>
+                    <span>Cubase</span>
+                  </span>
+
+                  <!-- Logic Pro -->
+                  <span class="skill-badge-tag tag-daw">
+                    <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="5" fill="#1E293B" />
+                      <circle cx="12" cy="12" r="7.5" stroke="#94A3B8" stroke-width="1.8" fill="none" />
+                      <circle cx="12" cy="12" r="4.5" fill="#38BDF8" />
+                      <path d="M12 4.5V8M19.5 12H16M12 19.5V16M4.5 12H8" stroke="#F8FAFC" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    </svg>
+                    <span>Logic Pro</span>
+                  </span>
+
+                  <!-- Pro Tools -->
+                  <span class="skill-badge-tag tag-daw">
+                    <svg class="ai-brand-svg" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="5" fill="#7E22CE" />
+                      <path d="M8 6h5a3.5 3.5 0 0 1 0 7H8V6zm0 7v5" stroke="#FFFFFF" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <circle cx="13" cy="9.5" r="1.5" fill="#D8B4FE" />
+                    </svg>
+                    <span>Pro Tools</span>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================================================
+    <!-- ========================================================================
        Contact Section (Peluang Karir Terbuka)
        ======================================================================== -->
-  <section id="contact" class="section-alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-badge">
-          <i class="fa-regular fa-envelope"></i> Kontak &amp; Peluang Karir
-        </span>
-        <h2 class="section-title">Mari Terhubung &amp; Berkolaborasi</h2>
-        <p class="section-subtitle">
-          Terbuka untuk peluang posisi <strong>Supervisor Inventory</strong>, <strong>Inventory Controller</strong>, dan
-          <strong>Inventory Specialist</strong> di sektor Manufaktur, E-Commerce, FMCG, maupun Retail.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Contact Info Card -->
-        <div class="contact-info-card">
-          <h3>Peluang Karir &amp; Kontak Langsung</h3>
-          <p>
-            Saya siap berkontribusi memimpin operasional inventaris, menekan selisih stok, dan meningkatkan efisiensi
-            alur pergudangan di perusahaan Anda.
+    <section id="contact" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">
+            <i class="fa-regular fa-envelope"></i> Kontak &amp; Peluang Karir
+          </span>
+          <h2 class="section-title">Mari Terhubung &amp; Berkolaborasi</h2>
+          <p class="section-subtitle">
+            Terbuka untuk peluang posisi <strong>Supervisor Inventory</strong>, <strong>Inventory Controller</strong>,
+            dan
+            <strong>Inventory Specialist</strong> di sektor Manufaktur, E-Commerce, FMCG, maupun Retail.
           </p>
-
-          <div class="contact-methods">
-            <div class="contact-method-item">
-              <div class="contact-method-icon icon-green">
-                <i class="fa-solid fa-briefcase"></i>
-              </div>
-              <div class="contact-method-text">
-                <span>Posisi Target</span>
-                <strong>Supervisor Inventory • Controller • Specialist</strong>
-              </div>
-            </div>
-
-            <div class="contact-method-item">
-              <div class="contact-method-icon" style="background: rgba(37, 211, 102, 0.12); color: #25D366;">
-                <i class="fa-brands fa-whatsapp"></i>
-              </div>
-              <div class="contact-method-text">
-                <span>WhatsApp</span>
-                <strong><a
-                    href="https://wa.me/6282210703118?text=Halo%20Daniel,%20saya%20tertarik%20dengan%20profil%20Anda%20dan%20ingin%20mendiskusikan%20peluang%20karir."
-                    target="_blank" style="color: #25D366; text-decoration: underline;">082210703118</a></strong>
-              </div>
-            </div>
-
-            <div class="contact-method-item">
-              <div class="contact-method-icon icon-amber">
-                <i class="fa-regular fa-envelope"></i>
-              </div>
-              <div class="contact-method-text">
-                <span>Email Penawaran</span>
-                <strong><a href="mailto:dhanielo.marthinz@gmail.com"
-                    style="color: inherit;">dhanielo.marthinz@gmail.com</a></strong>
-              </div>
-            </div>
-
-            <div class="contact-method-item">
-              <div class="contact-method-icon icon-indigo">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="contact-method-text">
-                <span>Lokasi Kerja</span>
-                <strong>Tangerang / Jakarta &amp; Sekitarnya, Indonesia</strong>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-actions-row">
-            <a href="https://wa.me/6282210703118?text=Halo%20Daniel,%20saya%20tertarik%20dengan%20profil%20Anda%20dan%20ingin%20mendiskusikan%20peluang%20karir."
-              target="_blank" class="btn btn-whatsapp btn-sm">
-              <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
-            </a>
-            <a href="mailto:dhanielo.marthinz@gmail.com" class="btn btn-secondary btn-sm">
-              <i class="fa-solid fa-envelope"></i> Kirim Email
-            </a>
-            <button class="btn btn-secondary btn-sm open-resume-btn">
-              <i class="fa-regular fa-file-pdf"></i> Lihat CV
-            </button>
-          </div>
         </div>
 
-        <!-- Contact Form Card -->
-        <div class="contact-form-card">
-          <h3>Kirimkan Penawaran / Pesan</h3>
+        <div class="contact-grid">
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <h3>Peluang Karir &amp; Kontak Langsung</h3>
+            <p>
+              Saya siap berkontribusi memimpin operasional inventaris, menekan selisih stok, dan meningkatkan efisiensi
+              alur pergudangan di perusahaan Anda.
+            </p>
 
-          <form id="portfolio-contact-form" class="contact-form">
-            <div class="form-row-dual">
-              <div class="form-group">
-                <label for="contact-name">Nama Lengkap / HRD / Perusahaan</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="Nama Anda / Perusahaan" required />
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="contact-method-icon icon-green">
+                  <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <div class="contact-method-text">
+                  <span>Posisi Target</span>
+                  <strong>Supervisor Inventory • Controller • Specialist</strong>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="contact-email">Alamat Email</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="email@perusahaan.com" required />
+
+              <div class="contact-method-item">
+                <div class="contact-method-icon" style="background: rgba(37, 211, 102, 0.12); color: #25D366;">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact-method-text">
+                  <span>WhatsApp</span>
+                  <strong><a
+                      href="https://wa.me/6282210703118?text=Halo%20Daniel,%20saya%20tertarik%20dengan%20profil%20Anda%20dan%20ingin%20mendiskusikan%20peluang%20karir."
+                      target="_blank" style="color: #25D366; text-decoration: underline;">082210703118</a></strong>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-method-icon icon-amber">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="contact-method-text">
+                  <span>Email Penawaran</span>
+                  <strong><a href="mailto:dhanielo.marthinz@gmail.com"
+                      style="color: inherit;">dhanielo.marthinz@gmail.com</a></strong>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-method-icon icon-indigo">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-method-text">
+                  <span>Lokasi Kerja</span>
+                  <strong>Tangerang / Jakarta &amp; Sekitarnya, Indonesia</strong>
+                </div>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="contact-subject">Subjek Pesan</label>
-              <input type="text" id="contact-subject" class="form-input"
-                placeholder="Tawaran Posisi: Supervisor Inventory / Inventory Controller" />
-            </div>
-
-            <div class="form-group">
-              <label for="contact-message">Isi Pesan</label>
-              <textarea id="contact-message" class="form-textarea" rows="4"
-                placeholder="Tuliskan detail tawaran kerja atau kebutuhan manajemen inventaris pergudangan Anda..."
-                required></textarea>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-              <button type="submit" class="btn btn-primary" id="contact-submit-btn">
-                <i class="fa-solid fa-envelope"></i> Kirim ke Email
-              </button>
-              <button type="button" class="btn btn-whatsapp" id="contact-whatsapp-btn">
-                <i class="fa-brands fa-whatsapp"></i> Kirim via WhatsApp
+            <div class="contact-actions-row">
+              <a href="https://wa.me/6282210703118?text=Halo%20Daniel,%20saya%20tertarik%20dengan%20profil%20Anda%20dan%20ingin%20mendiskusikan%20peluang%20karir."
+                target="_blank" class="btn btn-whatsapp btn-sm">
+                <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+              </a>
+              <a href="mailto:dhanielo.marthinz@gmail.com" class="btn btn-secondary btn-sm">
+                <i class="fa-solid fa-envelope"></i> Kirim Email
+              </a>
+              <button class="btn btn-secondary btn-sm open-resume-btn">
+                <i class="fa-regular fa-file-pdf"></i> Lihat CV
               </button>
             </div>
-          </form>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <h3>Kirimkan Penawaran / Pesan</h3>
+
+            <form id="portfolio-contact-form" class="contact-form">
+              <div class="form-row-dual">
+                <div class="form-group">
+                  <label for="contact-name">Nama Lengkap / HRD / Perusahaan</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="Nama Anda / Perusahaan"
+                    required />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Alamat Email</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="email@perusahaan.com"
+                    required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subjek Pesan</label>
+                <input type="text" id="contact-subject" class="form-input"
+                  placeholder="Tawaran Posisi: Supervisor Inventory / Inventory Controller" />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Isi Pesan</label>
+                <textarea id="contact-message" class="form-textarea" rows="4"
+                  placeholder="Tuliskan detail tawaran kerja atau kebutuhan manajemen inventaris pergudangan Anda..."
+                  required></textarea>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="submit" class="btn btn-primary" id="contact-submit-btn">
+                  <i class="fa-solid fa-envelope"></i> Kirim ke Email
+                </button>
+                <button type="button" class="btn btn-whatsapp" id="contact-whatsapp-btn">
+                  <i class="fa-brands fa-whatsapp"></i> Kirim via WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <!-- ========================================================================
@@ -1117,7 +1200,8 @@
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <div class="nav-logo-badge mini" id="footer-inventory-logo" style="cursor: pointer;" title="Daniel Imsula - Klik 3x untuk Akses Statistik (PIN: 0000)">
+        <div class="nav-logo-badge mini" id="footer-inventory-logo" style="cursor: pointer;"
+          title="Daniel Imsula - Klik 3x untuk Akses Statistik (PIN: 0000)">
           <i class="fa-solid fa-boxes-stacked"></i>
         </div>
         <span class="footer-title">Daniel Imsula — Supervisor Inventory, Controller &amp; Specialist</span>
@@ -1215,22 +1299,30 @@
           </div>
 
           <div class="resume-exp-item" style="border-left-color: var(--accent-pink);">
-            <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: linear-gradient(135deg, #8B5CF6, #EC4899); display: inline-flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; margin-right: 0.5rem; vertical-align: middle;">
+            <div
+              style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: linear-gradient(135deg, #8B5CF6, #EC4899); display: inline-flex; align-items: center; justify-content: center; color: white; font-size: 0.9rem; margin-right: 0.5rem; vertical-align: middle;">
               <i class="fa-solid fa-compact-disc"></i>
             </div>
-            <strong>5. Freelance Music Producer &amp; Audio Engineer</strong> — <em>Creative &amp; Audio Production</em><br />
-            <span class="exp-role-meta text-pink">Music Producer, Mixing &amp; Mastering Engineer | 2018 – Sekarang (Freelance)</span>
-            <p>Memproduksi musik lintas genre, rekaman vokal/instrumen, audio mixing, final mastering (standar LUFS streaming), dan pembuatan scoring film/soundtrack menggunakan ekosistem DAW profesional: FL Studio, Ableton Live, Studio One, Cubase, Logic Pro, dan Pro Tools.</p>
+            <strong>5. Freelance Music Producer &amp; Audio Engineer</strong> — <em>Creative &amp; Audio
+              Production</em><br />
+            <span class="exp-role-meta text-pink">Music Producer, Mixing &amp; Mastering Engineer | 2018 – Sekarang
+              (Freelance)</span>
+            <p>Memproduksi musik lintas genre, rekaman vokal/instrumen, audio mixing, final mastering (standar LUFS
+              streaming), dan pembuatan scoring film/soundtrack menggunakan ekosistem DAW profesional: FL Studio,
+              Ableton Live, Studio One, Cubase, Logic Pro, dan Pro Tools.</p>
           </div>
         </div>
 
         <div class="resume-section-block">
           <h4><i class="fa-solid fa-brain text-indigo"></i> Inovasi Sistem &amp; Ekosistem AI</h4>
           <p>
-            <strong>Sistem &amp; Solusi Logistik:</strong> Sistem Antrian Kurir Instan (Gojek/Grab/SPX), Sistem Stock Opname
+            <strong>Sistem &amp; Solusi Logistik:</strong> Sistem Antrian Kurir Instan (Gojek/Grab/SPX), Sistem Stock
+            Opname
             &amp; Auto-Reconciliation Engine, Handheld IMS Barcode Flow, Transportation Management System (TMS) &amp;
             Driver Live Tracking.<br />
-            <strong>Penerapan AI &amp; Otomasi:</strong> ChatGPT, Google Gemini, Claude, Antigravity IDE, Google Stitch, OpenClaw, Google Apps Script, AppSheet, Looker Studio untuk analisis anomali stok, otomasi script data gudang, dashboard visual, dan perumusan SOP presisi.
+            <strong>Penerapan AI &amp; Otomasi:</strong> ChatGPT, Google Gemini, Claude, Antigravity IDE, Google Stitch,
+            OpenClaw, Google Apps Script, AppSheet, Looker Studio untuk analisis anomali stok, otomasi script data
+            gudang, dashboard visual, dan perumusan SOP presisi.
           </p>
         </div>
 
@@ -1241,7 +1333,8 @@
             FEFO/FIFO Control, Root Cause Analysis (5-Why), Loss Prevention.<br />
             <strong>Sistem &amp; Software:</strong> WMS, Handheld Barcode Scanner, TMS Driver Tracking, Microsoft Excel
             Advanced, SAP / ERP Sync.<br />
-            <strong>Audio &amp; Musik (DAW):</strong> FL Studio, Ableton Live, Studio One, Cubase, Logic Pro, Pro Tools, Audio Recording, Mixing, Mastering, Film Scoring.
+            <strong>Audio &amp; Musik (DAW):</strong> FL Studio, Ableton Live, Studio One, Cubase, Logic Pro, Pro Tools,
+            Audio Recording, Mixing, Mastering, Film Scoring.
           </p>
         </div>
       </div>
@@ -1293,9 +1386,11 @@
         <div class="pin-dot" id="p-dot-3"></div>
       </div>
 
-      <input type="password" id="pin-hidden-input" maxlength="4" style="opacity: 0; position: absolute; pointer-events: none;" />
+      <input type="password" id="pin-hidden-input" maxlength="4"
+        style="opacity: 0; position: absolute; pointer-events: none;" />
 
-      <p id="pin-error-msg" style="color: #ef4444; font-size: 0.82rem; min-height: 1.2rem; margin-bottom: 0.5rem; font-weight: 600;"></p>
+      <p id="pin-error-msg"
+        style="color: #ef4444; font-size: 0.82rem; min-height: 1.2rem; margin-bottom: 0.5rem; font-weight: 600;"></p>
 
       <div class="pin-keypad">
         <button class="pin-key-btn" data-key="1">1</button>
@@ -1307,9 +1402,11 @@
         <button class="pin-key-btn" data-key="7">7</button>
         <button class="pin-key-btn" data-key="8">8</button>
         <button class="pin-key-btn" data-key="9">9</button>
-        <button class="pin-key-btn" data-key="clear" title="Hapus"><i class="fa-solid fa-trash-can" style="font-size: 1rem;"></i></button>
+        <button class="pin-key-btn" data-key="clear" title="Hapus"><i class="fa-solid fa-trash-can"
+            style="font-size: 1rem;"></i></button>
         <button class="pin-key-btn" data-key="0">0</button>
-        <button class="pin-key-btn" data-key="backspace" title="Backspace"><i class="fa-solid fa-delete-left" style="font-size: 1rem;"></i></button>
+        <button class="pin-key-btn" data-key="backspace" title="Backspace"><i class="fa-solid fa-delete-left"
+            style="font-size: 1rem;"></i></button>
       </div>
     </div>
   </div>
@@ -1324,7 +1421,8 @@
       <div class="analytics-header">
         <div>
           <div style="display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.25rem;">
-            <div style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(16,185,129,0.12); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+            <div
+              style="width: 32px; height: 32px; border-radius: var(--radius-sm); background: rgba(16,185,129,0.12); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-size: 1rem;">
               <i class="fa-solid fa-chart-line"></i>
             </div>
             <h2 style="font-size: 1.35rem; margin: 0;">Visitor Intelligence &amp; Lead Tracker</h2>
@@ -1335,7 +1433,8 @@
         </div>
 
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button class="btn btn-secondary btn-sm" id="btn-reset-analytics" title="Reset Semua Data ke 0" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">
+          <button class="btn btn-secondary btn-sm" id="btn-reset-analytics" title="Reset Semua Data ke 0"
+            style="color: #ef4444; border-color: rgba(239, 68, 68, 0.3);">
             <i class="fa-solid fa-rotate-left"></i> Reset ke 0
           </button>
           <button class="btn btn-secondary btn-sm" id="btn-export-analytics" title="Export CSV">
@@ -1401,8 +1500,10 @@
 
       <!-- Tab 1: Visitor Logs -->
       <div class="analytics-tab-content active" id="tab-visitors">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; gap: 0.75rem; flex-wrap: wrap;">
-          <input type="text" id="visitor-search-input" class="form-input" placeholder="Cari kota, IP, atau browser..." style="max-width: 280px; padding: 0.45rem 0.85rem; font-size: 0.85rem;" />
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; gap: 0.75rem; flex-wrap: wrap;">
+          <input type="text" id="visitor-search-input" class="form-input" placeholder="Cari kota, IP, atau browser..."
+            style="max-width: 280px; padding: 0.45rem 0.85rem; font-size: 0.85rem;" />
           <span style="font-size: 0.82rem; color: var(--text-muted);" id="visitor-records-counter">Memuat data...</span>
         </div>
         <div class="analytics-table-wrap">
@@ -1433,7 +1534,8 @@
       <!-- Tab 3: Geo & Device Distribution -->
       <div class="analytics-tab-content" id="tab-geo">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.35rem;">
+          <div
+            style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.35rem;">
             <h4 style="font-size: 0.96rem; margin-bottom: 1.15rem; display: flex; align-items: center; gap: 0.5rem;">
               <i class="fa-solid fa-map-location-dot text-emerald"></i> Sebaran Kota / Daerah Pengunjung
             </h4>
@@ -1442,7 +1544,8 @@
             </div>
           </div>
 
-          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.35rem;">
+          <div
+            style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.35rem;">
             <h4 style="font-size: 0.96rem; margin-bottom: 1.15rem; display: flex; align-items: center; gap: 0.5rem;">
               <i class="fa-solid fa-laptop text-blue"></i> Perangkat (Device Breakdown)
             </h4>
@@ -1453,7 +1556,8 @@
         </div>
       </div>
 
-      <div class="resume-modal-footer" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+      <div class="resume-modal-footer"
+        style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
         <span style="font-size: 0.8rem; color: var(--text-muted);">
           <i class="fa-solid fa-key text-emerald"></i> Akses Pemilik Terotentikasi (Password: 0000)
         </span>
