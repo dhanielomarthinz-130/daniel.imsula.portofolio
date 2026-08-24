@@ -199,6 +199,11 @@ let allProjectsData = [
     badge: "Developed by Daniel • Digunakan di Somethinc-Beautyhaul",
     author: "Sistem Dikembangkan Sendiri & Digunakan di Somethinc-Beautyhaul",
     companyLogo: "images/logos/logo_beautyhaul.png",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" },
+      { name: "PT Royal Pesona Indonesia", logo: "images/logos/logo_royalpesona.jpg" }
+    ],
     description: "Sistem manajemen mutu penerimaan barang masuk (Inbound QC), validasi nomor batch produksi, dan kontrol otomatis alur FEFO (First Expired, First Out) produk kosmetik & skincare. Menjamin setiap batch yang masuk terverifikasi masa kadaluwarsanya dan teralokasi ke bin rak yang tepat secara otomatis.",
     image: "images/somethinc_inbound_qc_fefo.jpg",
     adminPanel: "Master data registrasi batch SKU kosmetik, ambang batas expired alert (6-12 bulan), dashboard monitoring pass/fail QC harian, persetujuan karantina batch bermasalah, dan rekapitulasi audit kepatuhan FEFO per kategori produk.",
@@ -446,6 +451,20 @@ function renderProjects(projects) {
           </div>
         ` : ''}
 
+        ${proj.deployedBrands && proj.deployedBrands.length ? `
+          <div class="project-deployed-brands">
+            <span class="deployed-tag-label"><i class="fa-solid fa-circle-check text-emerald"></i> Sedang Aktif Digunakan di:</span>
+            <div class="deployed-brand-logos">
+              ${proj.deployedBrands.map(b => `
+                <div class="deployed-logo-badge" title="${b.name}">
+                  <img src="${b.logo}" alt="Logo ${b.name}" />
+                  <span>${b.name}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
         <div class="project-footer-links">
           <button class="project-link-btn" onclick="openProjectModal('${proj.id}')">
             <span>Lihat Detail &amp; Solusi Sistem</span>
@@ -556,6 +575,22 @@ window.openProjectModal = function (projectId) {
           ${(project.technologies || []).map(t => `<span class="tech-tag">${t}</span>`).join('')}
         </div>
       </div>
+
+      ${project.deployedBrands && project.deployedBrands.length ? `
+        <div class="modal-deployment-box">
+          <h4 style="color: var(--text-primary); margin-bottom: 0.55rem; font-size: 0.92rem; display: flex; align-items: center; gap: 0.45rem;">
+            <i class="fa-solid fa-building-circle-check text-emerald"></i> Perusahaan yang Sedang Menjalankan Sistem Ini:
+          </h4>
+          <div class="deployed-brand-logos">
+            ${project.deployedBrands.map(b => `
+              <div class="deployed-logo-badge">
+                <img src="${b.logo}" alt="Logo ${b.name}" />
+                <span>${b.name}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
     </div>
   `;
 
