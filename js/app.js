@@ -632,8 +632,12 @@ function initVisitorAnalytics() {
   let currentPin = '';
   const SECRET_PIN = '0000';
 
-  // Storage Key
-  const STORAGE_KEY = 'daniel_portfolio_analytics_v1';
+  // Storage Key (Version 2 - Pure Real Analytics)
+  const STORAGE_KEY = 'daniel_portfolio_analytics_real_v2';
+  try {
+    localStorage.removeItem('daniel_portfolio_analytics_v1');
+  } catch (e) {}
+
   let analyticsData = loadAnalyticsData();
 
   // Log current session visit
@@ -791,15 +795,26 @@ function initVisitorAnalytics() {
     const totalInquiriesEl = document.getElementById('kpi-total-inquiries');
     const tabInquiriesCount = document.getElementById('tab-inquiries-count');
 
-    if (totalVisitsEl) totalVisitsEl.textContent = analyticsData.totalVisits.toLocaleString();
-    if (uniqueVisitsEl) uniqueVisitsEl.textContent = analyticsData.uniqueVisitors.toLocaleString();
-    if (topRegionEl) topRegionEl.textContent = analyticsData.topRegion || 'Jakarta & Tangerang';
-    if (totalInquiriesEl) totalInquiriesEl.textContent = analyticsData.inquiryLogs.length;
-    if (tabInquiriesCount) tabInquiriesCount.textContent = analyticsData.inquiryLogs.length;
+    // Calculate dynamic top region from real logs
+    let topRegion = '-';
+    if (analyticsData.visitorLogs && analyticsData.visitorLogs.length > 0) {
+      const counts = {};
+      analyticsData.visitorLogs.forEach(l => {
+        const reg = l.region ? l.region.replace(/🇮🇩|🌐/g, '').trim() : 'Lokal';
+        counts[reg] = (counts[reg] || 0) + 1;
+      });
+      topRegion = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b, '-');
+    }
 
-    renderVisitorTable(analyticsData.visitorLogs);
-    renderInquiriesList(analyticsData.inquiryLogs);
-    renderGeoAndDevices(analyticsData.visitorLogs);
+    if (totalVisitsEl) totalVisitsEl.textContent = (analyticsData.totalVisits || 0).toLocaleString();
+    if (uniqueVisitsEl) uniqueVisitsEl.textContent = (analyticsData.uniqueVisitors || 0).toLocaleString();
+    if (topRegionEl) topRegionEl.textContent = topRegion;
+    if (totalInquiriesEl) totalInquiriesEl.textContent = (analyticsData.inquiryLogs || []).length;
+    if (tabInquiriesCount) tabInquiriesCount.textContent = (analyticsData.inquiryLogs || []).length;
+
+    renderVisitorTable(analyticsData.visitorLogs || []);
+    renderInquiriesList(analyticsData.inquiryLogs || []);
+    renderGeoAndDevices(analyticsData.visitorLogs || []);
   }
 
   function renderVisitorTable(logs) {
@@ -807,13 +822,25 @@ function initVisitorAnalytics() {
     const counter = document.getElementById('visitor-records-counter');
     if (!tbody) return;
 
-    if (counter) counter.textContent = `Menampilkan ${logs.length} data kunjungan terbaru`;
+    if (counter) counter.textContent = `Menampilkan ${logs.length} data kunjungan nyata`;
+
+    if (!logs || logs.length === 0) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="5" style="text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
+            <i class="fa-solid fa-users-slash" style="font-size: 2rem; margin-bottom: 0.5rem; display: block; opacity: 0.4;"></i>
+            Belum ada kunjungan. Kunjungan baru dari pengunjung nyata akan tercatat otomatis di sini.
+          </td>
+        </tr>
+      `;
+      return;
+    }
 
     tbody.innerHTML = logs.map(log => `
       <tr>
         <td><strong>${log.time}</strong></td>
         <td><i class="fa-solid fa-location-dot text-emerald"></i> ${log.region}</td>
-        <td><i class="${log.device.includes('Mobile') ? 'fa-solid fa-mobile-screen' : 'fa-solid fa-desktop'}"></i> ${log.device}</td>
+        <td><i class="${(log.device || '').includes('Mobile') ? 'fa-solid fa-mobile-screen text-emerald' : 'fa-solid fa-desktop text-blue'}"></i> ${log.device}</td>
         <td><i class="fa-brands fa-chrome"></i> ${log.browser}</td>
         <td><span class="badge-status-pill" style="font-size: 0.72rem; padding: 0.18rem 0.55rem; background: rgba(16,185,129,0.12); color: #10b981;">${log.action}</span></td>
       </tr>
@@ -826,9 +853,10 @@ function initVisitorAnalytics() {
 
     if (!inquiries || inquiries.length === 0) {
       container.innerHTML = `
-        <div style="text-align: center; padding: 2.5rem 1rem; color: var(--text-muted);">
-          <i class="fa-regular fa-envelope-open" style="font-size: 2.5rem; margin-bottom: 0.75rem; display: block; opacity: 0.5;"></i>
-          Belum ada penawaran/email yang tercatat.
+        <div style="text-align: center; padding: 2.8rem 1rem; color: var(--text-muted);">
+          <i class="fa-regular fa-envelope-open" style="font-size: 2.5rem; margin-bottom: 0.75rem; display: block; opacity: 0.4;"></i>
+          Belum ada pesan / email penawaran yang masuk.<br />
+          <span style="font-size: 0.83rem; opacity: 0.85; margin-top: 0.35rem; display: inline-block;">Pesan nyata yang dikirim pengunjung melalui formulir kontak atau WhatsApp akan otomatis tercatat di sini.</span>
         </div>
       `;
       return;
@@ -847,7 +875,7 @@ function initVisitorAnalytics() {
 
         <div class="inquiry-meta-row">
           <span><i class="fa-regular fa-envelope text-blue"></i> <strong>${inq.email}</strong></span>
-          ${inq.phone ? `<span><i class="fa-brands fa-whatsapp text-emerald"></i> <a href="https://wa.me/${inq.phone.replace(/[^0-9]/g, '')}" target="_blank" style="color: #25D366;">${inq.phone}</a></span>` : ''}
+          ${inq.phone && inq.phone !== '-' ? `<span><i class="fa-brands fa-whatsapp text-emerald"></i> <a href="https://wa.me/${inq.phone.replace(/[^0-9]/g, '')}" target="_blank" style="color: #25D366;">${inq.phone}</a></span>` : ''}
           ${inq.company ? `<span><i class="fa-solid fa-building text-amber"></i> ${inq.company}</span>` : ''}
           <span><i class="fa-solid fa-location-dot text-pink"></i> ${inq.region || 'Jabodetabek'}</span>
         </div>
@@ -864,16 +892,31 @@ function initVisitorAnalytics() {
     const geoContainer = document.getElementById('geo-distribution-container');
     const deviceContainer = document.getElementById('device-distribution-container');
 
-    if (geoContainer) {
-      const regions = [
-        { name: 'DKI Jakarta (Pusat / Barat / Selatan)', percent: 42 },
-        { name: 'Tangerang & Banten (Pusat Logistik)', percent: 28 },
-        { name: 'Jawa Barat (Bekasi, Cikarang, Karawang, Bandung)', percent: 16 },
-        { name: 'Jawa Timur (Surabaya, Sidoarjo)', percent: 8 },
-        { name: 'Lainnya & Internasional (Singapore/Malaysia)', percent: 6 }
-      ];
+    if (!logs || logs.length === 0) {
+      if (geoContainer) {
+        geoContainer.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.88rem;"><i class="fa-solid fa-earth-asia" style="font-size: 2rem; margin-bottom: 0.5rem; display: block; opacity: 0.4;"></i>Belum ada data wilayah pengunjung.</div>';
+      }
+      if (deviceContainer) {
+        deviceContainer.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.88rem;"><i class="fa-solid fa-laptop" style="font-size: 2rem; margin-bottom: 0.5rem; display: block; opacity: 0.4;"></i>Belum ada data perangkat pengunjung.</div>';
+      }
+      return;
+    }
 
-      geoContainer.innerHTML = regions.map(r => `
+    const total = logs.length;
+
+    // Real dynamic region breakdown
+    if (geoContainer) {
+      const regCounts = {};
+      logs.forEach(l => {
+        const reg = l.region || 'Lokal / Lainnya';
+        regCounts[reg] = (regCounts[reg] || 0) + 1;
+      });
+
+      const sortedRegions = Object.entries(regCounts)
+        .map(([name, count]) => ({ name, percent: Math.round((count / total) * 100) }))
+        .sort((a, b) => b.percent - a.percent);
+
+      geoContainer.innerHTML = sortedRegions.map(r => `
         <div class="geo-progress-row">
           <div class="geo-progress-label">
             <span>${r.name}</span>
@@ -886,23 +929,38 @@ function initVisitorAnalytics() {
       `).join('');
     }
 
+    // Real dynamic device breakdown
     if (deviceContainer) {
-      const devices = [
-        { name: 'Desktop (Windows / MacOS PC)', percent: 58, icon: 'fa-solid fa-desktop text-blue' },
-        { name: 'Mobile Smartphone (Android / iOS)', percent: 42, icon: 'fa-solid fa-mobile-screen text-emerald' }
-      ];
+      let desktopCount = 0;
+      let mobileCount = 0;
+      logs.forEach(l => {
+        if ((l.device || '').includes('Mobile')) mobileCount++;
+        else desktopCount++;
+      });
 
-      deviceContainer.innerHTML = devices.map(d => `
+      const desktopPct = Math.round((desktopCount / total) * 100);
+      const mobilePct = 100 - desktopPct;
+
+      deviceContainer.innerHTML = `
         <div class="geo-progress-row">
           <div class="geo-progress-label">
-            <span><i class="${d.icon}"></i> ${d.name}</span>
-            <span style="color: var(--text-primary); font-weight: 700;">${d.percent}%</span>
+            <span><i class="fa-solid fa-desktop text-blue"></i> Desktop (Windows / Mac PC)</span>
+            <span style="color: var(--text-primary); font-weight: 700;">${desktopPct}%</span>
           </div>
           <div class="geo-progress-bar-bg">
-            <div class="geo-progress-bar-fill" style="width: ${d.percent}%; background: linear-gradient(90deg, #38BDF8, #818CF8);"></div>
+            <div class="geo-progress-bar-fill" style="width: ${desktopPct}%; background: linear-gradient(90deg, #38BDF8, #818CF8);"></div>
           </div>
         </div>
-      `).join('');
+        <div class="geo-progress-row">
+          <div class="geo-progress-label">
+            <span><i class="fa-solid fa-mobile-screen text-emerald"></i> Mobile Smartphone (Android / iOS)</span>
+            <span style="color: var(--accent-emerald); font-weight: 700;">${mobilePct}%</span>
+          </div>
+          <div class="geo-progress-bar-bg">
+            <div class="geo-progress-bar-fill" style="width: ${mobilePct}%; background: linear-gradient(90deg, #10B981, #34D399);"></div>
+          </div>
+        </div>
+      `;
     }
   }
 
@@ -932,6 +990,21 @@ function initVisitorAnalytics() {
         log.time.toLowerCase().includes(query)
       );
       renderVisitorTable(filtered);
+    });
+  }
+
+  // --- Reset Analytics Button ---
+  const resetBtn = document.getElementById('btn-reset-analytics');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Apakah Anda yakin ingin mereset seluruh data kunjungan dan email ke 0?')) {
+        localStorage.removeItem(STORAGE_KEY);
+        sessionStorage.removeItem('visited_session');
+        analyticsData = getDefaultAnalyticsData();
+        recordCurrentVisit();
+        renderAnalyticsUI();
+        showToast('Data analitik berhasil direset ke 0 (kunjungan asli dimulai).', 'info');
+      }
     });
   }
 
@@ -973,52 +1046,23 @@ function initVisitorAnalytics() {
   }
 
   // --- Storage Helper Functions ---
+  function getDefaultAnalyticsData() {
+    return {
+      totalVisits: 0,
+      uniqueVisitors: 0,
+      topRegion: '-',
+      visitorLogs: [],
+      inquiryLogs: []
+    };
+  }
+
   function loadAnalyticsData() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) return JSON.parse(raw);
     } catch (e) {}
 
-    // Default rich realistic seed data
-    return {
-      totalVisits: 1428,
-      uniqueVisitors: 892,
-      topRegion: 'Jakarta & Tangerang',
-      visitorLogs: [
-        { time: '23 Agu 2026, 03:22', region: 'Jakarta Pusat, DKI Jakarta 🇮🇩', device: 'Desktop (Windows 11)', browser: 'Chrome 128', action: 'Melihat Portofolio WMS' },
-        { time: '23 Agu 2026, 02:45', region: 'Tangerang, Banten 🇮🇩', device: 'Mobile (iPhone iOS 18)', browser: 'Safari 18', action: 'Buka Profil & Pengalaman' },
-        { time: '23 Agu 2026, 01:15', region: 'Bekasi, Jawa Barat 🇮🇩', device: 'Desktop (Windows 11)', browser: 'Edge 128', action: 'Lihat Sistem Antrian Kurir' },
-        { time: '22 Agu 2026, 23:50', region: 'Jakarta Selatan, DKI Jakarta 🇮🇩', device: 'Desktop (Mac OS)', browser: 'Chrome 128', action: 'Cek Stock Opname Engine' },
-        { time: '22 Agu 2026, 22:30', region: 'Surabaya, Jawa Timur 🇮🇩', device: 'Mobile (Android 14)', browser: 'Chrome Mobile', action: 'Download CV Resume' },
-        { time: '22 Agu 2026, 21:10', region: 'Tangerang Selatan, Banten 🇮🇩', device: 'Desktop (Windows 10)', browser: 'Chrome 128', action: 'Melihat Kompetensi AI' },
-        { time: '22 Agu 2026, 19:40', region: 'Bandung, Jawa Barat 🇮🇩', device: 'Desktop (Mac OS)', browser: 'Safari 17', action: 'Buka Alur Handheld IMS' },
-        { time: '22 Agu 2026, 17:15', region: 'Cikarang / Karawang, Jabar 🇮🇩', device: 'Desktop (Windows 11)', browser: 'Chrome 128', action: 'Studi Kasus Kirin & Aditya' },
-        { time: '22 Agu 2026, 15:30', region: 'Jakarta Barat, DKI Jakarta 🇮🇩', device: 'Mobile (iPhone iOS 17)', browser: 'Safari', action: 'Kunjungi Kontak & Form' },
-        { time: '22 Agu 2026, 13:00', region: 'Singapore 🇸🇬', device: 'Desktop (Mac OS)', browser: 'Chrome 127', action: 'Buka LinkedIn Link Ref' }
-      ],
-      inquiryLogs: [
-        {
-          name: 'Talent Acquisition HRD',
-          email: 'recruitment.ops@beautyhaul.com',
-          phone: '081289234567',
-          company: 'Beautyhaul / E-Commerce Retail',
-          region: 'Jakarta Barat 🇮🇩',
-          subject: 'Peluang Posisi Supervisor Inventory & Controller',
-          message: 'Halo Daniel, kami sangat terkesan dengan rekam jejak Anda dalam implementasi WMS dan akurasi stok 99.85%. Apakah terbuka untuk diskusi karir?',
-          time: '22 Agu 2026, 18:30'
-        },
-        {
-          name: 'Plant Logistics Manager',
-          email: 'hrd.manufaktur@aditya.co.id',
-          phone: '081198765432',
-          company: 'PT Aditya Manufaktur Group',
-          region: 'Cikarang, Jawa Barat 🇮🇩',
-          subject: 'Kebutuhan Inventory Specialist Manufaktur',
-          message: 'Salam Daniel, kami membutuhkan specialist untuk memimpin audit cycle count dan spare part machinery pabrik.',
-          time: '21 Agu 2026, 14:15'
-        }
-      ]
-    };
+    return getDefaultAnalyticsData();
   }
 
   function saveAnalyticsData() {
@@ -1031,8 +1075,8 @@ function initVisitorAnalytics() {
     const isNewSession = !sessionStorage.getItem('visited_session');
     if (isNewSession) {
       sessionStorage.setItem('visited_session', 'true');
-      analyticsData.totalVisits++;
-      analyticsData.uniqueVisitors++;
+      analyticsData.totalVisits = (analyticsData.totalVisits || 0) + 1;
+      analyticsData.uniqueVisitors = (analyticsData.uniqueVisitors || 0) + 1;
 
       // Detect Device & OS
       const ua = navigator.userAgent;
