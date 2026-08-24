@@ -2736,3 +2736,230 @@ section {
   border-radius: var(--radius-full);
   background: linear-gradient(90deg, var(--accent-emerald), var(--accent-blue));
 }
+
+/* ==========================================================================
+   11. Print Styles (Executive A4 CV / Resume Export)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 16mm 14mm 16mm;
+  }
+
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Hide all website elements except the resume modal */
+  header,
+  section,
+  footer,
+  .ambient-mesh,
+  .toast-container,
+  .back-to-top,
+  .nav-backdrop,
+  .modal-backdrop:not(#resume-modal),
+  #admin-pin-modal,
+  #admin-analytics-modal,
+  #project-detail-modal,
+  .modal-close-btn,
+  .resume-modal-footer,
+  .mobile-menu-toggle {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #1e293b !important;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 9.5pt !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Display Resume Modal as a full-page clean document */
+  #resume-modal {
+    display: block !important;
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  #resume-modal .modal-dialog {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* CV Header */
+  .resume-modal-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+    padding-bottom: 1.15rem !important;
+    border-bottom: 2.5px solid #10b981 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .resume-header-avatar {
+    width: 74px !important;
+    height: 74px !important;
+    border-radius: 8px !important;
+    border: 2px solid #10b981 !important;
+    object-fit: cover !important;
+    flex-shrink: 0 !important;
+  }
+
+  .resume-modal-header h2 {
+    font-size: 1.55rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 0.15rem 0 !important;
+    line-height: 1.2 !important;
+    font-family: 'Outfit', sans-serif !important;
+  }
+
+  .resume-header-role {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #059669 !important;
+    margin: 0 0 0.35rem 0 !important;
+  }
+
+  .resume-header-contact {
+    font-size: 0.84rem !important;
+    color: #475569 !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .resume-header-contact a {
+    color: #0f172a !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+  }
+
+  /* CV Body Structure */
+  .resume-modal-body {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    color: #334155 !important;
+  }
+
+  .resume-section-block {
+    margin-bottom: 0.4rem !important;
+  }
+
+  .resume-section-block h4 {
+    font-size: 1.02rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    border-bottom: 1.5px solid #e2e8f0 !important;
+    padding-bottom: 0.35rem !important;
+    margin-bottom: 0.65rem !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .resume-section-block h4 i {
+    margin-right: 0.4rem !important;
+  }
+
+  .resume-section-block p {
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    color: #334155 !important;
+    margin: 0 !important;
+  }
+
+  /* Experience Items */
+  .resume-exp-item {
+    padding-left: 0.95rem !important;
+    border-left: 2.5px solid #10b981 !important;
+    margin-bottom: 0.85rem !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .resume-exp-item.border-pink { border-left-color: #ec4899 !important; }
+  .resume-exp-item.border-emerald { border-left-color: #10b981 !important; }
+  .resume-exp-item.border-blue { border-left-color: #0ea5e9 !important; }
+  .resume-exp-item.border-amber { border-left-color: #f59e0b !important; }
+
+  .resume-brand-logo {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 4px !important;
+    margin-right: 0.4rem !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+  }
+
+  .exp-role-meta {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    margin: 0.15rem 0 0.3rem !important;
+  }
+
+  .exp-role-meta.text-pink { color: #be185d !important; }
+  .exp-role-meta.text-emerald { color: #047857 !important; }
+  .exp-role-meta.text-blue { color: #0369a1 !important; }
+  .exp-role-meta.text-amber { color: #b45309 !important; }
+
+  .resume-exp-item p {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+    color: #334155 !important;
+    margin-top: 0.2rem !important;
+  }
+
+  /* Avoid breaking inside important blocks */
+  .resume-section-block,
+  .resume-exp-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
