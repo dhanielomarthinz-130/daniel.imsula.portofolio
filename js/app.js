@@ -48,10 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Contact Form Handler
   initContactForm();
 
-  // 6. Rate Card & Service Engagement
-  initRateCard();
-
-  // 7. Visitor Analytics & Secret PIN (Password 0000 / Triple Click Inventory Icon)
+  // 6. Visitor Analytics & Secret PIN (Password 0000 / Triple Click Inventory Icon)
   initVisitorAnalytics();
 });
 
