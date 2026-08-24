@@ -196,9 +196,8 @@ let allProjectsData = [
     id: "sys-somethinc-qc",
     title: "IMS (Inventory Management System) Inbound QC, Batch & FEFO Control",
     category: "ims-tech",
-    badge: "Developed by Daniel • Digunakan di Somethinc-Beautyhaul",
-    author: "Sistem Dikembangkan Sendiri & Digunakan di Somethinc-Beautyhaul",
-    companyLogo: "images/logos/logo_beautyhaul.png",
+    badge: "Developed by Daniel • Inbound QC & FEFO",
+    author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
     deployedBrands: [
       { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
       { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" }
