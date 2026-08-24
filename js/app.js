@@ -194,15 +194,14 @@ function initNavigation() {
 let allProjectsData = [
   {
     id: "sys-somethinc-qc",
-    title: "Sistem Kontrol Inbound QC, Batch Number & FEFO Expiry Date",
+    title: "IMS (Inventory Management System) Inbound QC, Batch & FEFO Control",
     category: "ims-tech",
     badge: "Developed by Daniel • Digunakan di Somethinc-Beautyhaul",
     author: "Sistem Dikembangkan Sendiri & Digunakan di Somethinc-Beautyhaul",
     companyLogo: "images/logos/logo_beautyhaul.png",
     deployedBrands: [
       { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
-      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" },
-      { name: "PT Royal Pesona Indonesia", logo: "images/logos/logo_royalpesona.jpg" }
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" }
     ],
     description: "Sistem manajemen mutu penerimaan barang masuk (Inbound QC), validasi nomor batch produksi, dan kontrol otomatis alur FEFO (First Expired, First Out) produk kosmetik & skincare. Menjamin setiap batch yang masuk terverifikasi masa kadaluwarsanya dan teralokasi ke bin rak yang tepat secara otomatis.",
     image: "images/somethinc_inbound_qc_fefo.jpg",
@@ -220,6 +219,11 @@ let allProjectsData = [
     category: "ai-tech",
     badge: "Developed by Daniel • Sistem 5R & Briefing",
     author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" },
+      { name: "PT Royal Pesona Indonesia", logo: "images/logos/logo_royalpesona.jpg" }
+    ],
     description: "Aplikasi delegasi tugas 5R (Ringkas, Rapi, Resik, Rawat, Rajin) dan koordinasi briefing harian tim per divisi gudang. Dilengkapi modul unggah foto bukti kerja dan auto-generate format laporan otomatis yang langsung dibagikan ke WhatsApp grup dengan rapi.",
     image: "images/system_5r_briefing.jpg",
     adminPanel: "Monitoring delegasi tugas 5R per divisi, approval validasi foto before-after, evaluasi skor kebersihan area, dan generator otomatis pesan rekapitulasi WhatsApp ke grup manajemen.",
@@ -236,6 +240,11 @@ let allProjectsData = [
     category: "tms-logistics",
     badge: "Developed by Daniel • Security Patrol",
     author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" },
+      { name: "PT Royal Pesona Indonesia", logo: "images/logos/logo_royalpesona.jpg" }
+    ],
     description: "Sistem digital patroli keamanan fasilitas gudang & pabrik. Memandu petugas security melakukan kontrol titik pos keliling (checkpoint barcode/NFC), pencatatan insiden mobile, dan pelaporan status patroli shift secara live.",
     image: "images/system_security_patrol.jpg",
     adminPanel: "Command Center interaktif pemetaan rute patroli, monitoring status realtime pos checkpoint fasilitas gudang, log anomali/insiden keamanan, dan arsip digital serah terima shift.",
@@ -252,6 +261,10 @@ let allProjectsData = [
     category: "tms-logistics",
     badge: "Developed by Daniel • Antrian Kurir",
     author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" }
+    ],
     description: "Sistem antrian digital serah-terima paket kurir instan dan sameday (Gojek, GoSend, Shopee Express / SPX, Grab), mengeliminasi kerumunan driver di area staging dan mempercepat waktu serah terima hingga 70%.",
     image: "images/instant_courier_queue.jpg",
     adminPanel: "Live monitor antrian slot staging kurir, manajemen nomor antrian driver (Gojek, Grab, SPX), analitik kecepatan dispatch per jam, dan rekapitulasi SLA serah terima.",
@@ -268,6 +281,10 @@ let allProjectsData = [
     category: "opname",
     badge: "Developed by Daniel • Engine Stock Opname",
     author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" }
+    ],
     description: "Sistem terotomasi untuk pelaksanaan Wall-to-Wall Stock Opname dan Cycle Count berkala. Memproses validasi hitung fisik vs saldo sistem WMS secara instan tanpa perlu olah manual di spreadsheet.",
     image: "images/stock_opname_system.jpg",
     adminPanel: "Setup master audit & cycle count, pemrosesan algoritma auto-variance matcher, visualisasi peta selisih per zona, approval penyesuaian saldo sistem, dan ekspor laporan selisih resmi.",
@@ -284,6 +301,10 @@ let allProjectsData = [
     category: "ims-tech",
     badge: "Developed by Daniel • Handheld IMS",
     author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" }
+    ],
     description: "Pengembangan alur pemindaian Handheld Scanner (PDA/Barcode) dan perombakan Picking Logic untuk memangkas waktu ambil barang dan menaikkan akurasi stok secara drastis dari 75% ke 99.99%+.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
     adminPanel: "Manajemen gelombang pesanan (wave picking), alokasi penugasan picker per zona lorong, pemantauan backlog order, dan live SLA kecepatan picking.",
@@ -300,6 +321,11 @@ let allProjectsData = [
     category: "tms-logistics",
     badge: "Developed by Daniel • TMS Tracking",
     author: "Sistem Dikembangkan Sendiri oleh Daniel Imsula",
+    deployedBrands: [
+      { name: "Somethinc", logo: "images/logos/logo_somethinc.jpg" },
+      { name: "BeautyHaul", logo: "images/logos/logo_beautyhaul.png" },
+      { name: "PT Royal Pesona Indonesia", logo: "images/logos/logo_royalpesona.jpg" }
+    ],
     description: "Sistem penjadwalan armada pengiriman barang, koordinasi rute driver, live tracking posisi armada, dan pelaporan bukti kirim digital secara mobile.",
     image: "images/tms_live_tracking.jpg",
     adminPanel: "Penjadwalan ritase armada pengiriman, optimasi rute multi-drop, monitoring GPS live tracking posisi armada di peta digital, dan verifikasi status surat jalan.",
