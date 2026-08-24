@@ -2,10 +2,8 @@
   "name": "portofolio-daniel-imsula",
   "version": "1.0.0",
   "description": "Portofolio Profesional Daniel Imsula - Inventory Controller & Warehouse Specialist",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "echo 'Build successful'"
+    "start": "node index.js"
   },
   "keywords": [
     "portfolio",
