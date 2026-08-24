@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Contact Form Handler
   initContactForm();
 
-  // 6. Visitor Analytics & Secret PIN (Password 0000 / Triple Click Inventory Icon)
+  // 6. Rate Card & Service Engagement
+  initRateCard();
+
+  // 7. Visitor Analytics & Secret PIN (Password 0000 / Triple Click Inventory Icon)
   initVisitorAnalytics();
 });
 
@@ -1148,3 +1151,37 @@ function initVisitorAnalytics() {
     saveAnalyticsData();
   };
 }
+
+/* ==========================================================================
+   7. Rate Card Tabs & Interactive Booking
+   ========================================================================== */
+function initRateCard() {
+  const rateTabs = document.querySelectorAll('.rate-tab-btn');
+  rateTabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      rateTabs.forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.rate-cards-tab-content').forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-rate-tab');
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) targetContent.classList.add('active');
+    });
+  });
+
+  window.selectRateOption = function (packageName) {
+    const subjectInput = document.getElementById('contact-subject');
+    const msgInput = document.getElementById('contact-message');
+
+    if (subjectInput) {
+      subjectInput.value = `Inquiry Kerjasama: ${packageName}`;
+    }
+
+    if (msgInput) {
+      msgInput.value = `Halo Daniel, saya tertarik untuk mendiskusikan kerjasama terkait paket "${packageName}". Mohon informasi lebih lanjut mengenai ketersediaan jadwal dan detail implementasinya.`;
+    }
+
+    showToast(`Paket "${packageName}" dipilih. Mengarahkan ke form kontak...`, 'info');
+  };
+}
+
